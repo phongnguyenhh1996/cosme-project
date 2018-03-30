@@ -76,22 +76,22 @@ class App extends Component {
   </a>
 </div>
    
-<footer class="page-footer ">
+<footer className="page-footer ">
 
-    <div class="container"><div class="footer_logo">
+    <div className="container"><div class="footer_logo">
         
-            <img src="./image/organica6_43091.jpg"/>
-        <h3> Organica </h3>
+           <img src={require('./image/organica6_43091.jpg')} />
+        
         </div>
 
     </div>
 
 
-    <div class="container mt-5 mb-4 text-center text-md-left">
+    <div className="container mt-5 mb-4 text-center text-md-left">
         <div class="row mt-3">
 
           
-            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+            <div className="col-md-3 col-lg-4 col-xl-3 mb-4">
                 <h6 class="text-uppercase font-weight-bold">
                     <strong>Categories</strong>
                 </h6>
@@ -117,8 +117,8 @@ class App extends Component {
                 </p>
                     </div>
           
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">
+            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 className="text-uppercase font-weight-bold">
                     <strong>Infomation</strong>
                 </h6>
             
@@ -142,22 +142,23 @@ class App extends Component {
                 </p>
             </div>
            
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">
+            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 className="text-uppercase font-weight-bold">
                     <strong>Contact Infomation</strong>
                 </h6>
                 
                 <p>
-                  k104/14 Mai Lao Bang, Hai Chau, Da Nang
+                  K104/14 Mai Lao Bang, Hai Chau, Da Nang
                 </p>
                 <p>
-                    organica@demolink.org
+                <a href="mailto: organica@demolink.org" >  organica@demolink.org</a>
+                   
                 </p>
                 
             </div>
            
-            <div class="col-md-4 col-lg-3 col-xl-3">
-                <h6 class="text-uppercase font-weight-bold">
+            <div className="col-md-4 col-lg-3 col-xl-3">
+                <h6 className="text-uppercase font-weight-bold">
                     <strong>Opening Hours</strong>
                 </h6>
                 
