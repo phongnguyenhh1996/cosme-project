@@ -40,6 +40,9 @@ class App extends Component {
         <a className="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
+
+
+                      
     <form className="form-inline my-2 my-lg-0">
       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -72,7 +75,107 @@ class App extends Component {
     <span className="sr-only">Next</span>
   </a>
 </div>
+   
+<footer class="page-footer ">
+
+    <div class="container"><div class="footer_logo">
+        
+            <img src="./image/organica6_43091.jpg"/>
+        <h3> Organica </h3>
+        </div>
+
+    </div>
+
+
+    <div class="container mt-5 mb-4 text-center text-md-left">
+        <div class="row mt-3">
+
+          
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Categories</strong>
+                </h6>
+              
+                <p>
+                    <a href="#!">Amino Acids</a>
+                </p>
+                <p>
+                    <a href="#!">Antioxidants</a>
+                </p>
+                <p>
+                    <a href="#!">Multivitamins</a>
+                </p>
+                <p>
+                    <a href="#!">Organic Cosmetics</a>
+                </p>
+                 <p>
+                    <a href="#!">Organic Food</a>
+                </p>
+                 
+                 <p>
+                    <a href="#!">Vitamins & Minerals</a>
+                </p>
+                    </div>
+          
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Infomation</strong>
+                </h6>
+            
+                <p>
+                    <a href="#!"> About </a>
+                </p>
+                <p>
+                    <a href="#!"> Wishlist </a>
+                </p>
+                <p> 
+                    <a href="#!"> Compare </a>
+                </p>
+                <p>
+                    <a href="#!"> My Account </a>
+                </p>
+                <p>
+                    <a href="#!"> Checkout </a>
+                </p>
+                 <p>
+                    <a href="#!"> Orders </a>
+                </p>
+            </div>
+           
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Contact Infomation</strong>
+                </h6>
+                
+                <p>
+                  k104/14 Mai Lao Bang, Hai Chau, Da Nang
+                </p>
+                <p>
+                    organica@demolink.org
+                </p>
+                
+            </div>
+           
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Opening Hours</strong>
+                </h6>
+                
+                <p>
+                    Working Days: Mon. - Fri.</p>
+                <p>
+                    Working Hours: 9.00AM - 5.00PM</p>
+                
+            </div>
+           
+
+        </div>
+    </div>
+    
+
+</footer>
       </div>
+
     );
   }
 }
