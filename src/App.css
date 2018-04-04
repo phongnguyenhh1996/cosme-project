@@ -1,5 +1,8 @@
-*{
+.sans-serif-font2{
  font-family: 'Jura', sans-serif;
+}
+.font-bigger{
+  font-size: 6rem;
 }
 .page-footer{
 
@@ -7,8 +10,17 @@
   padding: 0;
   background-color: #657253;
 }
+.sans-serif-font{
+  font-family: 'Poppins', sans-serif;
+}
+.hand-writing{
+  font-family: 'Satisfy', cursive;
+}
 .color-main{
   color: #95CA4D!important;
+}
+.color-main2{
+  color: #EA375C!important;
 }
 .color-alpha{
   color: rgba(255,255,255,.8)!important;
@@ -89,4 +101,49 @@ nav .nav-link:hover{
 }
 .slide-main .carousel-item .carousel-caption{
   transition-delay: .7s;
+  cursor: pointer;
 }
+.slide-main .carousel-item:nth-child(1) .carousel-caption{
+  top: 0;
+}
+.slide-main .carousel-item:nth-child(2) .carousel-caption{
+  top: 0;
+  right: 0;
+  left: 35%;
+}
+.slide-main .carousel-item:nth-child(3) .carousel-caption{
+  top: 0;
+  right: 35%;
+  left: 0;
+}
+.slide-main .carousel-item:nth-child(3) .color-main2{
+  color: #BADF25!important;
+}
+.slide-main .carousel-item:nth-child(3) button{
+  color: white;
+  background-color: transparent;
+  border-color: white;
+}
+.slide-main .carousel-item:nth-child(2) button{
+  background-color: #ea375c;
+  border-color: #ea375c;
+  color: white;
+}
+.slide-main .carousel-item .carousel-caption h1{
+  font-size: 3rem;
+}
+.slide-main .carousel-item .carousel-caption button{
+  border-width: 3px;
+}
+.slide-main .carousel-item .carousel-caption button:hover{
+  border-color: #ea375c;
+  color: #ea375c;
+  background-color: transparent;
+}
+.slide-main .carousel-control-next, .slide-main .carousel-control-prev{
+  background-color: #141D23;
+  height: 50px;
+  width: 50px;
+  top: 45%;
+}
+
