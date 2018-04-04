@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Header extends React.Component{
     render(){
@@ -38,7 +39,7 @@ class Header extends React.Component{
                 </div>
                 <div className="row px-md-5 py-md-3">
                     <div className="col-md-3">
-                        <img className="img-fluid" src={require('../image/logo.png')} />
+                        <a href="#"><img className="img-fluid" src={require('../images/logo.png')} /></a>
                     </div>
                     <div className="col-md-6">
                         <nav class="navbar navbar-expand-lg navbar-light py-4">
@@ -49,10 +50,10 @@ class Header extends React.Component{
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto ">
                               <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <Link class="nav-link" to="/">Home<span class="sr-only">(current)</span></Link>
                               </li>
                               <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Shop
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -63,13 +64,13 @@ class Header extends React.Component{
                                 </div>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <Link class="nav-link" to="/about">About</Link>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">Blog</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#">Contacts</a>
                               </li>
                             </ul>
                           </div>

@@ -3,9 +3,9 @@ import React from 'react';
 class Footer extends React.Component{
     render(){
         return(
-    <div className="container-fluid page-footer py-4">
-        <div className="row px-md-5">
-           <img className="mx-auto" src={require('../image/logo.png')} />
+    <div className="container-fluid page-footer py-md-4">
+        <div className="row px-md-5 pb-md-5">
+           <a className="mx-auto" href="#"><img src={require('../images/footer-logo.png')} /></a>
         </div>
         <div className="row px-md-5">
             <div className="col-md-3">

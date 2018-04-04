@@ -61,7 +61,7 @@ strong{
 }
 .search input{
   margin-right: 0!important;
-  outline: none!important;
+  outline: none;
   background-color: transparent;
   border: none;
   border-radius: 0;
@@ -69,11 +69,19 @@ strong{
   color: #333;
   display: block;
 }
+.search input:focus{
+  box-shadow: none;
+}
 .search button{
   position: absolute;
   right: 0;
   border: none;
   color: black;
+}
+.search button:hover, .search button:focus, .search button:active{
+  background-color: transparent!important;
+  color: black!important;
+  box-shadow: none!important;
 }
 nav .nav-link {
   color: black!important;
@@ -91,4 +99,11 @@ nav .nav-link:hover{
   position: absolute;
   right: 0;
   top: 0;
+}
+.page-footer .nav-link{
+  color: #88BB42!important;
+  transition: color .3s
+}
+.page-footer .nav-link:hover{
+  color: white!important;
 }
