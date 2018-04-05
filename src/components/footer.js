@@ -9,7 +9,7 @@ class Footer extends React.Component{
         </div>
         <div className="row px-md-5">
             <div className="col-md-3">
-                <h3 className="text-white"><span className="font-weight-bold">Categories</span></h3>
+                <h4 className="text-white"><span className="font-weight-bold">Categories</span></h4>
                 <ul class="nav flex-column mt-md-4">
                   <li class="nav-item">
                     <a class="nav-link pl-md-0" href="#">Amino Acids</a>
@@ -32,7 +32,7 @@ class Footer extends React.Component{
                 </ul>
             </div>
             <div className="col-md-3">
-                <h3 className="text-white"><span className="font-weight-bold">Customer</span> Service</h3>
+                <h4 className="text-white"><span className="font-weight-bold">Customer</span> Service</h4>
                 <ul class="nav flex-column mt-md-4">
                   <li class="nav-item color-2">
                     <a class="nav-link pl-md-0" href="#">About</a>
@@ -55,7 +55,7 @@ class Footer extends React.Component{
                 </ul>
             </div>
             <div className="col-md-3">
-                <h3 className="text-white"><span className="font-weight-bold">Contact</span> Information</h3>
+                <h4 className="text-white"><span className="font-weight-bold">Contact</span> Information</h4>
                 <ul class="nav flex-column mt-md-4">
                   <li class="nav-item color-alpha">
                     4096 N Highland St, Arlington, VA 32101, USA
@@ -66,7 +66,7 @@ class Footer extends React.Component{
                 </ul>
             </div>
             <div className="col-md-3">
-                <h3 className="text-white"><span className="font-weight-bold">Opening</span> Hours</h3>
+                <h4 className="text-white"><span className="font-weight-bold">Opening</span> Hours</h4>
                 <ul class="nav flex-column mt-md-4">
                   <li class="nav-item color-alpha">
                     Working Days: Mon. - Fri.

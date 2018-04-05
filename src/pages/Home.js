@@ -11,7 +11,7 @@ class Home extends React.Component{
 					      <img class="d-block w-100" src={require('../images/slide-1.jpg')} alt="First slide" />
 					      <div class="carousel-caption d-none d-md-block pt-md-5 mt-md-5">
 						    <h1 className="hand-writing color-main2 pt-md-5">Find the</h1>
-						    <h1 className="sans-serif-font text-dark font-weight-bold"><span className="font-bigger">Healthiest</span><br/>Organic Cosmetic Products</h1>
+						    <h1 className="sans-serif-font text-dark font-weight-bold"><span className="font-bigger sans-serif-font">Healthiest</span><br/>Organic Cosmetic Products</h1>
 						    <button className="btn btn-outline-dark font-weight-bold mt-md-4">SHOP NOW</button>
 						  </div>
 					    </div>
@@ -41,6 +41,19 @@ class Home extends React.Component{
 					    <span class="sr-only">Next</span>
 					  </a>
 					</div>
+				</div>
+				<div className="row px-md-5 py-md-5 banner">
+					<div className="col-md-4"><a href="#"><img className="img-fluid" src={require('../images/banner-1.png')}/></a></div>
+					<div className="col-md-4">
+						<div className="row justify-content-between">
+							<div className="col-md-12 mb-md-1 h-50"><a href="#"><img className="img-fluid" src={require('../images/banner-2.png')}/></a></div>
+							<div className="col-md-12 mt-md-4 h-50"><a href="#"><img className="img-fluid" src={require('../images/banner-3.png')}/></a></div>
+						</div>
+					</div>
+					<div className="col-md-4"><a href="#"><img className="img-fluid" src={require('../images/banner-4.jpg')}/></a></div>
+				</div>
+				<div className="row px-md-5">
+					<h3 className="text-center title w-100 pt-md-4"><span className="font-weight-bold">FEATURED</span> PRODUCTS</h3>
 				</div>
 			</div>
 		);

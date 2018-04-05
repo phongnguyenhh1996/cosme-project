@@ -77,7 +77,7 @@ class Header extends React.Component{
                         </nav>
                     </div>
                     <div className="col-md-3">
-                        <div className="row py-md-4 my-md-2 justify-content-end">
+                        <div className="row py-md-4 my-md-2 justify-content-md-end">
                         <ul class="nav social">
                             <li class="nav-item">
                                 <a class="nav-link shopping-cart" href="#"><i class="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">1</span></a>

@@ -1,5 +1,5 @@
-.sans-serif-font2{
- font-family: 'Jura', sans-serif;
+*{
+  font-family: 'Poppins', sans-serif;
 }
 .font-bigger{
   font-size: 6rem;
@@ -14,7 +14,7 @@
   font-family: 'Poppins', sans-serif;
 }
 .hand-writing{
-  font-family: 'Satisfy', cursive;
+  font-family: 'Satisfy', cursive!important;
 }
 .color-main{
   color: #95CA4D!important;
@@ -92,7 +92,11 @@ nav .nav-link:hover{
 .page-footer .nav-link:hover{
   color: white!important;
 }
-.slide-main .carousel-item, .slide-main .carousel-item .carousel-caption{
+.slide-main .carousel-item {
+  opacity: 0.1;
+  transition: opacity .8s ease-in-out;
+}
+.slide-main .carousel-item .carousel-caption{
   opacity: 0;
   transition: opacity .8s ease-in-out;
 }
@@ -101,7 +105,6 @@ nav .nav-link:hover{
 }
 .slide-main .carousel-item .carousel-caption{
   transition-delay: .7s;
-  cursor: pointer;
 }
 .slide-main .carousel-item:nth-child(1) .carousel-caption{
   top: 0;
@@ -131,6 +134,7 @@ nav .nav-link:hover{
 }
 .slide-main .carousel-item .carousel-caption h1{
   font-size: 3rem;
+  display: block;
 }
 .slide-main .carousel-item .carousel-caption button{
   border-width: 3px;
@@ -146,4 +150,14 @@ nav .nav-link:hover{
   width: 50px;
   top: 45%;
 }
-
+.banner img{
+  transition: all .3s ease;
+  display: block;
+}
+.banner a:hover img{
+  transform: scale(1.02);
+  box-shadow: 6px 8px 16px rgba(186, 186, 213, 0.57);
+}
+h3.title{
+  border-top: 1px dashed lightgray;
+}
