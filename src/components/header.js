@@ -7,32 +7,32 @@ class Header extends React.Component{
             <div className="container-fluid">
                 <div className="row py-md-2 px-md-5 header-top">
                     <div className="col-md-4">
-                        <ul class="nav social">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <ul className="nav social">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-facebook-f"></i></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-twitter"></i></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-google-plus-g"></i></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-linkedin-in"></i></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-pinterest"></i></a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-pinterest"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div className="col-md-4">
-                        <p className="text-center py-2 mb-0 font-weight-bold"><i class="fas fa-phone color-main"></i> 1-555-644-5566</p>
+                        <p className="text-center py-2 mb-0 font-weight-bold"><i className="fas fa-phone color-main"></i> 1-555-644-5566</p>
                     </div>
                     <div className="col-md-4">
                         <div className="row justify-content-end">
-                        <form class="form-inline my-2 my-lg-0 search">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                        <form className="form-inline my-2 my-lg-0 search">
+                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
                         </form>
                         </div>
                     </div>
@@ -42,35 +42,35 @@ class Header extends React.Component{
                         <a href="#"><img className="img-fluid" src={require('../images/logo.png')} /></a>
                     </div>
                     <div className="col-md-6">
-                        <nav class="navbar navbar-expand-lg navbar-light py-4">
-                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <nav className="navbar navbar-expand-lg navbar-light py-4">
+                          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                           </button>
 
-                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto ">
-                              <li class="nav-item active">
-                                <Link class="nav-link" to="/">Home<span class="sr-only">(current)</span></Link>
+                          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="navbar-nav mr-auto ">
+                              <li className="nav-item active">
+                                <Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
                               </li>
-                              <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <li className="nav-item dropdown">
+                                <a className="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Shop
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">Something else here</a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a className="dropdown-item" href="#">Action</a>
+                                  <a className="dropdown-item" href="#">Another action</a>
+                                  <div className="dropdown-divider"></div>
+                                  <a className="dropdown-item" href="#">Something else here</a>
                                 </div>
                               </li>
-                              <li class="nav-item">
-                                <Link class="nav-link" to="/about">About</Link>
+                              <li className="nav-item">
+                                <Link className="nav-link" to="/about">About</Link>
                               </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                              <li className="nav-item">
+                                <a className="nav-link" href="#">Blog</a>
                               </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Contacts</a>
+                              <li className="nav-item">
+                                <a className="nav-link" href="#">Contacts</a>
                               </li>
                             </ul>
                           </div>
@@ -78,12 +78,12 @@ class Header extends React.Component{
                     </div>
                     <div className="col-md-3">
                         <div className="row py-md-4 my-md-2 justify-content-md-end">
-                        <ul class="nav social">
-                            <li class="nav-item">
-                                <a class="nav-link shopping-cart" href="#"><i class="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">1</span></a>
+                        <ul className="nav social">
+                            <li className="nav-item">
+                                <a className="nav-link shopping-cart" href="#"><i className="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">1</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-user fa-lg"></i></a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fas fa-user fa-lg"></i></a>
                             </li>
                         </ul>
                         </div>

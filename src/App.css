@@ -149,6 +149,7 @@ nav .nav-link:hover{
   height: 50px;
   width: 50px;
   top: 45%;
+  transition: all .3s ease;
 }
 .banner img{
   transition: all .3s ease;
@@ -160,4 +161,114 @@ nav .nav-link:hover{
 }
 h3.title{
   border-top: 1px dashed lightgray;
+}
+.slide-products .carousel-control-next, .slide-products .carousel-control-prev{
+  height: 50px;
+  width: 50px;
+  border: 1px solid gray;
+  top: 43%;
+  transition: all .3s ease;
+}
+.slide-products .carousel-control-next:hover, .slide-products .carousel-control-prev:hover{
+  border-color: #8dc63f;
+  background-color: #8dc63f;
+}
+.slide-products .carousel-control-next:hover .carousel-control-next-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.slide-products .carousel-control-prev:hover .carousel-control-prev-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.slide-products .carousel-control-prev-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.slide-products .carousel-control-next-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.rate-star{
+  color: #EA375C;
+  text-align: left;
+}
+.rate-star svg{
+  margin-right: 4px;
+}
+.product-image{
+  border: 1px solid #F3F3F3;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.product-image img{
+  transition: all .8s ease;
+}
+.product-image:hover img{
+  transform:  scale(1.05);
+}
+.product-featured::after{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  content: "featured";
+  color: white;
+  background-color: #F8A91D;
+  padding: .3rem .6rem;
+  font-size: .9rem;
+}
+.product-sale::after{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  content: "sale";
+  color: white;
+  background-color: #EA375C;
+  padding: .3rem .6rem;
+  font-size: .9rem;
+}
+.products p{
+  margin-bottom: .6rem;
+}
+.products button:hover{
+  border-color: #EA375C;
+  background-color: #EA375C;
+}
+.news-events img{
+  display: block;
+  margin: auto;
+}
+
+.news-events div h3{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+.news-events div h3:hover{
+  color: black;
+}
+.carousel-indicators .active{
+  border: 3px solid black;
+}
+.carousel-indicators li{
+  width: 12px!important;
+  height: 12px!important;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+}
+.sub-follow{
+  background-color: #889B53;
+  color: white;
+}
+.sub-follow h3{
+  border: none;
+}
+.sub-follow input, .sub-follow button{
+  border-radius: 0;
+  border: none;
+}
+.sub-follow input{
+  background-color: rgba(255, 255, 255, .2)
+}
+.sub-follow button{
+  
 }
