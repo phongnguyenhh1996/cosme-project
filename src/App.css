@@ -210,7 +210,7 @@ h3.title{
   left: 15px;
   content: "featured";
   color: white;
-  background-color: #F8A91D;
+  background-color: rgba(248, 169, 29, .9);
   padding: .3rem .6rem;
   font-size: .9rem;
 }
@@ -220,12 +220,15 @@ h3.title{
   left: 15px;
   content: "sale";
   color: white;
-  background-color: #EA375C;
+  background-color: rgba(234, 55, 92, .9);
   padding: .3rem .6rem;
   font-size: .9rem;
 }
 .products p{
   margin-bottom: .6rem;
+}
+.products button{
+  border-radius: 0;
 }
 .products button:hover{
   border-color: #EA375C;
@@ -267,8 +270,38 @@ h3.title{
   border: none;
 }
 .sub-follow input{
-  background-color: rgba(255, 255, 255, .2)
+  background-color: rgba(255, 255, 255, .1);
+  color: white!important;
+}
+.sub-follow input::placeholder{
+  color: white;
+}
+.sub-follow input:focus{
+  background-color: rgba(255, 255, 255, .1)
 }
 .sub-follow button{
-  
+  background-color: #EA375C;
+  color: white;
+}
+.sub-follow button:hover{
+  background-color: white;
+  color: black;
+}
+.sub-follow ul li{
+  background-color: white;
+  margin-right: 1rem;
+  border-radius: 50%;
+  padding: .5rem .1rem;
+  transition: all .3s ease;
+}
+
+.sub-follow ul li a{
+  color: #889B53;
+  transition: all .3s ease;
+}
+.sub-follow li:hover{
+  background-color: #EA375C;
+}
+.sub-follow li:hover a{
+  color: white;
 }

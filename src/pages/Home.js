@@ -298,18 +298,37 @@ class Home extends React.Component{
 					  </div>
 					</div>
 				</div>
-				<div className="row px-md-5 sub-follow">
-					<h3 className="text-center title w-100 pt-md-5"><span className="font-weight-bold">Signup</span> For Exclusive Deals,<br/><small>Info and More</small></h3>
-					<form className="form-inline mx-auto">
-						<div className="col-7">
-					      <input type="text" className="form-control mb-2 mr-sm-2"  placeholder="Enter your e-mail address" /> 
+				<div className="row px-md-5 sub-follow pb-md-5">
+					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Signup</span> For Exclusive Deals,<br/><small>Info and More</small></h2>
+					<form className="col-md-7 mx-auto">
+					  <div class="form-row justify-content-md-center">
+					    <div class="col-md-7">
+					      <label class="sr-only" for="inlineFormInputName">Name</label>
+					      <input type="text" class="form-control py-md-2" id="inlineFormInputName" placeholder="Enter your e-mail address"/>
 					    </div>
-					    <div className="col">
-					      <button type="submit" className="btn btn-primary mb-2">SUBSCRIBE</button>
+					    <div class="col-auto">
+					      <button type="submit" class="btn py-md-2">SUBSCRIBE</button>
 					    </div>
-					  
-					  
-					</form>
+					  </div>
+					</form>	
+					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Special</span> Discounts<br/><small>on Our Social Media</small></h2>	
+					<ul className="nav col-md-6 mx-auto justify-content-md-center">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-twitter fa-lg fa-fw"></i></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-google-plus-g fa-lg fa-fw"></i></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-linkedin-in fa-lg fa-fw"></i></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><i className="fab fa-pinterest fa-lg fa-fw"></i></a>
+                            </li>
+                        </ul>
 				</div>
 			</div>
 		);
