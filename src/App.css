@@ -107,3 +107,178 @@ nav .nav-link:hover{
 .page-footer .nav-link:hover{
   color: white!important;
 }
+
+.browse{
+  border-top: 1px solid black;
+  padding-top:20px;
+}
+.nav-item1>a{
+  color: #88BB42!important;
+  transition: color .3s;
+ 
+
+}
+.nav-item1{
+ 
+   padding-bottom: 10px;
+ padding-top: 10px;
+  border-bottom: 1px solid grey;
+
+}
+.nav-item1>span{
+ 
+ float: right;
+ color: red;
+
+}
+.nav-item1>a:hover{
+
+text-decoration: none;
+ color: black!important;
+ 
+
+}
+
+#products{
+    position: relative;
+     padding: .5rem 1.2rem!important;
+
+}
+#products>a{
+    color: #88BB42!important;
+  transition: color .3s;
+ 
+
+}
+#products>a:hover{
+      color: white!important;
+
+}
+
+
+#products >a h3{
+   border: 1px solid white;
+   padding-right: 20px;
+   padding-left: 2px;
+  background-color: #ffffff;
+  text-transform: uppercase;
+position: absolute;
+left: 15%;
+text-align: center;
+    bottom: 30px;
+    width: 70%;
+    margin: auto;
+}
+#products >a h3:hover{
+   border: 1px solid white;
+   padding-right: 20px;
+   padding-left: 2px;
+  background-color:#88BB42;
+  text-transform: uppercase;
+position: absolute;
+left: 15%;
+text-align: center;
+    bottom: 30px;
+    width: 70%;
+    margin: auto;
+}
+
+ul.product-categories{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+
+}
+ul.product-list{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+
+
+}
+.top-rated{
+  border-top: 1px solid black;
+  border-bottom:  1px solid black;
+
+padding-top: 30px;
+padding-bottom: 30px;
+
+
+}
+ul.product-list>li{
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    
+}
+
+ul.product-widget{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+
+
+}
+ul.product-list>li>a{
+  text-decoration: none;
+    
+}
+
+.nav-item2>a{
+
+
+  color:grey!important;
+  transition: color .3s;
+ 
+
+}
+.nav-item2{
+ 
+   padding-bottom: 2px;
+ padding-top: 1px;
+
+
+}
+
+.nav-item2>a:hover{
+text-decoration: none;
+ color:  #88BB42!important;
+ 
+
+}
+.product_title_link>a{
+  color:black!important;
+  transition: color .3s;
+
+}
+.product_title_link>a:hover{
+text-decoration: none;
+ color:  #88BB42!important;
+ 
+
+}
+span.price{
+  color:red;
+}
+.fa-star{
+  color: red;
+}
+.images1{
+height: 160px;
+float: left;
+padding-right: 20px;
+}
+.images2{
+height: 150px;
+float: left;
+padding-right: 20px;
+}
+.images3{
+height: 50px;
+
+float: left;
+padding-right: 20px;
+}
+.by{
+  color: #88BB42;
+}

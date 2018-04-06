@@ -53,6 +53,7 @@ class Header extends React.Component{
                                 <Link class="nav-link" to="/">Home<span class="sr-only">(current)</span></Link>
                               </li>
                               <li class="nav-item dropdown">
+                              
                                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Shop
                                 </a>
@@ -67,7 +68,7 @@ class Header extends React.Component{
                                 <Link class="nav-link" to="/about">About</Link>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <Link class="nav-link" to="/blog">Blog</Link>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">Contacts</a>
