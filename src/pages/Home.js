@@ -299,7 +299,7 @@ class Home extends React.Component{
 					</div>
 				</div>
 				<div className="row px-md-5 sub-follow pb-md-5">
-					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Signup</span> For Exclusive Deals,<br/><small>Info and More</small></h2>
+					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Signup</span> For Exclusive Deals,<br/><small><small>Info and More</small></small></h2>
 					<form className="col-md-7 mx-auto">
 					  <div class="form-row justify-content-md-center">
 					    <div class="col-md-7">
@@ -311,7 +311,7 @@ class Home extends React.Component{
 					    </div>
 					  </div>
 					</form>	
-					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Special</span> Discounts<br/><small>on Our Social Media</small></h2>	
+					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Special</span> Discounts<br/><small><small>on Our Social Media</small></small></h2>	
 					<ul className="nav col-md-6 mx-auto justify-content-md-center">
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><i className="fab fa-facebook-f fa-lg fa-fw"></i></a>

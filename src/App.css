@@ -289,7 +289,8 @@ h3.title{
 }
 .sub-follow ul li{
   background-color: white;
-  margin-right: 1rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
   border-radius: 50%;
   padding: .5rem .1rem;
   transition: all .3s ease;
