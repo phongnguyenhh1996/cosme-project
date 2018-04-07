@@ -5,6 +5,8 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Shop from './pages/Shop';
+import ProductList from './pages/product-list';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -14,6 +16,7 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path="/" component={Home} />
+          <Route path="/shop" component={Shop} />
           <Route path="/about" component={About} />
           <Footer />
         </div>

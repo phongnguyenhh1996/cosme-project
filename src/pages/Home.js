@@ -312,7 +312,7 @@ class Home extends React.Component{
 					  </div>
 					</form>	
 					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Special</span> Discounts<br/><small><small>on Our Social Media</small></small></h2>	
-					<ul className="nav col-md-6 mx-auto justify-content-md-center">
+					<ul className="nav col-md-8 mx-auto justify-content-md-center">
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><i className="fab fa-facebook-f fa-lg fa-fw"></i></a>
                             </li>
