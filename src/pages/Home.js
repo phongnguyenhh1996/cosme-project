@@ -173,7 +173,7 @@ class Home extends React.Component{
 						      	</div>
 						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
 						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
+						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
 						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 						      </div>
 						      <div className="col-md-3 products">
@@ -185,7 +185,7 @@ class Home extends React.Component{
 						      	</div>
 						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
 						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
+						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
 						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 						      </div>
 						      <div className="col-md-3 products">
@@ -197,7 +197,7 @@ class Home extends React.Component{
 						      	</div>
 						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
 						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
+						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
 						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 						      </div>
 						      <div className="col-md-3 products">
@@ -209,7 +209,7 @@ class Home extends React.Component{
 						      	</div>
 						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
 						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
+						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
 						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 						      </div>
 					      </div>
@@ -225,7 +225,7 @@ class Home extends React.Component{
 						      	</div>
 						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
 						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
+						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
 						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 						      </div>
 						      <div className="col-md-3 products">
@@ -237,7 +237,7 @@ class Home extends React.Component{
 						      	</div>
 						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
 						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
+						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
 						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 						      </div>
 					      </div>
@@ -301,13 +301,13 @@ class Home extends React.Component{
 				<div className="row px-md-5 sub-follow pb-md-5">
 					<h2 className="text-center w-100 pt-md-5 pb-md-4"><span className="font-weight-bold">Signup</span> For Exclusive Deals,<br/><small><small>Info and More</small></small></h2>
 					<form className="col-md-7 mx-auto">
-					  <div class="form-row justify-content-md-center">
-					    <div class="col-md-7">
-					      <label class="sr-only" for="inlineFormInputName">Name</label>
-					      <input type="text" class="form-control py-md-2" id="inlineFormInputName" placeholder="Enter your e-mail address"/>
+					  <div className="form-row justify-content-md-center">
+					    <div className="col-md-7">
+					      <label className="sr-only" for="inlineFormInputName">Name</label>
+					      <input type="text" className="form-control py-md-2" id="inlineFormInputName" placeholder="Enter your e-mail address"/>
 					    </div>
-					    <div class="col-auto">
-					      <button type="submit" class="btn py-md-2">SUBSCRIBE</button>
+					    <div className="col-auto">
+					      <button type="submit" className="btn py-md-2">SUBSCRIBE</button>
 					    </div>
 					  </div>
 					</form>	

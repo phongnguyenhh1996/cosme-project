@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Shop from './pages/Shop';
 import ProductList from './pages/product-list';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -16,7 +16,8 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path="/" component={Home} />
-          <Route path="/shop" component={Shop} />
+          <Route exact path="/shop" component={Shop} />
+          <Route path="/shop/product-list" component={ProductList} />
           <Route path="/about" component={About} />
           <Footer />
         </div>

@@ -4,7 +4,7 @@ class Shop extends React.Component{
 	render(){
 		return(
 			<div>
-			Shop
+				Shop		
 			</div>
 		);
 	}
