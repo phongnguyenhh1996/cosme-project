@@ -363,7 +363,7 @@ ol.breadcrumb li.active{
 .shorting{
   position: relative;
   cursor: pointer;
-  border-bottom: 1px solid #343a40;;
+  border-bottom: 1px solid lightgray;
 }
 .shorting svg{
   position: absolute;
@@ -375,4 +375,58 @@ ol.breadcrumb li.active{
   left: 0;
   width: 100%;
   text-align: center;
+}
+.aside > h4{
+  border-top: 1px solid lightgray;
+}
+.browse a{
+  color: #9CCE59;
+  border-bottom: 1px solid lightgray;
+  transition: color .3s;
+}
+.browse a:hover{
+  color: black;
+}
+.browse li:last-child a{
+  border-bottom: none;
+}
+.browse a span{
+  float: right;
+  color: #EA375C;
+}
+.filter-price{
+  background-color: #FBFBFC;
+}
+.filter{
+  border: 1px solid lightgray;
+  padding: 2px 0;
+  position: relative;
+}
+.filter::before,.filter::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  height: 180%;
+  width: 2px;
+  background-color: black;
+}
+.filter::before{
+  left: 0;
+}
+.filter::after{
+  right: 0;
+}
+.filter div{
+  background-color: #9CCE59;
+  height: 4px;
+}
+.filter-price button{
+  border-radius: 0;
+  color: white;
+  background-color: #EA375C;
+  font-weight: bold;
+}
+.filter-price button:hover{
+  background-color: black;
 }
