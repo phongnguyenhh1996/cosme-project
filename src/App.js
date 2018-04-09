@@ -8,6 +8,7 @@ import Footer from './components/footer';
 import Home from './pages/Home';
 import About from './pages/About'; 
 import Blog from './pages/Blog';
+import Shop from './pages/Shop';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -20,6 +21,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />
+            <Route path="/shop" component={Shop} />
           <Footer />
         </div>
       </Router>
