@@ -57,12 +57,12 @@ class Header extends React.Component{
                                   Shop
                                 </Link>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <Link className="dropdown-item" to="/shop/product-list">Amino Acids</Link>
-                                  <Link className="dropdown-item" to="/shop/product-list">Antioxidants</Link>
-                                  <Link className="dropdown-item" to="/shop/product-list">Multivitamins</Link>
-                                  <Link className="dropdown-item" to="/shop/product-list">Organic Cosmetics</Link>
-                                  <Link className="dropdown-item" to="/shop/product-list">Organic Food</Link>
-                                  <Link className="dropdown-item" to="/shop/product-list">Vitamins & Minerals</Link>
+                                  <Link className="dropdown-item" to="/shop/product_list">Amino Acids</Link>
+                                  <Link className="dropdown-item" to="/shop/product_list">Antioxidants</Link>
+                                  <Link className="dropdown-item" to="/shop/product_list">Multivitamins</Link>
+                                  <Link className="dropdown-item" to="/shop/product_list">Organic Cosmetics</Link>
+                                  <Link className="dropdown-item" to="/shop/product_list">Organic Food</Link>
+                                  <Link className="dropdown-item" to="/shop/product_list">Vitamins & Minerals</Link>
                                 </div>
                               </li>
                               <li className="nav-item py-md-4">

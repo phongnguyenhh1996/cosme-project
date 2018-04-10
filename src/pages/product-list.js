@@ -7,10 +7,10 @@ class ProductList extends React.Component{
 			<div className="container-fluid">
 				<div className="row px-md-5 py-md-3">
 					<nav aria-label="breadcrumb ">
-					  <ol class="breadcrumb bg-white">
-					    <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-					    <li class="breadcrumb-item"><Link to="/shop">Shop</Link></li>
-					    <li class="breadcrumb-item active" aria-current="page">Products List</li>
+					  <ol className="breadcrumb bg-white">
+					    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+					    <li className="breadcrumb-item"><Link to="/shop">Shop</Link></li>
+					    <li className="breadcrumb-item active" aria-current="page">Products List</li>
 					  </ol>
 					</nav>
 					<div className="w-100 border-bottom-dashed mx-md-3"></div>
@@ -20,7 +20,7 @@ class ProductList extends React.Component{
 						<div className="row">
 							<p className="font-weight-bold color-main shorting-text">Showing all 7 results</p>
 							<div className="col-md-3">
-								<div className="shorting">Default sorting <i class="fas fa-chevron-down fa-xs"></i></div>
+								<div className="shorting">Default sorting <i className="fas fa-chevron-down fa-xs"></i></div>
 							</div>
 						</div>
 						<div className="row py-md-4">
@@ -83,16 +83,16 @@ class ProductList extends React.Component{
 				                    <a className="nav-link px-md-0" href="#">Amino Acids <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Antioxidants <span>(19)</span></a>
+				                    <a className="nav-link px-md-0" href="#">Antioxidants <span>(9)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Multivitamins <span>(19)</span></a>
+				                    <a className="nav-link px-md-0" href="#">Multivitamins <span>(12)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Organic Cosmetics <span>(19)</span></a>
+				                    <a className="nav-link px-md-0" href="#">Organic Cosmetics <span>(6)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Organic Food <span>(19)</span></a>
+				                    <a className="nav-link px-md-0" href="#">Organic Food <span>(15)</span></a>
 				                  </li>
 				                  <li className="nav-item">
 				                    <a className="nav-link px-md-0" href="#">Vitamins & Minerals <span>(19)</span></a>
@@ -190,7 +190,7 @@ class ProductList extends React.Component{
 
 									<div className="images3">
 										<img  width="75" height="75" src={require('../images/Daily Detangling Shampoo.png')} /></div>
-										<em class="reviewer">by <span className="by">admin</span></em>
+										<em className="reviewer">by <span className="by">admin</span></em>
 									<div className="product_title_link"><a href="#" title="Daily Detangling Shampoo">
 											<span className="product-title">Daily Detangling Shampoo</span></a></div>
 										
@@ -199,7 +199,7 @@ class ProductList extends React.Component{
 
 									<div className="images3">
 										<img  width="75" height="75" src={require('../images/Eminence Organic.png')} /></div>
-										<em class="reviewer">by <span className="by">admin</span></em>
+										<em className="reviewer">by <span className="by">admin</span></em>
 									<div className="product_title_link"><a href="#" title="Eminence Organic">
 											<span className="product-title">Eminence Organic</span></a></div>
 										
@@ -208,7 +208,7 @@ class ProductList extends React.Component{
 
 									<div className="images3">
 										<img  width="75" height="75" src={require('../images/BEST Vitamin C.png')} /></div>
-										<em class="reviewer">by <span className="by">admin</span></em>
+										<em className="reviewer">by <span className="by">admin</span></em>
 									<div className="product_title_link"><a href="#" title="BEST Vitamin C">
 											<span className="product-title">BEST Vitamin C</span></a></div>
 										

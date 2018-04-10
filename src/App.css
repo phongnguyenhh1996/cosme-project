@@ -129,7 +129,6 @@ nav .dropdown-item:hover{
 .page-footer .nav-link:hover{
   color: white!important;
 }
-<<<<<<< HEAD
 .slide-main .carousel-item {
   opacity: 0.1;
   transition: opacity .8s ease-in-out;
@@ -513,7 +512,7 @@ ul.product-list>li>a{
 }
 .nav-item2{
  
-   padding-bottom: 2px;
+padding-bottom: 2px;
  padding-top: 1px;
 
 

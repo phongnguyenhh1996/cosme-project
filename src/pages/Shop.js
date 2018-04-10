@@ -15,10 +15,10 @@ class Shop extends React.Component{
 					<div className="w-100 border-bottom-dashed mx-md-3"></div>
 				</div>
 			     <div className="row px-md-5 py-md-4">
-	<div id="primary" className="col-xs-12 col-md-9 col-xl-9">
+	<div id="primary" className="col-md-9 col-xl-9">
 <div className="row products">
 
-		<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+		<div id="products" className="col-sm-6 col-md-4 col-lg-4 col-xl-4">
 		<a href="#">
 		<img className src={require('../images/Amino Acids.jpg')} />	
 		<h3 className="text-center py-md-3">
