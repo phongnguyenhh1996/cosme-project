@@ -12,37 +12,37 @@ class Shop extends React.Component{
 		<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 		<a href="#">
 		<img className src={require('../images/Amino Acids.jpg')} />	
-		<h3 className="text-center">
+		<h3 className="text-center py-md-3">
 		Amino Acids 	</h3>
 	</a>	</div>
 	<div id="products"  className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
 		<a  href="#">
 		<img className="img-fluid" src={require('../images/Antioxidants.jpg')} />
-		<h3 className="text-center">
+		<h3 className="text-center py-md-3">
 		Antioxidants	</h3>
 	</a>	</div>
 	<div id="products"  className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 		<a   href="#">
 		<img className="img-fluid" src={require('../images/Multivitamins.jpg')} />
-		<h3 className="text-center">
+		<h3 className="text-center py-md-3">
 		Multivitamins	</h3>
 	</a>	</div>
 	<div  id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product">
 		<a  href="#">
 		<img className="img-fluid" src={require('../images/Organic Cosmetics.jpg')} />
-		<h3 className="text-center">
+		<h3 className="text-center py-md-3">
 		Organic Cosmetics </h3>
 	</a>	</div>
 	<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product first">
 		<a  href="#">
 		<img className="img-fluid" src={require('../images/Organic Food.jpg')} />
-		<h3 className="text-center">
+		<h3 className="text-center py-md-3">
 		Organic Food 	</h3>
 	</a>	</div>
 	<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product last">
 		<a   href="#">
 			<img className="img-fluid" src={require('../images/Vitamins & Minerals.jpg')} />
-		<h3 className="text-center">
+		<h3 className="text-center py-md-3">
 		Vitamins &amp; Minerals 	</h3>
 	</a>	
 	</div>
