@@ -129,6 +129,7 @@ nav .dropdown-item:hover{
 .page-footer .nav-link:hover{
   color: white!important;
 }
+<<<<<<< HEAD
 .slide-main .carousel-item {
   opacity: 0.1;
   transition: opacity .8s ease-in-out;
@@ -429,4 +430,134 @@ ol.breadcrumb li.active{
 }
 .filter-price button:hover{
   background-color: black;
+}
+
+#products{
+    position: relative;
+     padding: .5rem 1.2rem!important;
+
+}
+#products>a{
+    color: #88BB42!important;
+  transition: color .3s;
+ 
+
+}
+
+
+#products h3{
+  background-color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  bottom: 30px;
+  width: 70%;
+  font-weight: bold;
+}
+
+#products:hover h3{
+  color: white;
+  background-color:#88BB42;
+  transition: all .3s ease;
+}
+ul.product-categories{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+
+}
+ul.product-list{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+
+
+}
+.top-rated{
+  border-top: 1px solid black;
+  border-bottom:  1px solid black;
+
+padding-top: 30px;
+padding-bottom: 30px;
+
+
+}
+ul.product-list>li{
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    
+}
+
+ul.product-widget{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+
+
+}
+ul.product-list>li>a{
+  text-decoration: none;
+    
+}
+
+.nav-item2>a{
+
+
+  color:grey!important;
+  transition: color .3s;
+ 
+
+}
+.nav-item2{
+ 
+   padding-bottom: 2px;
+ padding-top: 1px;
+
+
+}
+
+.nav-item2>a:hover{
+text-decoration: none;
+ color:  #88BB42!important;
+ 
+
+}
+.product_title_link>a{
+  color:black!important;
+  transition: color .3s;
+
+}
+.product_title_link>a:hover{
+text-decoration: none;
+ color:  #88BB42!important;
+ 
+
+}
+span.price{
+  color:red;
+}
+.fa-star{
+  color: red;
+}
+.images1{
+height: 160px;
+float: left;
+padding-right: 20px;
+}
+.images2{
+height: 150px;
+float: left;
+padding-right: 20px;
+}
+.images3{
+height: 50px;
+
+float: left;
+padding-right: 20px;
+}
+.by{
+  color: #88BB42;
 }
