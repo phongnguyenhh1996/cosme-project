@@ -72,7 +72,7 @@ class Header extends React.Component{
                                 <a className="nav-link" href="#">Blog</a>
                               </li>
                               <li className="nav-item py-md-4">
-                                <a className="nav-link" href="#">Contacts</a>
+                               <Link className="nav-link" to="/contacts">  Contacts</Link>
                               </li>
                             </ul>
                           </div>

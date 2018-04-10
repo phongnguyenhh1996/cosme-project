@@ -20,7 +20,7 @@ class Shop extends React.Component{
 
 		<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 		<a href="#">
-		<img className src={require('../images/Amino Acids.jpg')} />	
+		<img className="img-fluid" src={require('../images/Amino Acids.jpg')} />	
 		<h3 className="text-center py-md-3">
 		Amino Acids 	</h3>
 	</a>	</div>
@@ -111,7 +111,7 @@ class Shop extends React.Component{
 									</li>
 									<li>
 										<a href="#" title="Eminence Organic">
-										<div className="images2">
+										<div className="images1">
 										<img width="75" height="75" src={require('../images/Eminence Organic.png')} /></div>
 										<ul className="product-widget">
 										
