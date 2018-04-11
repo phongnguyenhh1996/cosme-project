@@ -583,6 +583,7 @@ padding-right: 20px;
   background: #EA375C;
   border-color:#EA375C;
   transition: all .3s;
+  border-radius: 0;
 }
 .contact-form button:hover{
   background: black;
@@ -597,7 +598,7 @@ padding-right: 20px;
 
 }
 .subscribe-follow p{
-  color: lightgray;
+  color: gray;
 
 }
 .subscribe-follow a{
@@ -606,7 +607,6 @@ padding-right: 20px;
 
 .subscribe{
    border: 1px solid lightgray;
-  
   text-align: center;
    padding-left: 20px;
    padding-right: 20px;
@@ -624,6 +624,7 @@ margin: 0 auto;
   transition: all .3s;
    background: #EA375C;
   border-color:#EA375C;
+  border-radius: 0;
 
 }
 .subscribe button:hover{
@@ -632,6 +633,7 @@ margin: 0 auto;
 }
 .follow{
    border: 1px solid lightgray;
+   border-top: none;
     text-align: center;
    padding-left: 20px;
    padding-right: 20px;
