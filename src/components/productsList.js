@@ -57,7 +57,7 @@ class ProductsList extends React.Component{
 					      	</div>
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
-					      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+					      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className="text-secondary ml-md-2">{prd.oldprice.toFixed(2)}$</span></p>
 					      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 				      	</div>}}
 				)
@@ -69,8 +69,9 @@ class ProductsList extends React.Component{
 				<div className="row py-md-4">
 				{prds.map((prd) =>{
 					let status="";
+					let salePrice=[];
 							if (prd.featured) status="product-image product-featured"
-							 else if (prd.sale) status="product-image product-sale";
+							 else if (prd.sale) {status="product-image product-sale";salePrice= <span className="text-secondary ml-md-2">{prd.oldprice.toFixed(2)}$</span>}
 					return	<div className="col-md-4 products text-center my-md-4" key={prd.id}>
 				      	  	<RateStar star={prd.star}/>
 				      	  	<div className={status}>
@@ -78,7 +79,7 @@ class ProductsList extends React.Component{
 					      	</div>
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
-					      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+					      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$ {salePrice}</p>
 					      	<button className="btn btn-outline-secondary">ADD TO CART</button>
 				      	</div>}
 				)

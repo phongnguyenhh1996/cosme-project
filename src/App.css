@@ -297,6 +297,11 @@ h3.title{
   height: 12px!important;
   border-radius: 50%;
   border: 3px solid lightgray;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.carousel-indicators li:hover{
+  border-color: black;
 }
 .sub-follow{
   background-color: #889B53;
