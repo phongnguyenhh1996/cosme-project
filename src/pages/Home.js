@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ProductsList from '../components/productsList';
+import prdStore from '../stores/productsStore';
 
 class Home extends React.Component{
 	render(){
@@ -57,84 +59,7 @@ class Home extends React.Component{
 						<div id="carouselExampleIndicators2" className="carousel slide slide-products w-100" data-ride="carousel">
 					  <div className="carousel-inner">
 					    <div className="carousel-item active">
-					      <div className="row text-center">
-					      	  <div className="col-md-3 products">
-					      	  	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-featured">
-						      	<img className="img-fluid" src={require('../images/product-1.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-featured">
-						      	<img className="img-fluid" src={require('../images/product-2.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-featured">
-						      	<img className="img-fluid" src={require('../images/product-3.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-featured">
-						      	<img className="img-fluid" src={require('../images/product-4.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-					      </div>
-					    </div>
-					    <div className="carousel-item">
-					      <div className="row text-center">
-					      	  <div className="col-md-3 products">
-					      	  	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-featured">
-						      	<img className="img-fluid" src={require('../images/product-1.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-						      	<div className="product-image product-featured">
-						      		<img className="img-fluid" src={require('../images/product-2.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-					      </div>
+					      	  <ProductsList prds={prdStore.getAll()} showprd="featured"/>
 					    </div>
 					  </div>
 					  <a className="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -163,84 +88,7 @@ class Home extends React.Component{
 					<div id="carouselExampleIndicators3" className="carousel slide slide-products w-100" data-ride="carousel">
 					  <div className="carousel-inner">
 					    <div className="carousel-item active">
-					      <div className="row text-center">
-					      	  <div className="col-md-3 products">
-					      	  	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-sale">
-						      	<img className="img-fluid" src={require('../images/product-1.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-sale">
-						      	<img className="img-fluid" src={require('../images/product-2.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-sale">
-						      	<img className="img-fluid" src={require('../images/product-3.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-sale">
-						      	<img className="img-fluid" src={require('../images/product-4.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-					      </div>
-					    </div>
-					    <div className="carousel-item">
-					      <div className="row text-center">
-					      	  <div className="col-md-3 products">
-					      	  	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-sale">
-						      	<img className="img-fluid" src={require('../images/product-1.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-3 products">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-						      	<div className="product-image product-sale">
-						      		<img className="img-fluid" src={require('../images/product-2.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$ <span className="text-secondary pl-md-2">25.00$</span></p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-					      </div>
+					      <ProductsList prds={prdStore.getAll()} showprd="sale"/>
 					    </div>
 					  </div>
 					  <a className="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">

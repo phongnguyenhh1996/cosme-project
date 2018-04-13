@@ -238,7 +238,7 @@ h3.title{
 .product-image img{
   transition: all .8s ease;
 }
-.product-image:hover img{
+.products:hover img{
   transform:  scale(1.05);
 }
 .product-featured::after{
