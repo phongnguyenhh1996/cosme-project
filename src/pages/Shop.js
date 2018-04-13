@@ -16,7 +16,7 @@ class Shop extends React.Component{
 				</div>
 			     <div className="row px-md-5 py-md-4">
 	<div id="primary" className="col-md-9 col-xl-9">
-<div className="row products">
+<div className="row products shop">
 
 		<div id="products" className="col-sm-6 col-md-4 col-lg-4 col-xl-4">
 		<a href="#">
