@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
+import prdStore from '../stores/productsStore';
+import ProductsList from '../components/productsList';
 
 class ProductList extends React.Component{
 	render(){
@@ -23,56 +25,7 @@ class ProductList extends React.Component{
 								<div className="shorting">Default sorting <i className="fas fa-chevron-down fa-xs"></i></div>
 							</div>
 						</div>
-						<div className="row py-md-4">
-					<div className="col-md-4 products text-center my-md-4">
-					      	  	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs text-secondary"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-featured">
-						      	<img className="img-fluid" src={require('../images/product-1.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-4 products text-center my-md-4">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image">
-						      	<img className="img-fluid" src={require('../images/product-2.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-4 products text-center my-md-4">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image product-sale">
-						      	<img className="img-fluid" src={require('../images/product-3.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-						      <div className="col-md-4 products text-center my-md-4">
-						      	<div className="rate-star">
-					      	  		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-					      	  	</div>
-					      	  	<div className="product-image">
-						      	<img className="img-fluid" src={require('../images/product-4.png')} alt="First slide"/>
-						      	</div>
-						      	<p className="text-secondary font-italic mt-md-3">food, health, nutrition</p>
-						      	<p className="font-weight-bold">ALCOHOL-FREE HAND SANITIZER</p>
-						      	<p className="color-main2 font-weight-bold">56.00$</p>
-						      	<button className="btn btn-outline-secondary">ADD TO CART</button>
-						      </div>
-				</div>
+						<ProductsList prds={prdStore.getAll()}/>
 					</div>
 					<div className="col-md-3">
 						<div className="row">

@@ -239,7 +239,7 @@ s .carousel-control-prev{
 .product-image img{
   transition: all .8s ease;
 }
-.product-image:hover img{
+.products:hover img{
   transform:  scale(1.05);
 }
 .product-featured::after{
@@ -298,6 +298,11 @@ s .carousel-control-prev{
   height: 12px!important;
   border-radius: 50%;
   border: 3px solid lightgray;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.carousel-indicators li:hover{
+  border-color: black;
 }
 .sub-follow{
   background-color: #889B53;
