@@ -69,10 +69,10 @@ class Header extends React.Component{
                                 <Link className="nav-link" to="/about">About</Link>
                               </li>
                               <li className="nav-item py-md-4">
-                                <a className="nav-link" href="#">Blog</a>
+                                <Link className="nav-link" to="/blog">Blog</Link>
                               </li>
                               <li className="nav-item py-md-4">
-                                <a className="nav-link" href="#">Contacts</a>
+                               <Link className="nav-link" to="/contacts">  Contacts</Link>
                               </li>
                             </ul>
                           </div>

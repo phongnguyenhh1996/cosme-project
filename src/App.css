@@ -199,7 +199,8 @@ nav .dropdown-item:hover{
 h3.title{
   border-top: 1px dashed lightgray;
 }
-.slide-products .carousel-control-next, .slide-products .carousel-control-prev{
+.slide-products .carousel-control-next, .slide-
+s .carousel-control-prev{
   height: 50px;
   width: 50px;
   border: 1px solid gray;
@@ -544,7 +545,7 @@ float: left;
 padding-right: 20px;
 }
 .images2{
-height: 150px;
+height: 160px;
 float: left;
 padding-right: 20px;
 }
@@ -557,3 +558,258 @@ padding-right: 20px;
 .by{
   color: #88BB42;
 }
+.contacts-info p:first-of-type{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.contacts-info p a{
+  color: black;
+  transition: all .3s;
+}
+.contacts-info p a:hover{
+  color: #EA375C;
+  text-decoration: none;
+  transition: all .3s;
+}
+.contacts-info p:last-child a{
+  color: #EA375C;
+}
+.contacts-info p:last-child a:hover{
+  color: black;
+}
+.contact-form label span{
+  color: #EA375C;
+}
+.making-your h2{
+    border-top: 1px solid lightgray;
+}
+.making-your p{
+  padding-bottom: 20px;
+  padding-top: 10px;
+
+}
+.subscribe-follow p{
+  color: gray;
+
+}
+.subscribe-follow a{
+  color: lightgray;
+}
+
+.subscribe{
+   border: 1px solid lightgray;
+  text-align: center;
+   padding-left: 20px;
+   padding-right: 20px;
+
+}
+.subscribe p{
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.subscribe input{
+margin: 0 auto;
+  
+}
+.subscribe  button{
+  transition: all .3s;
+   background: #EA375C;
+  border-color:#EA375C;
+  border-radius: 0;
+
+}
+.subscribe button:hover{
+ background: black;
+  border-color: black;
+}
+.follow{
+   border: 1px solid lightgray;
+   border-top: none;
+    text-align: center;
+   padding-left: 20px;
+   padding-right: 20px;
+
+}
+
+
+.social1 .nav-link{
+  padding: .5rem .5rem;
+  color: lightgray;
+  transition: color .3s;
+}
+.social1 .nav-link:hover{
+  color: #8DAC5C;}
+
+
+.row p{
+  font-family: Lora, serif;
+    font-size: 20px;
+}
+.title h1 a{
+  color: black;
+  text-decoration: none;
+  transition: all .3s;
+
+}
+.title h1 a:hover{
+  color:#EA375C ;
+}
+.publish{
+  color: lightgray;
+}
+ .publish a{
+  color:#EA375C ;
+ text-decoration: none;
+  transition: all .3s;
+}
+.publish a:hover{
+  color: black;
+  text-decoration: none;
+}
+.publish .dot{
+  position: relative;
+}
+.publish .dot::before{
+  content: " ";
+  position: absolute;
+  background-color: #ACD674;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.btn.button1{
+  transition: all .3s;
+  background: #EA375C;
+  border-color:#EA375C;
+  border-radius: 0;
+
+
+}
+
+.btn.button1:hover{
+ background: black;
+  border-color: black;
+}
+.title1 {
+  border-top:1px solid lightgray;
+}
+.title1 h1 a{
+  color: black;
+  text-decoration: none;
+  transition: all .3s;
+
+}
+.title1 h1 a:hover{
+  color:#EA375C ;
+}
+.quote{
+  background-color: #3A3A3A;
+}
+.quote p{
+  color: white;
+}
+
+
+
+#products h3{
+  background-color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  bottom: 30px;
+  width: 70%;
+  font-weight: bold;
+}
+
+.link>a{
+   color:#444341!important;
+  transition: color .3s;
+
+}
+.link p{
+  background-color: #444341;
+  position: absolute;
+color: white;
+top: 54%;
+left: 50%;
+  transform: translate(-50%,-50%);
+}
+.link:hover p{
+color: white;
+  background-color:#444341;
+  transition: all .3s ease;
+}
+
+.link1{
+  background-color: #444341;
+  position: absolute;
+color: white;
+top: 50%;
+left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.gallery-search
+{
+background-color:gray;
+color: white;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%,-50%);
+
+
+}
+
+.recent-posts{
+  color: lightgray;
+
+}
+
+.recent-posts a{
+  color: #90C744;
+  text-decoration: none;
+    transition: color .3s;
+}
+.recent-posts a:hover{
+  text-decoration: none;
+  color: #484848;
+}
+.recent-posts h5 a{
+   text-decoration: none;
+  color: #484848;
+      transition: color .3s;
+}
+.recent-posts h5  a:hover{
+   color: #90C744;
+  text-decoration: none;
+}
+.pagination li a{
+  background-color: white;
+  color: black;
+}
+.pagination li a:hover{
+  background-color:#91C846 ;
+  color: white;
+}
+.pagination li:active a{
+  background-color: red;
+}
+ .slide-2 .carousel-control-next, .slide-2 .carousel-control-prev
+{
+  background-color: lightgray;
+  color:blue !important;
+
+}
+.slide-2 .carousel-control-next:hover, .slide-2 .carousel-control-prev:hover
+{
+background-color:#8DC63F ;
+}
+
