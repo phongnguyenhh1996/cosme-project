@@ -10,6 +10,7 @@ import About from './pages/About';
 import Shop from './pages/Shop';
 import Contacts from './pages/Contacts';
 import ProductList from './pages/product-list';
+import ProductDetail from './pages/productDetail';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Blog from './pages/Blog';
 
@@ -21,7 +22,8 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/shop" component={Shop} />
-          <Route path="/shop/product_list" component={ProductList} />
+          <Route exact path="/shop/product_list" component={ProductList} />
+          <Route path="/shop/product_list/product_detail" component={ProductDetail} />
           <Route path="/about" component={About} />
            <Route path="/contacts" component={Contacts} />
           <Route path="/blog" component={Blog} />
