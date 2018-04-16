@@ -894,3 +894,14 @@ background-color:#8DC63F ;
 .product-tab table{font-size:20px}
 .product-tab .tab-content h5{font-weight:600;}
 .product-tab .tab-content p{font-size:18px; line-height: 30px;}
+.product-tab .comment{
+  border: 1px solid lightgray;
+}
+.product-tab .comment img{float:left}
+.product-tab .comment li{line-height:30px; word-spacing: 8px;}
+
+.add-review label::after{
+  content: '*';
+  color: #EA375C;
+}
+.add-review input, .add-review textarea{border-radius:0;}

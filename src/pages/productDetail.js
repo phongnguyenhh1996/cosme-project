@@ -136,7 +136,7 @@ class ProductDetail extends React.Component{
 						</div>
 					</div>
 				</div>
-				<div className="row px-md-5">
+				<div className="row px-md-5 pb-md-5">
 					<div className="col-md-12 product-tab">
 						<nav>
 						  <div class="nav" id="nav-tab" role="tablist">
@@ -145,7 +145,7 @@ class ProductDetail extends React.Component{
 						    <a class="nav-item nav-link pb-md-4" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">REVIEWS (2)</a>
 						  </div>
 						</nav>
-						<div class="tab-content pt-md-5 pb-md-4" id="nav-tabContent">
+						<div class="tab-content py-md-5" id="nav-tabContent">
 						  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 						  <h5 className="pb-md-3">Description</h5>
 						  <p>
@@ -179,8 +179,73 @@ class ProductDetail extends React.Component{
 						  </div>
 						  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 						  <h5 className="pb-md-3">2 Reviews for Alcohol-Free Hand Sanitizer</h5>
+						  <div className="comment clearfix d-flex align-items-center p-md-4 mb-md-4">
+						  	<img className="rounded-circle" src={require('../images/customer-avatar.png')} />
+						  	<ul className="list-unstyled mb-md-0 ml-md-3">
+						  		<li className="font-italic text-secondary">Posted by <span className="color-main2">admin</span>  •  <span className="color-main2">Sep 27, 2016</span></li>
+						  		<li>"This store is the best, forget the rest!"</li>
+						  		<li>
+						  			<div className="rate-star">
+								   		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
+									</div>
+						  		</li>
+						  	</ul>
+						  </div>
+						  <div className="comment clearfix d-flex align-items-center p-md-4 ml-5 mb-md-4">
+						  	<img className="rounded-circle" src={require('../images/customer-avatar.png')} />
+						  	<ul className="list-unstyled mb-md-0 ml-md-3 w-75">
+						  		<li className="font-italic text-secondary">Posted by <span className="color-main2">admin</span>  •  <span className="color-main2">Sep 27, 2016</span></li>
+						  		<li className="color-main2">"Exactly!"</li>
+						  		<li> </li>
+						  	</ul>
+						  </div>
+						  <div className="comment clearfix d-flex align-items-center p-md-4 mb-md-4">
+						  	<img className="rounded-circle" src={require('../images/customer-avatar.png')} />
+						  	<ul className="list-unstyled mb-md-0 ml-md-3">
+						  		<li className="font-italic text-secondary">Posted by <span className="color-main2">admin</span>  •  <span className="color-main2">Sep 27, 2016</span></li>
+						  		<li>"24/7 helpdesk is also available. I Love it!"</li>
+						  		<li>
+						  			<div className="rate-star">
+								   		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
+									</div>
+						  		</li>
+						  	</ul>
+						  </div>
+						  <div className="comment clearfix d-flex align-items-center p-md-4 ml-5">
+						  	<img className="rounded-circle" src={require('../images/customer-avatar.png')} />
+						  	<ul className="list-unstyled mb-md-0 ml-md-3 w-75">
+						  		<li className="font-italic text-secondary">Posted by <span className="color-main2">admin</span>  •  <span className="color-main2">Sep 27, 2016</span></li>
+						  		<li className="color-main2">"Thank you!"</li>
+						  		<li> </li>
+						  	</ul>
+						  </div>
+						  <div className="add-review mt-md-5">
+						  	<h5 className="pb-md-3">Add a review</h5>
+						  	<form className="w-50">
+						  	  <div class="form-group">
+							    <label>Your Rating: </label> <i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i>			
+							  </div>
+							  <div class="form-group">
+							    <label for="review">Your Review: </label>
+							    <textarea type="email" class="form-control" id="review" aria-describedby="emailHelp" cols="45" rows="8"></textarea>
+							  </div>
+							  <div class="form-group">
+							    <label for="name">Your Name: </label>
+							    <input type="password" class="form-control" id="name" />
+							  </div>
+							  <div class="form-group">
+							    <label for="email">Your Email: </label>
+							    <input type="email" class="form-control" id="email" />
+							  </div>
+							  <button type="submit" class="btn button1 text-white">Submit</button>
+							</form>
+						  </div>
 						  </div>
 						</div>
+					</div>
+					<div className="col-md-12">
+						<h3 className="text-center title w-100 py-md-5"><span className="font-weight-bold">RELATED</span> PRODUCTS</h3>
+						<ProductsList prds={prdStore.getAll()} showprd="featured"/>
 					</div>
 				</div>
 			</div>
