@@ -85,7 +85,9 @@ class Header extends React.Component{
                                 <a className="nav-link shopping-cart" href="#"><i className="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">1</span></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><i className="fas fa-user fa-lg"></i></a>
+                            <Link className="nav-link" to="/login" id="navbarDropdown">
+                               <i className="fas fa-user fa-lg"></i> 
+                                </Link>
                             </li>
                         </ul>
                         </div>

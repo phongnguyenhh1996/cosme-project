@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Shop from './pages/Shop';
 import Contacts from './pages/Contacts';
+import Login from './pages/Login';
 import ProductList from './pages/product-list';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Blog from './pages/Blog';
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/about" component={About} />
            <Route path="/contacts" component={Contacts} />
           <Route path="/blog" component={Blog} />
+          <Route path="/login" component={Login} />
           <Footer />
         </div>
       </Router>
