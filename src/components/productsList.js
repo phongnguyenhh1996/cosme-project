@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class RateStar extends React.Component{
 	render(){
@@ -34,7 +35,7 @@ class ProductsList extends React.Component{
 			if (prd.featured){return	<div className="col-md-3 products" key={prd.id}>
 			      	  	<RateStar star={prd.star}/>
 			      	  	<div className="product-image product-featured">
-				      	<img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/>
+				      	<Link to="/shop/product_list/product_detail"><img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/></Link>
 				      	</div>
 				      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 				      	<p className="font-weight-bold">{prd.name}</p>
@@ -53,7 +54,7 @@ class ProductsList extends React.Component{
 				if (prd.sale){return	<div className="col-md-3 products" key={prd.id}>
 				      	  	<RateStar star={prd.star}/>
 				      	  	<div className="product-image product-sale">
-					      	<img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/>
+					      	<Link to="/shop/product_list/product_detail"><img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/></Link>
 					      	</div>
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
@@ -75,7 +76,7 @@ class ProductsList extends React.Component{
 					return	<div className="col-md-4 products text-center my-md-4" key={prd.id}>
 				      	  	<RateStar star={prd.star}/>
 				      	  	<div className={status}>
-					      	<img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/>
+					      	<Link to="/shop/product_list/product_detail"><img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/></Link>
 					      	</div>
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
