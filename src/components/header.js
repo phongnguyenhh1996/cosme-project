@@ -39,7 +39,7 @@ class Header extends React.Component{
                 </div>
                 <div className="row px-md-5 py-md-3">
                     <div className="col-md-3">
-                        <a href="#"><img className="img-fluid" src={require('../images/logo.png')} /></a>
+                        <Link to="/"><img className="img-fluid" src={require('../images/logo.png')} /></Link>
                     </div>
                     <div className="col-md-6">
                         <nav className="navbar navbar-expand-lg navbar-light">
@@ -81,11 +81,35 @@ class Header extends React.Component{
                     <div className="col-md-3">
                         <div className="row py-md-4 my-md-2 justify-content-md-end">
                         <ul className="nav social">
-                            <li className="nav-item">
-                                <a className="nav-link shopping-cart" href="#"><i className="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">1</span></a>
+                            <li className="nav-item dropdown shopping-cart">
+                                <a className="nav-link " href="#" role="button" id="dropdownCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">1</span></a>
+                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownCart">
+                                    <h4 className="mb-md-3">My Cart</h4>
+                                    <div className="cart-content pt-md-3">
+                                      <div className="cart-item clearfix mb-md-3">
+                                      <img src={require('../images/product-1.png')} />
+                                      <ul className="list-unstyled ml-md-5">
+                                        <li className="pb-md-2"><a href="#">Serumtologie C serum</a></li>
+                                        <li>1 x <span className="price">32.00$</span></li>
+                                      </ul>
+                                      <button className="btn"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    <div className="cart-item clearfix mb-md-3">
+                                      <img src={require('../images/product-2.png')} />
+                                      <ul className="list-unstyled ml-md-5">
+                                        <li className="pb-md-2"><a href="#">Serumtologie C serum</a></li>
+                                        <li>1 x <span className="price">32.00$</span></li>
+                                      </ul>
+                                      <button className="btn"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    </div>
+                                    <h4 className="my-md-3 subtotal">SUBTOTAL: <span className="price">32.00$</span></h4>
+                                    <a href="#" className="btn view-card w-100 mb-md-3">VIEW CART</a>
+                                    <a href="#" className="btn check-out w-100">CHECK OUT</a>
+                                  </div>   
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/login" id="navbarDropdown">
+                            <Link className="nav-link" to="/login">
                                <i className="fas fa-user fa-lg"></i> 
                                 </Link>
                             </li>

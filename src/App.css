@@ -88,7 +88,6 @@ nav.navbar .dropdown .dropdown-menu {
     visibility: hidden;
     overflow: hidden;
     opacity: 0;
-    transform: translate(0, 0);
     top: 120%;
     border: none;
     background-color: #F5F5F5;
@@ -99,7 +98,7 @@ nav.navbar .dropdown-menu a{
 }
 
 nav.navbar .dropdown:hover .dropdown-menu {
-    transform: translate(0, -20px);
+    top: 95%;
     opacity: 1;
     visibility: visible;
 }
@@ -117,10 +116,77 @@ nav.navbar .dropdown-item:hover{
 .shopping-cart{
   position: relative;
 }
-.shopping-cart span{
+.shopping-cart span.badge{
   position: absolute;
   right: 0;
   top: 0;
+}
+.shopping-cart .dropdown-menu{
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: 0 0 10px 3px rgba(165, 165, 165, 0.1);
+  top: 70%!important;
+  transition: all 0.3s;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  width: 354px;
+  max-width: 354px;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+.shopping-cart.show .dropdown-menu{
+  top: 50%!important;
+  opacity: 1;
+  visibility: visible;
+}
+.cart-content{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.cart-item{
+  position: relative;
+}
+.shopping-cart .price{
+  color: #95CA4C;
+  font-weight: bold;
+  font-size: 20px;
+  
+}
+.shopping-cart .subtotal{
+  font-weight: 600;
+}
+.shopping-cart a.btn.w-100{
+  color: white;
+  font-weight: bold;
+  border-radius: 0;
+}
+.shopping-cart a.btn.view-card{
+  background-color: #2F2F2F;
+}
+.shopping-cart a.btn.view-card:hover{
+  background-color: #8DC63F;
+}
+.shopping-cart a.btn.check-out{
+  background-color: #8DC63F;
+}
+.shopping-cart a.btn.check-out:hover{
+  background-color: #2F2F2F;
+}
+.cart-item li a{
+  color: black;
+  transition: all .3s;
+}
+.cart-item li a:hover{
+  text-decoration: none;
+  color: #95CA4C;
+}
+.cart-item img{width:63px; float:left;}
+.cart-item button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
 }
 .page-footer .nav-link{
   color: #88BB42!important;
