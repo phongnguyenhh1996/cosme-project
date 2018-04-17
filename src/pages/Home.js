@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProductsList from '../components/productsList';
 import prdStore from '../stores/productsStore';
+import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 
 class Home extends React.Component{
 	render(){
@@ -76,11 +77,11 @@ class Home extends React.Component{
 					<h3 className="text-center title w-100 py-md-5"><span className="font-weight-bold">ORGANICA</span> NEWS & EVENTS</h3>
 					<div className="col-md-6">
 						<img className="img-fluid" src={require('../images/new-event.jpg')}/>
-						<a href="#"><h3 className="pl-md-5 pb-md-4">What Are Superfoods?</h3></a>
+						<Link to="/blog"><h3 className="pl-md-5 pb-md-4">What Are Superfoods?</h3></Link>
 					</div>
 					<div className="col-md-6">
 						<img className="img-fluid" src={require('../images/new-event-2.jpg')}/>
-						<a href="#"><h3 className="pl-md-5 pb-md-4">Supplement Facts</h3></a>
+						<Link to="/blog"><h3 className="pl-md-5 pb-md-4">Supplement Facts</h3></Link>
 					</div>
 				</div>
 				<div className="row px-md-5 pb-md-5">

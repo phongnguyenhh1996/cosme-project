@@ -131,68 +131,9 @@ class Blog extends React.Component{
 		                        <a className="nav-link" href="#"><i className="fab fa-pinterest"></i></a>                            </li>
 	                        </ul>
 	                        
-	                        <button type="submit" className="btn btn-primary button1 ">READ MORE</button>
+	                        <button className="btn btn-primary button1 ">READ MORE</button>
 	                   
 	                   	</div>
-
-						<div className="title1 pd-md-5">
-
-							<h1 className="pt-md-5">
-								<a href="#">Audio Format
-								</a>
-							</h1>
-						</div>
-					<div className="publish pd-md-5">
-					
-						Published on  
-						<a href="#" className="px-md-2">Sep 27, 2016 </a>
-						<span className="dot px-md-2"></span>
-						by
-						<a href="#" className="px-md-2">Admin </a>
-						<span className="dot px-md-2"></span>
-					
-						<a href="# px-md-2"> 0 comments</a>
-					</div>
-					<a href="#">
-						<audio className="controls">
-							<source src="horse.ogg" type="audio/ogg"/>
-						</audio>
-					</a>
-					<p> Whole grains — named such because, unlike refined grains, they are not stripped of their
-					 nutrient-containing bran and germ during processing — have similar benefits to beans,
-					  though they don’t contain as much protein.	
-					 Quinoa is not a grain, but it cooks up like one,…
-					</p>
-					<div className="publish pb-md-5">
-					
-						Categories:
-						<a href="# px-md-2" >Organic Brands,</a>
-						<a href="# px-md-2">Uncategorized</a>
-						<span className="dot px-md-2"></span>
-						Tag:  
-						<a href="#" className="px-md-2">cometic,</a>
-						<a href="#" className="px-md-2">organic</a>
-					</div>
-					<div className="row pt-md-5 pb-md-5 justify-content-between">
-						<ul className="nav social1 ">
-	                        <li className="nav-item">
-	                             <a className="nav-link" href="#"><i className="fab fa-facebook-f"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-twitter"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-google-plus-g"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-linkedin-in"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                        <a className="nav-link" href="#"><i className="fab fa-pinterest"></i></a>                            </li>
-                        </ul>
-                        
-                        <button type="submit" className="btn btn-primary button1 ">READ MORE</button>                
-					</div>
 					<div className="title1 pd-md-5">
 						<h1 className="pt-md-5">
 							<a href="#">Video Format
@@ -210,7 +151,7 @@ class Blog extends React.Component{
 					<div>
 						<a href="#">
 							<video width="500" controls>
- 					 			<source src="https://youtu.be/2F5Z50q4FNk" type="video/mp4"/>
+ 					 			<source src="https://www.youtube.com/watch?v=rpLITtLRltw" type="video/mp4"/>
  							 Your browser does not support HTML5 video.
 							</video>
 						</a>
@@ -307,64 +248,6 @@ class Blog extends React.Component{
                         
                         <button type="submit" className="btn btn-primary button1 ">READ MORE</button>                
 					</div>
-					<div className="title1 pd-md-5">
-
-						<h1 className="pt-md-5">
-							<a href="#">Link Format
-							</a>
-						</h1>
-					</div>
-					<div className="publish pd-md-5 pb-md-5" >
-					
-						Published on  
-						<a href="#" className="px-md-2">Sep 27, 2016</a>
-						<span className="dot px-md-2"></span>
-						by
-						<a href="#" className="px-md-2">Admin</a>
-						<span className="dot px-md-2"></span>
-						<a href="#" className="px-md-2"> 2 comments</a>
-					</div>
-					<div className="link">
-						<a   href="#">
-							<img className="img-fluid" src={require('../images/Blog 3.jpg')} />
-							<p className="text-center py-md-3">
-							http://www.templatemoster.com	</p>
-						</a>
-					</div>
-					<p className="pt-md-5">Blueberries often top many lists of superfoods because they are rich in vitamins,
-					 soluble fiber and phytochemicals. But the same nutrients found in blueberries are also found in many other 
-					 kinds of berries, including strawberries and cranberries.
-					 However, there are no set criteria for determining what…
-					</p>
-					<div className="publish px-md-2">
-						Categories:
-						<a href="#">Organic Brands,</a>
-						<a href="#">Organic Skincare</a>
-						<span className="dot px-md-2"></span>
-						Tag:
-						<a href="#" className="px-md-2">food</a>
-					</div>
-					<div className="row pt-md-5 pb-md-5 justify-content-between">
-						<ul className="nav social1 ">
-	                        <li className="nav-item">
-	                             <a className="nav-link" href="#"><i className="fab fa-facebook-f"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-twitter"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-google-plus-g"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-linkedin-in"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                        <a className="nav-link" href="#"><i className="fab fa-pinterest"></i></a>                            </li>
-                        </ul>
-                        
-                        <button type="submit" className="btn btn-primary button1 ">READ MORE</button>                
-					</div>
-					
 					<div className="title1 pd-md-5">
 
 						<h1 className="pt-md-5">
