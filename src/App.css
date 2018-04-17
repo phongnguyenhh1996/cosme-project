@@ -84,11 +84,11 @@ nav.navbar .nav-link:hover{
 }
 nav.navbar .dropdown .dropdown-menu {
     display: block;
-    transition: all 0.3s;
+    transition: visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;
     visibility: hidden;
     overflow: hidden;
     opacity: 0;
-    top: 120%;
+    top: 105%;
     border: none;
     background-color: #F5F5F5;
     padding: 1rem 2rem;
@@ -101,6 +101,7 @@ nav.navbar .dropdown:hover .dropdown-menu {
     top: 95%;
     opacity: 1;
     visibility: visible;
+    transition-delay:0s;
 }
 nav.navbar .dropdown-item{
   transition: all .3s ease;
@@ -126,20 +127,22 @@ nav.navbar .dropdown-item:hover{
   border-radius: 0;
   box-shadow: 0 0 10px 3px rgba(165, 165, 165, 0.1);
   top: 70%!important;
-  transition: all 0.3s;
+  transition:visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;
   overflow: hidden;
-  padding: 1rem 2rem;
+  padding: 2rem;
   width: 354px;
   max-width: 354px;
   display: block;
   visibility: hidden;
   opacity: 0;
 }
-.shopping-cart.show .dropdown-menu{
+.shopping-cart.show .dropdown-menu,.shopping-cart .dropdown-menu:hover{
   top: 50%!important;
   opacity: 1;
   visibility: visible;
+  transition-delay:0s;
 }
+
 .cart-content{
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -187,6 +190,7 @@ nav.navbar .dropdown-item:hover{
   top: 0;
   right: 0;
   background-color: transparent;
+  padding: 0;
 }
 .page-footer .nav-link{
   color: #88BB42!important;
