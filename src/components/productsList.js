@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import * as CartActions from '../actions/CartActions';
+import cartStore from '../stores/cartStore';
+
+class AddToCart extends React.Component{
+	constructor(props){
+		super(props);
+		this.addItem= this.addItem.bind(this);
+	}
+	addItem(){
+		let item = this.props.item;
+		CartActions.addItem(item.id,item.name,item.price,item.img);
+	}
+	render(){
+		return(
+			<button className="btn btn-outline-secondary" onClick={this.addItem}>ADD TO CART
+			</button>
+		);
+	}
+}
 
 class RateStar extends React.Component{
 	render(){
@@ -40,7 +59,7 @@ class ProductsList extends React.Component{
 				      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 				      	<p className="font-weight-bold">{prd.name}</p>
 				      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
-				      	<button className="btn btn-outline-secondary">ADD TO CART</button>
+				      	<AddToCart item={prd}/>
 			      	</div>}}
 			)
 			}
@@ -59,7 +78,7 @@ class ProductsList extends React.Component{
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
 					      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className="text-secondary ml-md-2">{prd.oldprice.toFixed(2)}$</span></p>
-					      	<button className="btn btn-outline-secondary">ADD TO CART</button>
+					      	<AddToCart item={prd}/>
 				      	</div>}}
 				)
 				}
@@ -81,7 +100,7 @@ class ProductsList extends React.Component{
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
 					      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$ {salePrice}</p>
-					      	<button className="btn btn-outline-secondary">ADD TO CART</button>
+					      	<AddToCart item={prd}/>
 				      	</div>}
 				)
 				}

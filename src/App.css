@@ -127,7 +127,7 @@ nav.navbar .dropdown-item:hover{
   border-radius: 0;
   box-shadow: 0 0 10px 3px rgba(165, 165, 165, 0.1);
   top: 70%!important;
-  transition:visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;
+  transition:visibility 0s linear 0.5s,opacity 0.2s linear, top 0.2s linear;
   overflow: hidden;
   padding: 2rem;
   width: 354px;
@@ -135,17 +135,20 @@ nav.navbar .dropdown-item:hover{
   display: block;
   visibility: hidden;
   opacity: 0;
+  left: -300px;
 }
 .shopping-cart.show .dropdown-menu,.shopping-cart .dropdown-menu:hover{
   top: 50%!important;
   opacity: 1;
   visibility: visible;
-  transition-delay:0s;
+  transition-delay: 0s;
 }
 
 .cart-content{
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
+  max-height: 193px;
+  overflow-y: auto;
 }
 .cart-item{
   position: relative;
