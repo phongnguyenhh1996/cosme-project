@@ -3,6 +3,7 @@ import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-d
 import prdStore from '../stores/productsStore';
 import ProductsList from '../components/productsList';
 import Slider from "react-slick";
+import RateStar from '../components/rateStar';
 
 class ProductDetail extends React.Component{
 	constructor(props) {
