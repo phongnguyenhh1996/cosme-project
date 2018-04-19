@@ -6,7 +6,6 @@ import cartStore from '../stores/cartStore';
 class AddToCart extends React.Component{
 	constructor(props){
 		super(props);
-		this.addItem= this.addItem.bind(this);
 	}
 	addItem(){
 		let item = this.props.item;
@@ -14,7 +13,7 @@ class AddToCart extends React.Component{
 	}
 	render(){
 		return(
-			<button className="btn btn-outline-secondary" onClick={this.addItem}>ADD TO CART
+			<button className="btn btn-outline-secondary" onClick={this.addItem.bind(this)}>ADD TO CART
 			</button>
 		);
 	}

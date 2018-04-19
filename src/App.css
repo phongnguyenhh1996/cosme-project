@@ -143,15 +143,23 @@ nav.navbar .dropdown-item:hover{
   visibility: visible;
   transition-delay: 0s;
 }
-
-.cart-content{
+.shopping-cart h4.border-bottom{
+  border-bottom: 1px solid gray!important;
+}
+h4.subtotal{
   border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  max-height: 193px;
+}
+.cart-content{
+  max-height: 191px;
   overflow-y: auto;
+  transition: all .3s;
 }
 .cart-item{
   position: relative;
+  transition: background-color .5s;
+}
+.cart-item:hover{
+  background-color: rgba(245, 245, 245, 1.0);
 }
 .shopping-cart .price{
   color: #95CA4C;

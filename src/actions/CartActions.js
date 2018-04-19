@@ -9,3 +9,10 @@ export function addItem(id,name,price,img) {
         img
     });
 }
+
+export function deleteItem(id) {
+    dispatcher.dispatch({
+        type: "DELELE_ITEM",
+        id
+    });
+}

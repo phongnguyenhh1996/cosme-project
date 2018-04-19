@@ -37,13 +37,28 @@ class CartStore extends EventEmitter{
 				};            
         this.emit("change");
 	}
+    deleteItem(id){
+        let a = this.items;
+        for (var i=0; i<a.length;i++){
+            if(id == a[i].id){
+                this.items.splice(i, 1);
+                break;
+            }
+        };
+        this.emit("change");
+    }
 	getAll() {
         return this.items;
     }
     handleAction(action) {
         switch (action.type){
             case "ADD_ITEM": {
-                this.addItem(action.id,action.name,action.price,action.img)
+                this.addItem(action.id,action.name,action.price,action.img);
+                break;
+            }
+            case "DELELE_ITEM": {
+                this.deleteItem(action.id);
+                break;
             }
         }
     }
