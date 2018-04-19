@@ -9,7 +9,8 @@ class ProductDetail extends React.Component{
     super(props);
     this.state = {
       nav1: null,
-      nav2: null
+      nav2: null,
+      prds: prdStore.getAll()
     };
   }
 
@@ -20,122 +21,131 @@ class ProductDetail extends React.Component{
     });
   }
 	render(){
+		const prds = this.state.prds;
 		return(
 			<div className="container-fluid">
-				<div className="row px-md-5 py-md-3">
-					<nav aria-label="breadcrumb ">
-					  <ol className="breadcrumb bg-white">
-					    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-					    <li className="breadcrumb-item"><Link to="/shop">Shop</Link></li>
-					    <li className="breadcrumb-item"><Link to="/shop/product_list">Products List</Link></li>
-					    <li className="breadcrumb-item active" aria-current="page">Products Detail</li>
-					  </ol>
-					</nav>
-					<div className="w-100 border-bottom-dashed mx-md-3"></div>
-				</div>			
-				<div className="row px-md-5 py-md-5">
-					<div className="col-md-6 product-image-slide">
-						<Slider className="img-big mb-md-5"
-				          asNavFor={this.state.nav2}
-				          ref={slider => (this.slider1 = slider)}
-				          infinite={false}
-				          arrows={false}
-				        >
-				          <div>
-				            <img className="img-fluid mx-auto" src={require('../images/product-1-detail-1.png')}/>
-				          </div>
-				          <div>
-				            <img className="img-fluid mx-auto" src={require('../images/product-1-detail-2.png')}/>
-				          </div>
-				          <div>
-				            <img className="img-fluid mx-auto" src={require('../images/product-1-detail-3.png')}/>
-				          </div>
-				          <div>
-				            <img className="img-fluid mx-auto" src={require('../images/product-1-detail-4.png')}/>
-				          </div>
-				          <div>
-				            <img className="img-fluid mx-auto" src={require('../images/product-1-detail-5.png')}/>
-				          </div>
-				        </Slider>
-				        <Slider
-				          asNavFor={this.state.nav1}
-				          ref={slider => (this.slider2 = slider)}
-				          slidesToShow={4}
-				          swipeToSlide={true}
-				          focusOnSelect={true}
-				          infinite={false}
-				          arrows={true}
-				        >
-				          <div className="img-list">
-				            <img className="img-fluid" src={require('../images/product-1-detail-1.png')}/>
-				          </div>
-				          <div className="img-list">
-				            <img className="img-fluid" src={require('../images/product-1-detail-2.png')}/>
-				          </div>
-				          <div className="img-list">
-				            <img className="img-fluid" src={require('../images/product-1-detail-3.png')}/>
-				          </div>
-				          <div className="img-list">
-				            <img className="img-fluid" src={require('../images/product-1-detail-4.png')}/>
-				          </div>
-				          <div className="img-list">
-				            <img className="img-fluid" src={require('../images/product-1-detail-5.png')}/>
-				          </div>
-				        </Slider>
-					</div>
-					<div className="col-md-6 product-detail">
-						<div className="rate-star mb-md-3">
-					   		<i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i><i className="fas fa-star fa-xs"></i>
-						</div>
-						<div className="clearfix mb-md-4">
-							<h1 className="w-75">ALCOHOL-FREE HAND SANITIZER</h1>
-							<p className="font-weight-bold color-main2 mb-md-0">46.00$</p>
-							<a className="float-right" href="#">(2 customer reviews)</a>
-						</div>
-						<div className="product-meta pt-md-4 pb-md-2">
-							<p>SKU: N/A</p>
-							<p>Categories: <a href="#">Amino Acids</a>, <a href="#">Antioxidants</a>, <a href="#">Multivitamins</a></p>
-							<p>Tags: <a href="#">food</a>, <a href="#">nutrition</a></p>
-						</div>
-						<p className="pt-md-4">It is actually slightly more powerful as it contains 22% Vitamin C.</p>
-						<div className="cart row py-md-4">
-							<div className="cart-quatity col-md-6">
-								<div className="form-row">
-								    <div class="input-group mb-2 col">
-									  <div class="input-group-prepend">
-									    <span class="input-group-text">-</span>
-									  </div>
-									  <input type="number" value="1" class="form-control" aria-label="Amount (to the nearest dollar)"/>
-									  <div class="input-group-append">
-									    <span class="input-group-text">+</span>
-									  </div>
+			{prds.map((prd) =>{
+				if (this.props.match.params.prdDetail == prd.name){return <div><div className="row px-md-5 py-md-3">
+									<nav aria-label="breadcrumb ">
+									  <ol className="breadcrumb bg-white">
+									    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+									    <li className="breadcrumb-item"><Link to="/shop">Shop</Link></li>
+									    <li className="breadcrumb-item"><Link to="/shop/product_list">Products List</Link></li>
+									    <li className="breadcrumb-item active" aria-current="page">{prd.name}</li>
+									  </ol>
+									</nav>
+									<div className="w-100 border-bottom-dashed mx-md-3"></div>
+								</div>			
+								<div className="row px-md-5 py-md-5">
+									<div className="col-md-6 product-image-slide">
+										<Slider className="img-big mb-md-5"
+								          asNavFor={this.state.nav2}
+								          ref={slider => (this.slider1 = slider)}
+								          infinite={false}
+								          arrows={false}
+								        >
+								          	<div>
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-1.png')}/>
+								          </div>
+								          <div>
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-2.png')}/>
+								          </div>
+								          <div>
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-3.png')}/>
+								          </div>
+								          <div>
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-4.png')}/>
+								          </div>
+								          <div>
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-5.png')}/>
+								          </div>
+								          <div>
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-6.png')}/>
+								          </div>
+								        </Slider>
+								        <Slider
+								          asNavFor={this.state.nav1}
+								          ref={slider => (this.slider2 = slider)}
+								          slidesToShow={4}
+								          swipeToSlide={true}
+								          focusOnSelect={true}
+								          infinite={false}
+								          arrows={true}
+								        >
+								          <div className="img-list">
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-1.png')}/>
+								          </div>
+								          <div className="img-list">
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-2.png')}/>
+								          </div>
+								          <div className="img-list">
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-3.png')}/>
+								          </div>
+								          <div className="img-list">
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-4.png')}/>
+								          </div>
+								          <div className="img-list">
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-5.png')}/>
+								          </div>
+								          <div className="img-list">
+								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-6.png')}/>
+								          </div>
+								        </Slider>
 									</div>
-								  	<div className="col">
-								  	<button className="btn button1 text-white font-weight-bold">ADD TO CART</button>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div className="widget pt-md-3">
-							<ul className="nav social1 ">
-	                        <li className="nav-item">
-	                             <a className="nav-link" href="#"><i className="fab fa-facebook-f fa-sm"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-twitter fa-sm"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-google-plus-g fa-sm"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                            <a className="nav-link" href="#"><i className="fab fa-linkedin-in fa-sm"></i></a>
-	                        </li>
-	                        <li className="nav-item">
-	                        <a className="nav-link" href="#"><i className="fab fa-pinterest fa-sm"></i></a>                            </li>
-                        </ul>
-						</div>
-					</div>
-				</div>
+									<div className="col-md-6 product-detail">
+										<div className="mb-md-3"><RateStar star={prd.star} /></div>	
+										<div className="clearfix mb-md-4">
+											<h1 className="w-75">{prd.name}</h1>
+											<p className="font-weight-bold color-main2 mb-md-0">{prd.price.toFixed(2)}$</p>
+											<a className="float-right" href="#">(2 customer reviews)</a>
+										</div>
+										<div className="product-meta pt-md-4 pb-md-2">
+											<p>SKU: N/A</p>
+											<p>Categories: <a href="#">Amino Acids</a>, <a href="#">Antioxidants</a>, <a href="#">Multivitamins</a></p>
+											<p className="tags">Tags: {prd.tags.map((tag) =>  <a href="#">{tag}</a>)}</p>
+										</div>
+										<p className="pt-md-4">It is actually slightly more powerful as it contains 22% Vitamin C.</p>
+										<div className="cart row py-md-4">
+											<div className="cart-quatity col-md-6">
+												<div className="form-row">
+												    <div class="input-group mb-2 col">
+													  <div class="input-group-prepend">
+													    <span class="input-group-text">-</span>
+													  </div>
+													  <input type="number" value="1" class="form-control" aria-label="Amount (to the nearest dollar)"/>
+													  <div class="input-group-append">
+													    <span class="input-group-text">+</span>
+													  </div>
+													</div>
+												  	<div className="col">
+												  	<button className="btn button1 text-white font-weight-bold">ADD TO CART</button>
+												  	</div>
+												</div>
+											</div>
+										</div>
+										<div className="widget pt-md-3">
+											<ul className="nav social1 ">
+					                        <li className="nav-item">
+					                             <a className="nav-link" href="#"><i className="fab fa-facebook-f fa-sm"></i></a>
+					                        </li>
+					                        <li className="nav-item">
+					                            <a className="nav-link" href="#"><i className="fab fa-twitter fa-sm"></i></a>
+					                        </li>
+					                        <li className="nav-item">
+					                            <a className="nav-link" href="#"><i className="fab fa-google-plus-g fa-sm"></i></a>
+					                        </li>
+					                        <li className="nav-item">
+					                            <a className="nav-link" href="#"><i className="fab fa-linkedin-in fa-sm"></i></a>
+					                        </li>
+					                        <li className="nav-item">
+					                        <a className="nav-link" href="#"><i className="fab fa-pinterest fa-sm"></i></a>                            </li>
+				                        </ul>
+										</div>
+									</div>
+								</div></div>
+				}
+			})}
+				
 				<div className="row px-md-5 pb-md-5">
 					<div className="col-md-12 product-tab">
 						<nav>

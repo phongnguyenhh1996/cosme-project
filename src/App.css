@@ -5,7 +5,6 @@
   font-size: 6rem;
 }
 .page-footer{
-
   margin: 0;
   padding: 0;
   background-color: #657253;
@@ -165,7 +164,6 @@ h4.subtotal{
   color: #95CA4C;
   font-weight: bold;
   font-size: 20px;
-  
 }
 .shopping-cart .subtotal{
   font-weight: 600;
@@ -187,11 +185,11 @@ h4.subtotal{
 .shopping-cart a.btn.check-out:hover{
   background-color: #2F2F2F;
 }
-.cart-item li a{
+.cart-item li a, .cart-item button svg{
   color: black;
   transition: all .3s;
 }
-.cart-item li a:hover{
+.cart-item li a:hover, .cart-item button:hover svg{
   text-decoration: none;
   color: #95CA4C;
 }
@@ -941,8 +939,9 @@ text-decoration: none;
 .product-detail .product-meta{
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
-
 }
+.tags a::after{content:" ,";}
+.tags a:last-child::after{content:"";}
 .product-detail .product-meta a, .product-detail a.float-right{
   color: #EA375C;
   transition: color .3s ease;

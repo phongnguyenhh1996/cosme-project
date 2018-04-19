@@ -8,7 +8,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 1,
 				name: "ALCOHOL-FREE HAND SANITIZER",
-				img: "product-1.png",
+				img: "product-1",
 				price: 46.00,
 				oldprice: 0,
 				featured: true,
@@ -19,7 +19,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 2,
 				name: "SERUMTOLOGIE C SERUM",
-				img: "product-2.png",
+				img: "product-2",
 				price: 32.00,
 				oldprice: 0,
 				featured: true,
@@ -30,7 +30,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 3,
 				name: "ORGANIC GREEN TEA",
-				img: "product-3.png",
+				img: "product-3",
 				price: 19.00,
 				oldprice: 0,
 				featured: true,
@@ -41,7 +41,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 4,
 				name: "EMINENCE STRAWBERRY",
-				img: "product-4.png",
+				img: "product-4",
 				price: 56.00,
 				featured: true,
 				oldprice: 0,
@@ -52,7 +52,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 5,
 				name: "BEST VITAMIN C",
-				img: "product-5.png",
+				img: "product-5",
 				price: 39.00,
 				oldprice: 56.00,
 				featured: false,
@@ -63,7 +63,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 6,
 				name: "SHEA BUTTEК",
-				img: "product-6.png",
+				img: "product-6",
 				price: 36.00,
 				oldprice: 46.00,
 				featured: false,
@@ -74,7 +74,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 7,
 				name: "RESTORING ROSEHIP",
-				img: "product-7.png",
+				img: "product-7",
 				price: 30.00,
 				oldprice: 32.00,
 				featured: false,
@@ -85,7 +85,7 @@ class PrdStore extends EventEmitter{
 			{
 				id: 8,
 				name: "COCONUT OIL",
-				img: "product-8.png",
+				img: "product-8",
 				price: 30.00,
 				oldprice: 46.00,
 				featured: false,
