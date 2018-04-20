@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import prdStore from '../stores/productsStore';
 import ProductsList from '../components/productsList';
+import ScrollToTop from '../components/scrollOnTop';
 
 class ProductList extends React.Component{
 	render(){
 		return(
 			<div className="container-fluid">
+			<ScrollToTop />
 				<div className="row px-md-5 py-md-3">
 					<nav aria-label="breadcrumb ">
 					  <ol className="breadcrumb bg-white">

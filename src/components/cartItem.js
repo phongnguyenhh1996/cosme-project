@@ -22,7 +22,7 @@ class CartContent extends React.Component{
 							{ this.props.itemss.map((item)=>{
 								subtotal+= item.price*item.quantity;
 							return	<div key={item.id} className="cart-item clearfix mb-md-3">
-							          <img src={require('../images/'+ item.img)} />
+							          <img src={require('../images/'+item.img + '.png')} />
 							          <ul className="list-unstyled ml-md-5">
 							            <li className="pb-md-1"><a href="#">{item.name}</a></li>
 							            <li>{item.quantity} x <span className="price">{(item.price*item.quantity).toFixed(2)}$</span></li>

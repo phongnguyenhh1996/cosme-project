@@ -4,14 +4,14 @@ import prdStore from '../stores/productsStore';
 import ProductsList from '../components/productsList';
 import Slider from "react-slick";
 import RateStar from '../components/rateStar';
+import ScrollToTop from '../components/scrollOnTop';
 
-class ProductDetail extends React.Component{
+class ProductsSlide extends React.Component{
 	constructor(props) {
     super(props);
     this.state = {
       nav1: null,
       nav2: null,
-      prds: prdStore.getAll()
     };
   }
 
@@ -21,12 +21,49 @@ class ProductDetail extends React.Component{
       nav2: this.slider2
     });
   }
+
+  render(){
+  	let prdImg = this.props.prdImg;
+  	return(
+  		<div className="col-md-6 product-image-slide">
+			<Slider className="img-big mb-md-5"
+	          asNavFor={this.state.nav2}
+	          ref={slider => (this.slider1 = slider)}
+	          infinite={false}
+	          arrows={false}
+	        >
+	        {Array.apply(null, Array(6)).map((a,index)=> <div><img className="img-fluid" src={require('../images/'+prdImg+'-detail-'+(index+1)+'.png')}/></div>)}
+	        </Slider>
+	        <Slider
+	          asNavFor={this.state.nav1}
+	          ref={slider => (this.slider2 = slider)}
+	          slidesToShow={4}
+	          swipeToSlide={true}
+	          focusOnSelect={true}
+	          infinite={false}
+	          arrows={true}
+	        >
+	          {Array.apply(null, Array(6)).map((a,index)=> <div className="img-list"><img className="img-fluid" src={require('../images/'+prdImg+'-detail-'+(index+1)+'.png')}/></div>)}
+	        </Slider>
+		</div>
+  	);
+  }
+}
+
+class ProductDetail extends React.Component{
+	constructor(props) {
+    super(props);
+    this.state = {
+      prds: prdStore.getAll()
+    };
+  }
+
 	render(){
 		const prds = this.state.prds;
 		return(
 			<div className="container-fluid">
 			{prds.map((prd) =>{
-				if (this.props.match.params.prdDetail == prd.name){return <div><div className="row px-md-5 py-md-3">
+				if (this.props.match.params.prdDetail == prd.name){return <div><ScrollToTop/><div className="row px-md-5 py-md-3">
 									<nav aria-label="breadcrumb ">
 									  <ol className="breadcrumb bg-white">
 									    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
@@ -38,61 +75,7 @@ class ProductDetail extends React.Component{
 									<div className="w-100 border-bottom-dashed mx-md-3"></div>
 								</div>			
 								<div className="row px-md-5 py-md-5">
-									<div className="col-md-6 product-image-slide">
-										<Slider className="img-big mb-md-5"
-								          asNavFor={this.state.nav2}
-								          ref={slider => (this.slider1 = slider)}
-								          infinite={false}
-								          arrows={false}
-								        >
-								          	<div>
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-1.png')}/>
-								          </div>
-								          <div>
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-2.png')}/>
-								          </div>
-								          <div>
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-3.png')}/>
-								          </div>
-								          <div>
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-4.png')}/>
-								          </div>
-								          <div>
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-5.png')}/>
-								          </div>
-								          <div>
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-6.png')}/>
-								          </div>
-								        </Slider>
-								        <Slider
-								          asNavFor={this.state.nav1}
-								          ref={slider => (this.slider2 = slider)}
-								          slidesToShow={4}
-								          swipeToSlide={true}
-								          focusOnSelect={true}
-								          infinite={false}
-								          arrows={true}
-								        >
-								          <div className="img-list">
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-1.png')}/>
-								          </div>
-								          <div className="img-list">
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-2.png')}/>
-								          </div>
-								          <div className="img-list">
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-3.png')}/>
-								          </div>
-								          <div className="img-list">
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-4.png')}/>
-								          </div>
-								          <div className="img-list">
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-5.png')}/>
-								          </div>
-								          <div className="img-list">
-								            <img className="img-fluid" src={require('../images/'+prd.img+'-detail-6.png')}/>
-								          </div>
-								        </Slider>
-									</div>
+									<ProductsSlide prdImg={prd.img}/>
 									<div className="col-md-6 product-detail">
 										<div className="mb-md-3"><RateStar star={prd.star} /></div>	
 										<div className="clearfix mb-md-4">
@@ -109,13 +92,13 @@ class ProductDetail extends React.Component{
 										<div className="cart row py-md-4">
 											<div className="cart-quatity col-md-6">
 												<div className="form-row">
-												    <div class="input-group mb-2 col">
-													  <div class="input-group-prepend">
-													    <span class="input-group-text">-</span>
+												    <div className="input-group mb-2 col">
+													  <div className="input-group-prepend">
+													    <span className="input-group-text">-</span>
 													  </div>
-													  <input type="number" value="1" class="form-control" aria-label="Amount (to the nearest dollar)"/>
-													  <div class="input-group-append">
-													    <span class="input-group-text">+</span>
+													  <input type="number" defaultValue="1" className="form-control" aria-label="Amount (to the nearest dollar)"/>
+													  <div className="input-group-append">
+													    <span className="input-group-text">+</span>
 													  </div>
 													</div>
 												  	<div className="col">
@@ -150,22 +133,23 @@ class ProductDetail extends React.Component{
 				<div className="row px-md-5 pb-md-5">
 					<div className="col-md-12 product-tab">
 						<nav>
-						  <div class="nav" id="nav-tab" role="tablist">
-						    <a class="nav-item nav-link active mr-md-5 pb-md-4" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">DESCRIPTION</a>
-						    <a class="nav-item nav-link mr-md-5 pb-md-4" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ADDITIONAL INFORMATION</a>
-						    <a class="nav-item nav-link pb-md-4" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">REVIEWS (2)</a>
+						  <div className="nav" id="nav-tab" role="tablist">
+						    <a className="nav-item nav-link active mr-md-5 pb-md-4" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">DESCRIPTION</a>
+						    <a className="nav-item nav-link mr-md-5 pb-md-4" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ADDITIONAL INFORMATION</a>
+						    <a className="nav-item nav-link pb-md-4" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">REVIEWS (2)</a>
 						  </div>
 						</nav>
-						<div class="tab-content py-md-5" id="nav-tabContent">
-						  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+						<div className="tab-content py-md-5" id="nav-tabContent">
+						  <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 						  <h5 className="pb-md-3">Description</h5>
 						  <p>
 						  	We Are Committed To Providing A Safe 100 percent Vegan Product Made From The Finest Natural And Organic Ingredients And Formulated In A FDA Registered Facility In The USA. serumtologie C serum 22 Does NOT Contain Parabens, Phthalates, Petrochemicals, Sulfates. Synthetic Dyes, Aromas or GMO’s. In addition, the ingredients in our exclusive formulation have a 1 risk rating as determined by the extensive database maintained by the EWG (Environmental Working Group).
 						  </p>
 						  </div>
-						  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+						  <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 						  <h5 className="pb-md-3">Additional Information</h5>
-						  <table class="table table-bordered">
+						  <table className="table table-bordered">
+						  		<tbody>
 							    <tr>
 							      <th className="w-25">Brand</th>
 							      <td>JASON Kids</td>
@@ -186,9 +170,10 @@ class ProductDetail extends React.Component{
 							      <th>Total Pieces</th>
 							      <td>3</td>
 							    </tr>
+							    </tbody>
 						  </table>
 						  </div>
-						  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+						  <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 						  <h5 className="pb-md-3">2 Reviews for Alcohol-Free Hand Sanitizer</h5>
 						  <div className="comment clearfix d-flex align-items-center p-md-4 mb-md-4">
 						  	<img className="rounded-circle" src={require('../images/customer-avatar.png')} />
@@ -233,22 +218,22 @@ class ProductDetail extends React.Component{
 						  <div className="add-review mt-md-5">
 						  	<h5 className="pb-md-3">Add a review</h5>
 						  	<form className="w-50">
-						  	  <div class="form-group">
+						  	  <div className="form-group">
 							    <label>Your Rating: </label> <i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i><i className="fas fa-star text-secondary fa-xs"></i>			
 							  </div>
-							  <div class="form-group">
+							  <div className="form-group">
 							    <label for="review">Your Review: </label>
-							    <textarea type="email" class="form-control" id="review" aria-describedby="emailHelp" cols="45" rows="8"></textarea>
+							    <textarea type="email" className="form-control" id="review" aria-describedby="emailHelp" cols="45" rows="8"></textarea>
 							  </div>
-							  <div class="form-group">
+							  <div className="form-group">
 							    <label for="name">Your Name: </label>
-							    <input type="password" class="form-control" id="name" />
+							    <input type="password" className="form-control" id="name" />
 							  </div>
-							  <div class="form-group">
+							  <div className="form-group">
 							    <label for="email">Your Email: </label>
-							    <input type="email" class="form-control" id="email" />
+							    <input type="email" className="form-control" id="email" />
 							  </div>
-							  <button type="submit" class="btn button1 text-white">Submit</button>
+							  <button type="submit" className="btn button1 text-white">Submit</button>
 							</form>
 						  </div>
 						  </div>
