@@ -3,9 +3,28 @@ import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-d
 import prdStore from '../stores/productsStore';
 import ProductsList from '../components/productsList';
 import ScrollToTop from '../components/scrollOnTop';
+import RateStar from '../components/rateStar';
+import * as CartActions from '../actions/CartActions';
+
+class AddToCart extends React.Component{
+	constructor(props){
+		super(props);
+	}
+	addItem(){
+		let item = this.props.item;
+		CartActions.addItem(item.id,item.name,item.price,item.img);
+	}
+	render(){
+		return(
+			<button className="btn btn-outline-secondary" onClick={this.addItem.bind(this)}>ADD TO CART
+			</button>
+		);
+	}
+}
 
 class ProductList extends React.Component{
 	render(){
+		const prds=prdStore.getAll();
 		return(
 			<div className="container-fluid">
 			<ScrollToTop />
@@ -27,7 +46,21 @@ class ProductList extends React.Component{
 								<div className="shorting">Default sorting <i className="fas fa-chevron-down fa-xs"></i></div>
 							</div>
 						</div>
-						<ProductsList prds={prdStore.getAll()}/>
+						<div className="row py-md-4">
+							{prds.map((prd) =>
+							{
+								return	<div className="products px-md-3 text-center" key={prd.id}>
+								      	  	<RateStar star={prd.star}/>
+								      	  	<div className="product-image">
+									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
+									      	</div>
+									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
+									      	<p className="font-weight-bold">{prd.name}</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+									      	<AddToCart item={prd}/>
+							      		</div>}
+							)}
+						</div>
 					</div>
 					<div className="col-md-3">
 						<div className="row">
