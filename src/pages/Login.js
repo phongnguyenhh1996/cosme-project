@@ -3,6 +3,31 @@ import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-d
 
 
 class Login extends React.Component{
+	constructor(props){
+		super();
+			this.state={
+				email:" ",
+				pass:" "
+			};
+			this.onChangePass=this.onChangePass.bind(this);
+    this.onChangeEmail=this.onChangeEmail.bind(this);
+
+		}
+
+
+		onChangeEmail(e){
+			this.setState({email: e.target.value
+         
+      })
+		}
+		onChangePass(e){
+			this.setState({pass: e.target.value
+         
+      })
+		}
+		onSubmit (e)  {
+        e.preventDefault();
+      }
 	render(){
 		 return(	
 				<div className="container-fluid blog">
@@ -18,15 +43,17 @@ class Login extends React.Component{
 					</div>
 					<div className="row px-md-5 py-md-4  form-login-register">
 						<div className=" col-xs-12 col-md-6 col-xl-6">
+						
 							<h2 className="pt-md-5 pb-md-4"><b> Login</b></h2>
-							<div className="form-login pt-md-5">
+							<form className="form-login pt-md-5" onSubmit={this.onSubmit}>
+							
 								<div class="form-group">
 								    <label for="formGroupExampleInput2">Username or email address <span>*</span></label>
-								    <input type="text" class="form-control"/>
+								    <input type="email" class="form-control" onChange={this.onChangeEmail} required />
 								</div>
 								<div class="form-group">
 								    <label >Password  <span>*</span></label>
-								    <input type="text" class="form-control"/>
+								    <input type="password" class="form-control" onChange={this.onChangePass} pattern="[a-zA-z0-9]{9,}" required />
 								</div>
 								<div className="form-group my-1">
 									<button type="submit" class="btn btn-primary button1">Login</button>
@@ -38,23 +65,25 @@ class Login extends React.Component{
 								    <label class="form-check-label" for="exampleCheck1">Remember me</label>
 								</div>
 								<div>
-								<a href="#"> Lost your password?</a>
-							</div>
-							</div>
+									<a href="#"> Lost your password?</a>
+								</div>
+						
 							
-							
+							</form>
 
-						</div>
+						</div>	
 						<div className=" col-xs-12 col-md-6 col-xl-6">
+						
 						<h2 className="pt-md-5 pb-md-4"><b> Register</b></h2>
-							<div className="form-register pt-md-5">
+						<form  className="form-register pt-md-5" onSubmit={this.onSubmit}>
+							
 								<div class="form-group">
 								    <label for="formGroupExampleInput2">Email address <span>*</span></label>
-								    <input type="text" class="form-control"/>
+								    <input type="email" class="form-control"/>
 								</div>
 								<div class="form-group">
 								    <label >Password  <span>*</span></label>
-								    <input type="text" class="form-control"/>
+								    <input type="password" class="form-control"/>
 								</div>
 								<div className="form-group my-1">
 									<button type="submit" class="btn btn-primary button1">Register</button>
@@ -62,8 +91,9 @@ class Login extends React.Component{
 								</div>
 
 							
-							</div>
 							
+
+							</form>
 						</div>
 					</div>
 
