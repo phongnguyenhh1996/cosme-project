@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import * as CartActions from '../actions/CartActions';
 import cartStore from '../stores/cartStore';
+import RateStar from '../components/rateStar';
 
 class AddToCart extends React.Component{
 	constructor(props){
@@ -19,29 +20,6 @@ class AddToCart extends React.Component{
 	}
 }
 
-class RateStar extends React.Component{
-	render(){
-		let count=this.props.star;
-		let stars=[];
-		if (count == 0){
-			return(
-				<div className="rate-star">
-			   		<i className="fas fa-star fa-xs text-white"></i><i className="fas fa-star fa-xs text-white"></i><i className="fas fa-star fa-xs text-white"></i><i className="fas fa-star fa-xs text-white"></i><i className="fas fa-star fa-xs text-white"></i>
-				</div>
-			)
-		} else{
-		for (var i = 1; i <= 5; i++){
-			if (count > 0){stars.push(<i className="fas fa-star fa-xs"></i>) ;count= count-1;}
-				else {stars.push(<i className="fas fa-star fa-xs text-secondary"></i>);}
-		}};
-		return(
-			<div className="rate-star">
-			   {stars}
-			</div>
-		);
-	}
-}
-
 class ProductsList extends React.Component{
 	render(){
 		const prds = this.props.prds;
@@ -53,7 +31,7 @@ class ProductsList extends React.Component{
 			if (prd.featured){return	<div className="col-md-3 products" key={prd.id}>
 			      	  	<RateStar star={prd.star}/>
 			      	  	<div className="product-image product-featured">
-				      	<Link to="/shop/product_list/product_detail"><img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/></Link>
+				      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid" src={require('../images/'+prd.img + '.png')} alt="First slide"/></Link>
 				      	</div>
 				      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 				      	<p className="font-weight-bold">{prd.name}</p>
@@ -72,7 +50,7 @@ class ProductsList extends React.Component{
 				if (prd.sale){return	<div className="col-md-3 products" key={prd.id}>
 				      	  	<RateStar star={prd.star}/>
 				      	  	<div className="product-image product-sale">
-					      	<Link to="/shop/product_list/product_detail"><img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/></Link>
+					      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid" src={require('../images/'+prd.img + '.png')} alt="First slide"/></Link>
 					      	</div>
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>
@@ -94,7 +72,7 @@ class ProductsList extends React.Component{
 					return	<div className="col-md-4 products text-center my-md-4" key={prd.id}>
 				      	  	<RateStar star={prd.star}/>
 				      	  	<div className={status}>
-					      	<Link to="/shop/product_list/product_detail"><img className="img-fluid" src={require('../images/'+prd.img)} alt="First slide"/></Link>
+					      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid" src={require('../images/'+prd.img + '.png')} alt="First slide"/></Link>
 					      	</div>
 					      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 					      	<p className="font-weight-bold">{prd.name}</p>

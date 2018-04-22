@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
@@ -24,7 +22,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/shop" component={Shop} />
           <Route exact path="/shop/product_list" component={ProductList} />
-          <Route path="/shop/product_list/product_detail" component={ProductDetail} />
+          <Route path="/shop/product_list/:prdDetail" component={ProductDetail} />
           <Route path="/about" component={About} />
            <Route path="/contacts" component={Contacts} />
           <Route path="/blog" component={Blog} />

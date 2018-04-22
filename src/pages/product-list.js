@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import prdStore from '../stores/productsStore';
 import ProductsList from '../components/productsList';
+import ScrollToTop from '../components/scrollOnTop';
+import RateStar from '../components/rateStar';
+import * as CartActions from '../actions/CartActions';
+import AddToCart from '../components/addToCart';
 
 class ProductList extends React.Component{
 	render(){
+		const prds=prdStore.getAll();
 		return(
 			<div className="container-fluid">
+			<ScrollToTop />
 				<div className="row px-md-5 py-md-3">
 					<nav aria-label="breadcrumb ">
 					  <ol className="breadcrumb bg-white">
@@ -20,12 +26,26 @@ class ProductList extends React.Component{
 				<div className="row px-md-5 py-md-4">
 					<div className="col-md-9">
 						<div className="row">
-							<p className="font-weight-bold color-main shorting-text">Showing all 7 results</p>
+							<p className="font-weight-bold color-main shorting-text">Showing all {prds.length} results</p>
 							<div className="col-md-3">
 								<div className="shorting">Default sorting <i className="fas fa-chevron-down fa-xs"></i></div>
 							</div>
 						</div>
-						<ProductsList prds={prdStore.getAll()}/>
+						<div className="row py-md-4">
+							{prds.map((prd) =>
+							{
+								return	<div className="products px-md-3 text-center" key={prd.id}>
+								      	  	<RateStar star={prd.star}/>
+								      	  	<div className="product-image">
+									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
+									      	</div>
+									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
+									      	<p className="font-weight-bold">{prd.name}</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+									      	<AddToCart item={prd}/>
+							      		</div>}
+							)}
+						</div>
 					</div>
 					<div className="col-md-3">
 						<div className="row">

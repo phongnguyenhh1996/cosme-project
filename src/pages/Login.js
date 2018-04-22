@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
+import ScrollToTop from '../components/scrollOnTop';
 
 
 class Login extends React.Component{
@@ -31,6 +32,7 @@ class Login extends React.Component{
 	render(){
 		 return(	
 				<div className="container-fluid blog">
+				<ScrollToTop />
 					<div className="row px-md-5 py-md-3">
 						<nav aria-label="breadcrumb ">
 						  <ol className="breadcrumb bg-white">

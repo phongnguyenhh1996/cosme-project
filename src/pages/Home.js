@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import ProductsList from '../components/productsList';
 import prdStore from '../stores/productsStore';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
+import Slider from "react-slick";
+import RateStar from '../components/rateStar';
+import AddToCart from '../components/addToCart';
 
 class Home extends React.Component{
 	render(){
+		const prds=prdStore.getAll();
 		return(
 			<div className="container-fluid">
 				<div className="row slide-main">
@@ -57,7 +61,30 @@ class Home extends React.Component{
 				</div>
 				<div className="row px-md-5 pb-md-5">
 					<h3 className="text-center title w-100 py-md-5"><span className="font-weight-bold">FEATURED</span> PRODUCTS</h3>
-						<div id="carouselExampleIndicators2" className="carousel slide slide-products w-100" data-ride="carousel">
+						<div className="w-100">
+							<Slider
+					          infinite={false}
+					          slidesToShow={4}
+					          slidesToScroll={1}
+					          swipeToSlide={true}
+					        >
+					        {prds.map((prd) =>
+							{	if(prd.featured){
+								return	<div className="products px-md-3 text-center" key={prd.id}>
+								      	  	<RateStar star={prd.star}/>
+								      	  	<div className="product-image product-featured">
+									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
+									      	</div>
+									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
+									      	<p className="font-weight-bold">{prd.name}</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+									      	<AddToCart item={prd}/>
+							      		</div>}
+							}
+							)}
+					        </Slider>
+						</div>
+						{/*<div id="carouselExampleIndicators2" className="carousel slide slide-products w-100" data-ride="carousel">
 					  <div className="carousel-inner">
 					    <div className="carousel-item active">
 					      	  <ProductsList prds={prdStore.getAll()} showprd="featured"/>
@@ -71,7 +98,7 @@ class Home extends React.Component{
 					    <span className="carousel-control-next-icon" aria-hidden="true"></span>
 					    <span className="sr-only">Next</span>
 					  </a>
-					</div>
+					</div>*/}
 				</div>
 				<div className="row px-md-5 news-events pb-md-5">
 					<h3 className="text-center title w-100 py-md-5"><span className="font-weight-bold">ORGANICA</span> NEWS & EVENTS</h3>
@@ -86,21 +113,29 @@ class Home extends React.Component{
 				</div>
 				<div className="row px-md-5 pb-md-5">
 					<h3 className="text-center title w-100 py-md-5"><span className="font-weight-bold">PRODUCTS</span> FOR SALE</h3>
-					<div id="carouselExampleIndicators3" className="carousel slide slide-products w-100" data-ride="carousel">
-					  <div className="carousel-inner">
-					    <div className="carousel-item active">
-					      <ProductsList prds={prdStore.getAll()} showprd="sale"/>
-					    </div>
-					  </div>
-					  <a className="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
-					    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-					    <span className="sr-only">Previous</span>
-					  </a>
-					  <a className="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
-					    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-					    <span className="sr-only">Next</span>
-					  </a>
-					</div>
+					<div className="w-100">
+							<Slider
+					          infinite={false}
+					          slidesToShow={4}
+					          slidesToScroll={2}
+					          swipeToSlide={true}
+					        >
+					        {prds.map((prd) =>
+							{	if (prd.sale){
+								return	<div className="products px-md-3 text-center" key={prd.id}>
+								      	  	<RateStar star={prd.star}/>
+								      	  	<div className="product-image product-sale">
+									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
+									      	</div>
+									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
+									      	<p className="font-weight-bold">{prd.name}</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className="text-secondary ml-md-2">{prd.oldprice.toFixed(2)}$</span></p>
+									      	<AddToCart item={prd}/>
+							      		</div>}
+							}
+							)}
+					        </Slider>
+						</div>
 				</div>
 				<div className="row px-md-5 pb-md-5">
 					<h3 className="text-center title w-100 py-md-5 review">CUSTOMER REVIEWS</h3>
