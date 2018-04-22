@@ -5,22 +5,7 @@ import ProductsList from '../components/productsList';
 import ScrollToTop from '../components/scrollOnTop';
 import RateStar from '../components/rateStar';
 import * as CartActions from '../actions/CartActions';
-
-class AddToCart extends React.Component{
-	constructor(props){
-		super(props);
-	}
-	addItem(){
-		let item = this.props.item;
-		CartActions.addItem(item.id,item.name,item.price,item.img);
-	}
-	render(){
-		return(
-			<button className="btn btn-outline-secondary" onClick={this.addItem.bind(this)}>ADD TO CART
-			</button>
-		);
-	}
-}
+import AddToCart from '../components/addToCart';
 
 class ProductList extends React.Component{
 	render(){
@@ -41,7 +26,7 @@ class ProductList extends React.Component{
 				<div className="row px-md-5 py-md-4">
 					<div className="col-md-9">
 						<div className="row">
-							<p className="font-weight-bold color-main shorting-text">Showing all 7 results</p>
+							<p className="font-weight-bold color-main shorting-text">Showing all {prds.length} results</p>
 							<div className="col-md-3">
 								<div className="shorting">Default sorting <i className="fas fa-chevron-down fa-xs"></i></div>
 							</div>

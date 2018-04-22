@@ -4,23 +4,7 @@ import prdStore from '../stores/productsStore';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import Slider from "react-slick";
 import RateStar from '../components/rateStar';
-import * as CartActions from '../actions/CartActions';
-
-class AddToCart extends React.Component{
-	constructor(props){
-		super(props);
-	}
-	addItem(){
-		let item = this.props.item;
-		CartActions.addItem(item.id,item.name,item.price,item.img);
-	}
-	render(){
-		return(
-			<button className="btn btn-outline-secondary" onClick={this.addItem.bind(this)}>ADD TO CART
-			</button>
-		);
-	}
-}
+import AddToCart from '../components/addToCart';
 
 class Home extends React.Component{
 	render(){
@@ -85,7 +69,7 @@ class Home extends React.Component{
 					          swipeToSlide={true}
 					        >
 					        {prds.map((prd) =>
-							{
+							{	if(prd.featured){
 								return	<div className="products px-md-3 text-center" key={prd.id}>
 								      	  	<RateStar star={prd.star}/>
 								      	  	<div className="product-image product-featured">
@@ -96,6 +80,7 @@ class Home extends React.Component{
 									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
 									      	<AddToCart item={prd}/>
 							      		</div>}
+							}
 							)}
 					        </Slider>
 						</div>
@@ -136,17 +121,18 @@ class Home extends React.Component{
 					          swipeToSlide={true}
 					        >
 					        {prds.map((prd) =>
-							{
+							{	if (prd.sale){
 								return	<div className="products px-md-3 text-center" key={prd.id}>
 								      	  	<RateStar star={prd.star}/>
-								      	  	<div className="product-image product-featured">
+								      	  	<div className="product-image product-sale">
 									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
 									      	</div>
 									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 									      	<p className="font-weight-bold">{prd.name}</p>
-									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className="text-secondary ml-md-2">{prd.oldprice.toFixed(2)}$</span></p>
 									      	<AddToCart item={prd}/>
 							      		</div>}
+							}
 							)}
 					        </Slider>
 						</div>
