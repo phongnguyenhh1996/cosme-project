@@ -185,6 +185,7 @@ h4.subtotal{
 .shopping-cart a.btn.check-out:hover{
   background-color: #2F2F2F;
 }
+.cart-item ul{position:relative;}
 .cart-item li a, .cart-item button svg{
   color: black;
   transition: all .3s;
@@ -966,6 +967,10 @@ text-decoration: none;
   background-color: white;
   cursor: pointer;
   border-radius: 0;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;       
 }
 .cart-quatity input[type=number]::-webkit-inner-spin-button, 
 .cart-quatity input[type=number]::-webkit-outer-spin-button { 
@@ -1006,3 +1011,20 @@ text-decoration: none;
   color: #EA375C;
 }
 .add-review input, .add-review textarea{border-radius:0;}
+.cartpg-item{
+  border-top: 1px solid lightgray;
+}
+.cartpg-item:last-child{
+  border-bottom: 1px solid lightgray;
+}
+.cartpg-item ul li.name{
+  font-weight: 600;
+  color: #EA375C;
+  transition: all .3s ease;
+}
+.cartpg-item .remove span{text-decoration: underline;cursor:pointer;font-weight:600;color:#EA375C}
+.summary ul{
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+

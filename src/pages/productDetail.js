@@ -5,6 +5,7 @@ import ProductsList from '../components/productsList';
 import Slider from "react-slick";
 import RateStar from '../components/rateStar';
 import ScrollToTop from '../components/scrollOnTop';
+import AddToCart from '../components/addToCart';
 
 class ProductsSlide extends React.Component{
 	constructor(props) {
@@ -239,9 +240,27 @@ class ProductDetail extends React.Component{
 						  </div>
 						</div>
 					</div>
+					<div className="col-md-12 px-md-0">
+						<div className="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="2"></div>
+					</div>
 					<div className="col-md-12">
 						<h3 className="text-center title w-100 py-md-5"><span className="font-weight-bold">RELATED</span> PRODUCTS</h3>
-						<ProductsList prds={prdStore.getAll()} showprd="featured"/>
+						<div className="row py-md-4">
+							{prds.map((prd,i) =>
+							{	if (i<4){
+								return	<div className="products px-md-3 text-center my-md-4" key={prd.id}>
+								      	  	<RateStar star={prd.star}/>
+								      	  	<div className={`product-image product-${prd.status}`}>
+									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
+									      	</div>
+									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
+									      	<p className="font-weight-bold">{prd.name}</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className={`text-secondary ml-md-2 ${(prd.status!="sale")?"d-none":""}`}>{(prd.status=="sale")?prd.oldprice.toFixed(2):""}$</span></p>
+									      	<AddToCart item={prd}/>
+							      		</div>}
+							}
+							)}
+						</div>
 					</div>
 				</div>
 			</div>

@@ -11,8 +11,7 @@ class PrdStore extends EventEmitter{
 				img: "product-1",
 				price: 46.00,
 				oldprice: 0,
-				featured: true,
-				sale: false,
+				status: "featured",
 				star: 5,
 				tags: ["food","nutrition"]
 			},
@@ -22,8 +21,7 @@ class PrdStore extends EventEmitter{
 				img: "product-2",
 				price: 32.00,
 				oldprice: 0,
-				featured: true,
-				sale: false,
+				status: "featured",
 				star: 4,
 				tags: ["food","health","organic"]
 			},
@@ -33,8 +31,7 @@ class PrdStore extends EventEmitter{
 				img: "product-3",
 				price: 19.00,
 				oldprice: 0,
-				featured: true,
-				sale: false,
+				status: "featured",
 				star: 5,
 				tags: ["acids","health","nutrition"]
 			},
@@ -43,8 +40,7 @@ class PrdStore extends EventEmitter{
 				name: "EMINENCE STRAWBERRY",
 				img: "product-4",
 				price: 56.00,
-				featured: true,
-				oldprice: 0,
+				status: "featured",
 				sale: false,
 				star: 4,
 				tags: ["food","health","nutrition"]
@@ -55,8 +51,7 @@ class PrdStore extends EventEmitter{
 				img: "product-5",
 				price: 39.00,
 				oldprice: 56.00,
-				featured: false,
-				sale: true,
+				status: "sale",
 				star: 4,
 				tags: ["acids","food","organic"]
 			},
@@ -66,8 +61,7 @@ class PrdStore extends EventEmitter{
 				img: "product-6",
 				price: 36.00,
 				oldprice: 46.00,
-				featured: false,
-				sale: true,
+				status: "sale",
 				star: 0,
 				tags: ["health","vitamins"]
 			},
@@ -77,8 +71,7 @@ class PrdStore extends EventEmitter{
 				img: "product-7",
 				price: 30.00,
 				oldprice: 32.00,
-				featured: false,
-				sale: true,
+				status: "sale",
 				star: 0,
 				tags: ["food","nutrition","organic"]
 			},
@@ -88,8 +81,7 @@ class PrdStore extends EventEmitter{
 				img: "product-8",
 				price: 30.00,
 				oldprice: 46.00,
-				featured: false,
-				sale: true,
+				status: "sale",
 				star: 4,
 				tags: ["food","health"]
 			}

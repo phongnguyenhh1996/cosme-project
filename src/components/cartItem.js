@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CartStore from '../stores/cartStore';
 import * as CartActions from '../actions/CartActions';
+import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 
 class DeleteItem extends React.Component{
 	deleteItem(){
@@ -21,19 +22,19 @@ class CartContent extends React.Component{
 			<div className="cart-content pt-md-3">
 							{ this.props.itemss.map((item)=>{
 								subtotal+= item.price*item.quantity;
-							return	<div key={item.id} className="cart-item clearfix mb-md-3">
+							return	<div key={item.id} className="cart-item clearfix mb-md-3 d-flex align-items-center">
 							          <img src={require('../images/'+item.img + '.png')} />
-							          <ul className="list-unstyled float-left ml-md-2">
+							          <ul className="list-unstyled float-left ml-md-2 pr-md-3 w-100">
 							            <li className="pb-md-1"><a href="#">{item.name}</a></li>
 							            <li>{item.quantity} x <span className="price">{(item.price*item.quantity).toFixed(2)}$</span></li>
-							          </ul>
-							          <DeleteItem idItem={item.id}/>
+							            <DeleteItem idItem={item.id}/>
+							          </ul>   
 							        </div>
 							}
 								)}
 				        </div>
 				        <h4 className="my-md-3 pt-md-3 subtotal">SUBTOTAL: <span className="price">{subtotal.toFixed(2)}$</span></h4>
-				        <a href="#" className="btn view-card w-100 mb-md-3">VIEW CART</a>
+				        <Link to="/cart" className="btn view-card w-100 mb-md-3">VIEW CART</Link>
 				        <a href="#" className="btn check-out w-100">CHECK OUT</a>
 			</div>
 		);

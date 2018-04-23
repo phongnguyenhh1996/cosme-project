@@ -16,3 +16,11 @@ export function deleteItem(id) {
         id
     });
 }
+
+export function updateQty(id,qty) {
+    dispatcher.dispatch({
+        type: "UPDATE_QTY",
+        id,
+        qty
+    });
+}

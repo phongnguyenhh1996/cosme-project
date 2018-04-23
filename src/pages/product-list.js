@@ -34,14 +34,14 @@ class ProductList extends React.Component{
 						<div className="row py-md-4">
 							{prds.map((prd) =>
 							{
-								return	<div className="products px-md-3 text-center" key={prd.id}>
+								return	<div className="products px-md-3 text-center my-md-4" key={prd.id}>
 								      	  	<RateStar star={prd.star}/>
-								      	  	<div className="product-image">
+								      	  	<div className={`product-image product-${prd.status}`}>
 									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
 									      	</div>
 									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 									      	<p className="font-weight-bold">{prd.name}</p>
-									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
+									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className={`text-secondary ml-md-2 ${(prd.status!="sale")?"d-none":""}`}>{(prd.status=="sale")?prd.oldprice.toFixed(2):""}$</span></p>
 									      	<AddToCart item={prd}/>
 							      		</div>}
 							)}

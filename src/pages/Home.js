@@ -69,7 +69,7 @@ class Home extends React.Component{
 					          swipeToSlide={true}
 					        >
 					        {prds.map((prd) =>
-							{	if(prd.featured){
+							{	if(prd.status=="featured"){
 								return	<div className="products px-md-3 text-center" key={prd.id}>
 								      	  	<RateStar star={prd.star}/>
 								      	  	<div className="product-image product-featured">
@@ -121,7 +121,7 @@ class Home extends React.Component{
 					          swipeToSlide={true}
 					        >
 					        {prds.map((prd) =>
-							{	if (prd.sale){
+							{	if (prd.status=="sale"){
 								return	<div className="products px-md-3 text-center" key={prd.id}>
 								      	  	<RateStar star={prd.star}/>
 								      	  	<div className="product-image product-sale">

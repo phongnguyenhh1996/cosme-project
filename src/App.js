@@ -12,6 +12,8 @@ import ProductList from './pages/product-list';
 import ProductDetail from './pages/productDetail';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Blog from './pages/Blog';
+import CartPage from './pages/Cart';
+
 
 class App extends Component {
   render() {
@@ -27,6 +29,7 @@ class App extends Component {
            <Route path="/contacts" component={Contacts} />
           <Route path="/blog" component={Blog} />
           <Route path="/login" component={Login} />
+          <Route path="/cart" component={CartPage} />
           <Footer />
         </div>
       </Router>
