@@ -13,6 +13,7 @@ import ProductDetail from './pages/productDetail';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Blog from './pages/Blog';
 import CartPage from './pages/Cart';
+import CheckoutPage from './pages/Checkout';
 
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
           <Route path="/blog" component={Blog} />
           <Route path="/login" component={Login} />
           <Route path="/cart" component={CartPage} />
+          <Route path="/checkout" component={CheckoutPage} />
           <Footer />
         </div>
       </Router>

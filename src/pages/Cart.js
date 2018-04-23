@@ -55,12 +55,6 @@ class CartPage extends React.Component{
             this.setState({carts: CartStore.getAll()});
         })
     }
-    updateQty(id,qty){
-    	if (qty>0){CartActions.updateQty(id, qty);}
-	}
-	handleChange(id) {
-    	CartActions.updateQty(id, this.refs.quantityItem.value);
-  	}
 	render(){
 		const {carts}=this.state;
 		var subtotal = 0;
@@ -119,7 +113,7 @@ class CartPage extends React.Component{
 							            <li className="pb-md-1">Tax <span className="float-right">0.00$</span></li>
 							        </ul>
 							        <h6 className="font-weight-bold pb-md-2">ESTIMATED TOTAL <span className="float-right">{subtotal.toFixed(2)}$</span></h6>
-									<button type="submit" class="btn btn-primary btn-lm btn-block mb-md-3">PROCEED TO CHECKOUT</button>
+									<Link to="/checkout" class="btn btn-primary button1 text-white btn-block mb-md-3">PROCEED TO CHECKOUT</Link>
 								</div>
 							</div>
 					</div>

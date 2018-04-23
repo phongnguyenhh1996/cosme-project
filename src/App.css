@@ -1027,4 +1027,5 @@ text-decoration: none;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
+.checkout-form button, .checkout-form input{border-radius:0}
 
