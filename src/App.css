@@ -1022,7 +1022,7 @@ text-decoration: none;
   color: #EA375C;
   transition: all .3s ease;
 }
-.cartpg-item .remove span{text-decoration: underline;cursor:pointer;font-weight:600;color:#EA375C}
+.cartpg-item .remove span{text-decoration: underline;cursor:pointer;font-weight:600;}
 .summary ul{
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;

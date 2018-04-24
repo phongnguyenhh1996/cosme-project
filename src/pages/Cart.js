@@ -26,9 +26,9 @@ class CartPage extends React.Component{
 			<ScrollToTop />
 				<div className="row px-md-5 py-md-3">
 					<nav aria-label="breadcrumb ">
-					  <ol class="breadcrumb bg-white">
-					    <li class="breadcrumb-item"> <Link to="/">Home</Link></li>
-					    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+					  <ol className="breadcrumb bg-white">
+					    <li className="breadcrumb-item"> <Link to="/">Home</Link></li>
+					    <li className="breadcrumb-item active" aria-current="page">Cart</li>
 					  </ol>
 					</nav>
 					<div className="w-100 border-bottom-dashed mx-md-3"></div>
@@ -78,7 +78,7 @@ class CartPage extends React.Component{
 							            <li className="pb-md-1">Tax <span className="float-right">0.00$</span></li>
 							        </ul>
 							        <h6 className="font-weight-bold pb-md-2">ESTIMATED TOTAL <span className="float-right">{subtotal.toFixed(2)}$</span></h6>
-									<Link to="/checkout" class="btn btn-primary button1 text-white btn-block mb-md-3">PROCEED TO CHECKOUT</Link>
+									<Link to="/checkout" className="btn btn-primary button1 text-white btn-block mb-md-3">PROCEED TO CHECKOUT</Link>
 								</div>
 							</div>
 					</div>
