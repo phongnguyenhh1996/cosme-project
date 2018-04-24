@@ -1,12 +1,13 @@
 import dispatcher from "../dispatcher";
 
-export function addItem(id,name,price,img) {
+export function addItem(id,name,price,img,qty) {
     dispatcher.dispatch({
         type: "ADD_ITEM",
         id,
         name,
         price,
-        img
+        img,
+        qty
     });
 }
 

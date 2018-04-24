@@ -7,7 +7,7 @@ class AddToCart extends React.Component{
     }
     addItem(){
         let item = this.props.item;
-        CartActions.addItem(item.id,item.name,item.price,item.img);
+        CartActions.addItem(item.id,item.name,item.price,item.img,this.props.qty);
     }
     render(){
         return(

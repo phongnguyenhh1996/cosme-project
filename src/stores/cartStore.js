@@ -4,32 +4,18 @@ import dispatcher from "../dispatcher";
 class CartStore extends EventEmitter{
 	constructor(){
 		super();
-		this.items = [{id: 1,
-                name: "ALCOHOL-FREE HAND SANITIZER",
-                price: 46.00,
-                img: "product-1",
-                quantity: 1},
-                {id: 2,
-                name: "SERUMTOLOGIE C SERUM",
-                price: 32.00,
-                img: "product-2",
-                quantity: 1},
-                {id: 3,
-                name: "ORGANIC GREEN TEA",
-                price: 19.00,
-                img: "product-3",
-                quantity: 1}];
+		this.items = [];
 	}
-	addItem(id,name,price,img) {
+	addItem(id,name,price,img,qty) {
         let pos = this.items.map((i)=> i.id).indexOf(id);
-        if (pos>=0){this.items[pos].quantity+=1;}
+        if (pos>=0){this.items[pos].quantity= parseFloat(this.items[pos].quantity)+parseFloat(qty);}
             else{
                 this.items.push({
                 id,
                 name,
                 price,
                 img,
-                quantity: 1
+                quantity: qty
             });
             };  
         this.emit("change");
@@ -50,7 +36,7 @@ class CartStore extends EventEmitter{
     handleAction(action) {
         switch (action.type){
             case "ADD_ITEM": {
-                this.addItem(action.id,action.name,action.price,action.img);
+                this.addItem(action.id,action.name,action.price,action.img,action.qty);
                 break;
             }
             case "DELELE_ITEM": {

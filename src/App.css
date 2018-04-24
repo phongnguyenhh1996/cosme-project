@@ -941,7 +941,7 @@ text-decoration: none;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
-.tags a::after{content:" ,";}
+.tags a::after{content:", ";}
 .tags a:last-child::after{content:"";}
 .product-detail .product-meta a, .product-detail a.float-right{
   color: #EA375C;

@@ -1,47 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import ScrollToTop from '../components/scrollOnTop';
+import QuantityCount from '../components/QuantityCount';
 import CartStore from '../stores/cartStore';
 import * as CartActions from '../actions/CartActions';
 
-class QuantityCount extends React.Component{
-	constructor(props){
-		super(props);
-		this.state={count: this.props.qty};
-	}
-	componentWillReceiveProps(nextProps){
-		this.setState({count: nextProps.qty});
-	}
-	updateQty(i){
-		if (i>0){
-			CartActions.updateQty(this.props.idItem, i);
-		}	
-	}
-	handleChange(event) {
-	this.setState(
-		{count: event.target.value},
-		()=>{if(this.state.count>0){
-			CartActions.updateQty(this.props.idItem, this.state.count)
-			}
-		}
-	)
-  	}
-	render(){
-		return(
-			<div className="row cart-quatity pr-md-5">
-				<div className="input-group mb-2 col">
-				  <div className="input-group-prepend">
-				    <span className="input-group-text" onClick={this.updateQty.bind(this,(this.state.count-1))}>-</span>
-				  </div>
-				  <input type="number" value={this.state.count} className="form-control p-md-0" onChange={this.handleChange.bind(this)}/>
-				  <div className="input-group-append">
-				    <span className="input-group-text" onClick={this.updateQty.bind(this,(this.state.count+1))}>+</span>
-				  </div>
-				</div>
-			</div>
-		);
-	}
-}
 
 class CartPage extends React.Component{
 	constructor(){
@@ -94,7 +57,9 @@ class CartPage extends React.Component{
 							        </ul>   
 									</div>
 									<div className="col-md-2">
-										<QuantityCount qty={item.quantity} idItem={item.id} />
+										<div className="row cart-quatity pr-md-5">
+											<QuantityCount qty={item.quantity} idItem={item.id} />
+										</div>	
 									</div>
 									<div className="col-md-2">{item.price.toFixed(2)}$</div>
 									<div className="col-md-2 font-weight-bold">{(item.price*item.quantity).toFixed(2)}$</div>
@@ -103,7 +68,7 @@ class CartPage extends React.Component{
 						</div>
 						<div className={(carts.length >0)?"d-none":"d-block"}><p>Your cart is currently empty.</p><Link className="btn button1 text-white" to="/shop">Return to shop</Link></div>
 					</div>
-					<div className="col-md-3 px-md-0">
+					<div className={`col-md-3 px-md-0 ${(carts.length >0)?"d-block":"d-none"}`}>
 							<div className="subscribe-follow summary">
 								<div className="subscribe text-left">
 									<h4 className="pt-md-3 mb-md-3 font-weight-bold">Order Summary</h4>

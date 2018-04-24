@@ -6,6 +6,45 @@ import Slider from "react-slick";
 import RateStar from '../components/rateStar';
 import ScrollToTop from '../components/scrollOnTop';
 import AddToCart from '../components/addToCart';
+import QuantityCount from '../components/QuantityCount';
+import * as CartActions from '../actions/CartActions';
+
+class AddCartDetail extends React.Component{
+	constructor(props){
+        super(props);
+        this.state={count: 1};
+    }
+    updateQty(i){
+        if (i>0){
+            this.setState({count: i});
+        }   
+    }
+    handleChange(event) {
+    this.setState({count: event.target.value});
+	}
+    addToCart(){
+    	let item = this.props.item;
+    	CartActions.addItem(item.id,item.name,item.price,item.img,this.state.count);
+    }
+	render(){
+		return(
+			<div className="form-row">
+			    <div className="input-group mb-2 col">
+			      <div className="input-group-prepend">
+			        <span className="input-group-text" onClick={this.updateQty.bind(this,(this.state.count-1))}>-</span>
+			      </div>
+			      <input type="number" value={this.state.count} className="form-control p-md-0" onChange={this.handleChange.bind(this)}/>
+			      <div className="input-group-append">
+			        <span className="input-group-text" onClick={this.updateQty.bind(this,(this.state.count+1))}>+</span>
+			      </div>
+			    </div>
+			  	<div className="col">
+			  	<button onClick={this.addToCart.bind(this)} className="btn button1 text-white font-weight-bold">ADD TO CART</button>
+			  	</div>
+			</div>
+		);
+	}
+}
 
 class ProductsSlide extends React.Component{
 	constructor(props) {
@@ -92,20 +131,7 @@ class ProductDetail extends React.Component{
 										<p className="pt-md-4">It is actually slightly more powerful as it contains 22% Vitamin C.</p>
 										<div className="cart row py-md-4">
 											<div className="cart-quatity col-md-6">
-												<div className="form-row">
-												    <div className="input-group mb-2 col">
-													  <div className="input-group-prepend">
-													    <span className="input-group-text">-</span>
-													  </div>
-													  <input type="number" defaultValue="1" className="form-control" aria-label="Amount (to the nearest dollar)"/>
-													  <div className="input-group-append">
-													    <span className="input-group-text">+</span>
-													  </div>
-													</div>
-												  	<div className="col">
-												  	<button className="btn button1 text-white font-weight-bold">ADD TO CART</button>
-												  	</div>
-												</div>
+												<AddCartDetail item={prd} />
 											</div>
 										</div>
 										<div className="widget pt-md-3">
@@ -256,7 +282,7 @@ class ProductDetail extends React.Component{
 									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 									      	<p className="font-weight-bold">{prd.name}</p>
 									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className={`text-secondary ml-md-2 ${(prd.status!="sale")?"d-none":""}`}>{(prd.status=="sale")?prd.oldprice.toFixed(2):""}$</span></p>
-									      	<AddToCart item={prd}/>
+									      	<AddToCart item={prd} qty={1}/>
 							      		</div>}
 							}
 							)}

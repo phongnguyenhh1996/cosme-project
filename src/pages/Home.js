@@ -78,7 +78,7 @@ class Home extends React.Component{
 									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 									      	<p className="font-weight-bold">{prd.name}</p>
 									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$</p>
-									      	<AddToCart item={prd}/>
+									      	<AddToCart item={prd} qty={1}/>
 							      		</div>}
 							}
 							)}
@@ -130,7 +130,7 @@ class Home extends React.Component{
 									      	<p className="text-secondary font-italic mt-md-3">{prd.tags.map((tag) => tag + ", ")}</p>
 									      	<p className="font-weight-bold">{prd.name}</p>
 									      	<p className="color-main2 font-weight-bold">{prd.price.toFixed(2)}$<span className="text-secondary ml-md-2">{prd.oldprice.toFixed(2)}$</span></p>
-									      	<AddToCart item={prd}/>
+									      	<AddToCart item={prd} qty={1}/>
 							      		</div>}
 							}
 							)}
