@@ -266,7 +266,10 @@ class ProductDetail extends React.Component{
 						  </div>
 						</div>
 					</div>
-					<div className="col-md-12 px-md-0">
+					<div className="col-md-12">
+						<div className="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+					</div>
+					<div className="col-md-12">
 						<div className="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="2"></div>
 					</div>
 					<div className="col-md-12">

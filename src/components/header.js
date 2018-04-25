@@ -6,8 +6,8 @@ class Header extends React.Component{
     render(){
         return(
             <header className="container-fluid">
-                <div className="row py-md-2 px-md-5 header-top">
-                    <div className="col-md-4">
+                <div className="row py-md-2 px-md-5 header-top d-none d-md-flex">
+                    <div className="col-sm-4">
                         <ul className="nav social">
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><i className="fab fa-facebook-f"></i></a>
@@ -26,11 +26,11 @@ class Header extends React.Component{
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-sm-4">
                         <p className="text-center py-2 mb-0 font-weight-bold"><i className="fas fa-phone color-main"></i> 1-555-644-5566</p>
                     </div>
-                    <div className="col-md-4">
-                        <div className="row justify-content-end">
+                    <div className="col-sm-4">
+                        <div className="row justify-content-md-end justify-content-center">
                         <form className="form-inline my-2 my-lg-0 search">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                             <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
@@ -39,10 +39,12 @@ class Header extends React.Component{
                     </div>
                 </div>
                 <div className="row px-md-5 py-md-3">
-                    <div className="col-md-3">
-                        <Link to="/"><img className="img-fluid" src={require('../images/logo.png')} /></Link>
+                    <div className="col-sm-3 col-12 order-3 order-md-1 d-flex justify-content-center py-3 py-md-0">
+                        <Link className="text-center w-100" to="/"><img className="img-fluid mx-auto" src={require('../images/logo.png')} /></Link>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-sm-9 order-1 order-md-3">
+                    <div className="row">
+                         <div className="col-6">
                         <nav className="navbar navbar-expand-lg navbar-light">
                           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -79,9 +81,8 @@ class Header extends React.Component{
                           </div>
                         </nav>
                     </div>
-                    <div className="col-md-3">
-                        <div className="row py-md-4 my-md-2 justify-content-md-end">
-                        <ul className="nav social">
+                    <div className="col-6">
+                        <ul className="nav social float-right py-md-4 py-2">
                             <Cart />
                             <li className="nav-item">
                             <Link className="nav-link" to="/login">
@@ -89,7 +90,8 @@ class Header extends React.Component{
                                 </Link>
                             </li>
                         </ul>
-                        </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </header>

@@ -19,44 +19,44 @@ class Shop extends React.Component{
 				</div>
 			     <div className="row px-md-5 py-md-4">
 	<div id="primary" className="col-md-9 col-xl-9">
-<div className="row products shop">
+<div className="row products shop py-5 py-md-0">
 
 		<div id="products" className="col-sm-6 col-md-4 col-lg-4 col-xl-4">
-		<a href="#">
+		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Amino Acids.jpg')} />	
-		<h3 className="text-center py-md-3">
+		<h3 className="text-center py-3">
 		Amino Acids 	</h3>
-	</a>	</div>
+	</Link>	</div>
 	<div id="products"  className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
-		<a  href="#">
+		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Antioxidants.jpg')} />
-		<h3 className="text-center py-md-3">
+		<h3 className="text-center py-3">
 		Antioxidants	</h3>
-	</a>	</div>
+	</Link>	</div>
 	<div id="products"  className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-		<a   href="#">
+		<Link to="/shop/product_list" className="w-100 d-block text-center"  >
 		<img className="img-fluid" src={require('../images/Multivitamins.jpg')} />
-		<h3 className="text-center py-md-3">
+		<h3 className="text-center py-3">
 		Multivitamins	</h3>
-	</a>	</div>
+	</Link>	</div>
 	<div  id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product">
-		<a  href="#">
+		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Organic Cosmetics.jpg')} />
-		<h3 className="text-center py-md-3">
+		<h3 className="text-center py-3">
 		Organic Cosmetics </h3>
-	</a>	</div>
+	</Link>	</div>
 	<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product first">
-		<a  href="#">
+		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Organic Food.jpg')} />
-		<h3 className="text-center py-md-3">
+		<h3 className="text-center py-3">
 		Organic Food 	</h3>
-	</a>	</div>
+	</Link>	</div>
 	<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product last">
-		<a   href="#">
+		<Link to="/shop/product_list" className="w-100 d-block text-center"  >
 			<img className="img-fluid" src={require('../images/Vitamins & Minerals.jpg')} />
-		<h3 className="text-center py-md-3">
+		<h3 className="text-center py-3">
 		Vitamins &amp; Minerals 	</h3>
-	</a>	
+	</Link>	
 	</div>
 	</div>
 	</div>
@@ -64,8 +64,8 @@ class Shop extends React.Component{
 <div className="col-md-3">
 						<div className="row">
 							<div className="col-md-12 browse aside">
-								<h4 className="font-weight-bold w-100 pt-md-5">Browse</h4>
-								<ul className="nav flex-column pt-md-4">
+								<h4 className="font-weight-bold w-100 pt-5">Browse</h4>
+								<ul className="nav flex-column pt-4">
 				                  <li className="nav-item">
 				                    <a className="nav-link px-md-0" href="#">Amino Acids <span>(19)</span></a>
 				                  </li>
@@ -87,8 +87,8 @@ class Shop extends React.Component{
 				                </ul>
 							</div>
 							<div className="col-md-12 aside">
-								<h4 className="font-weight-bold w-100 pt-md-5 mt-md-5">Top Rated Products</h4>
-								<ul className="product-list pt-md-4">
+								<h4 className="font-weight-bold w-100 pt-5 mt-md-5">Top Rated Products</h4>
+								<ul className="product-list pt-4">
 									<li>
 										<a href="#" title="Daily Detangling Shampoo">
 									<div className="images1">
@@ -166,9 +166,9 @@ class Shop extends React.Component{
 									</ul>
 							</div>
 							<div className="col-md-12 aside">
-								<h4 className="font-weight-bold w-100 pt-md-5 mt-md-3">Recent Reviews</h4>
-								<ul className="product-list pt-md-4">
-									<li className="pb-md-5">
+								<h4 className="font-weight-bold w-100 pt-5 mt-md-3">Recent Reviews</h4>
+								<ul className="product-list pt-4">
+									<li className="pb-5">
 
 									<div className="images3">
 										<img  width="75" height="75" src={require('../images/Daily Detangling Shampoo.png')} /></div>
@@ -177,7 +177,7 @@ class Shop extends React.Component{
 											<span className="product-title">Daily Detangling Shampoo</span></a></div>
 										
 									</li>
-									<li className="pb-md-5">
+									<li className="pb-5">
 
 									<div className="images3">
 										<img  width="75" height="75" src={require('../images/Eminence Organic.png')} /></div>
@@ -186,7 +186,7 @@ class Shop extends React.Component{
 											<span className="product-title">Eminence Organic</span></a></div>
 										
 									</li>
-									<li className="pb-md-5">
+									<li className="pb-5">
 
 									<div className="images3">
 										<img  width="75" height="75" src={require('../images/BEST Vitamin C.png')} /></div>

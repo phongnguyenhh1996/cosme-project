@@ -81,38 +81,6 @@ nav.navbar .nav-link {
 nav.navbar .nav-link:hover{
   color: #8DAC5C!important;
 }
-nav.navbar .dropdown .dropdown-menu {
-    display: block;
-    transition: visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;
-    visibility: hidden;
-    overflow: hidden;
-    opacity: 0;
-    top: 105%;
-    border: none;
-    background-color: #F5F5F5;
-    padding: 1rem 2rem;
-}
-nav.navbar .dropdown-menu a{
-  padding: .6rem 0;
-}
-
-nav.navbar .dropdown:hover .dropdown-menu {
-    top: 95%;
-    opacity: 1;
-    visibility: visible;
-    transition-delay:0s;
-}
-nav.navbar .dropdown-item{
-  transition: all .3s ease;
-  border-bottom: 1px solid black!important;
-}
-nav.navbar .dropdown-item:last-child{
-  border-bottom: none!important;
-}
-nav.navbar .dropdown-item:hover{
-  color: #95CA4D!important;
-  background-color: transparent!important;
-}
 .shopping-cart{
   position: relative;
 }
@@ -1029,3 +997,56 @@ text-decoration: none;
 }
 .checkout-form button, .checkout-form input{border-radius:0}
 
+@media (max-width: 575.98px) {
+  header .col-sm-9.order-1.order-md-3 .row{position:fixed; top:0; left: 0; width:100%; background-color:#F5F5F5; margin-right:0;margin-left:0; z-index:100;}
+  header .order-3{margin-top: 56px;}
+  .slide-main .carousel-item .carousel-caption h1{
+  font-size: 1rem;
+  }
+  .font-bigger{
+  font-size: 1rem;
+  }
+  .slide-main .carousel-item .carousel-caption button{font-size:.7rem; padding:.175rem .55rem}
+  .banner .col-md-4,.banner .col-md-12{padding-right:0;padding-left:0}
+  .carousel-indicators{bottom: -25px!important;}
+  .sub-follow input{text-align: center;}
+  .sub-follow ul li .svg-inline--fa.fa-fw{width:1rem}
+  .sub-follow ul li{padding: .3rem .1rem;}
+  .shorting-text{position:relative}
+  .blog .title h1{font-size:2rem}
+  .blog .publish{font-size:.8rem}
+}
+@media (min-width: 768px) {
+  nav.navbar .dropdown .dropdown-menu {
+    display: block;
+    transition: visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    top: 105%;
+    border: none;
+    background-color: #F5F5F5;
+    padding: 1rem 2rem;
+  }
+  nav.navbar .dropdown-menu a{
+    padding: .6rem 0;
+  }
+  nav.navbar .dropdown:hover .dropdown-menu {
+      top: 95%;
+      opacity: 1;
+      visibility: visible;
+      transition-delay:0s;
+  }
+  nav.navbar .dropdown-item{
+    transition: all .3s ease;
+    border-bottom: 1px solid black!important;
+  }
+  nav.navbar .dropdown-item:last-child{
+    border-bottom: none!important;
+  }
+  nav.navbar .dropdown-item:hover{
+    color: #95CA4D!important;
+    background-color: transparent!important;
+  }
+
+}
