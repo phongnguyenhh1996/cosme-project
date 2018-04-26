@@ -40,6 +40,14 @@ class Login extends React.Component{
     					if (!re.test(fValue)) {error="Invalid phone number!";}; 
     					break;
     				}
+    				case "pass":{
+    					if (fValue.length<=8) {error="Password must be at least 8 characters!";}; 
+    					break;
+    				}
+    				case "repass":{
+    					if (fValue!=this.state.fields["pass"]) {error="Retype password and password must be matching!";}; 
+    					break;
+    				}
     			}
     		};
     	errors[fName]=error;
@@ -53,15 +61,8 @@ class Login extends React.Component{
     		if (this.state.fields[k]==""){isValid=false;errors[k]="This field cannot be empty!"}
     		if (this.state.errors[k]!=""){isValid=false};
     	});
-    	console.log(isValid);
     	this.setState({errors});
     	this.setState({isValid});
-    }
-    validateClass(i){
-    	let valid = (this.state.errors[i]!="" &&this.state.errors[i]!= undefined)?true:false;
-    	let validCl = "";
-    	if (!valid) {validCl="is-invalid"};
-    	return validCl;
     }
 	render(){
 		 return(	
@@ -84,7 +85,7 @@ class Login extends React.Component{
 							<form className="form-login pt-5" onSubmit={this.onSubmit}>
 							
 								<div class="form-group">
-								    <label for="formGroupExampleInput2">Username or email address <span>*</span></label>
+								    <label for="formGroupExampleInput2">Email address <span>*</span></label>
 								    <input type="email" class="form-control" required />
 								</div>
 								<div class="form-group">
@@ -154,7 +155,7 @@ class Login extends React.Component{
 						    </div>
 						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>Retype Password</label>
-						      <input type="password" name="city" value={this.state.fields["repass"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["repass"]!="" &&this.state.errors["repass"]!= undefined)?"is-invalid":""}`} placeholder="Retype Password"/>
+						      <input type="password" name="repass" value={this.state.fields["repass"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["repass"]!="" &&this.state.errors["repass"]!= undefined)?"is-invalid":""}`} placeholder="Retype Password"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["repass"]}
 						       </div>
