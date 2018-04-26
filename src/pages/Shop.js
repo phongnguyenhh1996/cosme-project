@@ -8,50 +8,50 @@ class Shop extends React.Component{
 
 	<div className="container-fluid page-shop">
 	<ScrollToTop />
-	<div className="row px-md-5 py-md-3">
+	<div className="row px-sm-3 px-lg-5 py-sm-3">
 					<nav aria-label="breadcrumb ">
 					  <ol class="breadcrumb bg-white">
 					    <li class="breadcrumb-item"><Link to="/">Home</Link></li>
 					    <li class="breadcrumb-item active" aria-current="page">Shop</li>
 					  </ol>
 					</nav>
-					<div className="w-100 border-bottom-dashed mx-md-3"></div>
+					<div className="w-100 border-bottom-dashed mx-sm-3"></div>
 				</div>
-			     <div className="row px-md-5 py-md-4">
-	<div id="primary" className="col-md-9 col-xl-9">
-<div className="row products shop py-5 py-md-0">
+			     <div className="row px-sm-3 px-lg-5 py-sm-4">
+	<div id="primary" className="col-sm-8 col-lg-9">
+<div className="row products shop py-5 py-sm-0">
 
-		<div id="products" className="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+		<div id="products" className="col-sm-6 col-lg-4">
 		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Amino Acids.jpg')} />	
 		<h3 className="text-center py-3">
 		Amino Acids 	</h3>
 	</Link>	</div>
-	<div id="products"  className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
+	<div id="products"  className="col-sm-6 col-lg-4">
 		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Antioxidants.jpg')} />
 		<h3 className="text-center py-3">
 		Antioxidants	</h3>
 	</Link>	</div>
-	<div id="products"  className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+	<div id="products"  className="col-sm-6 col-lg-4">
 		<Link to="/shop/product_list" className="w-100 d-block text-center"  >
 		<img className="img-fluid" src={require('../images/Multivitamins.jpg')} />
 		<h3 className="text-center py-3">
 		Multivitamins	</h3>
 	</Link>	</div>
-	<div  id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product">
+	<div  id="products" className="col-sm-6 col-lg-4 product-category product">
 		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Organic Cosmetics.jpg')} />
 		<h3 className="text-center py-3">
 		Organic Cosmetics </h3>
 	</Link>	</div>
-	<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product first">
+	<div id="products" className="col-sm-6 col-lg-4 product-category product first">
 		<Link to="/shop/product_list" className="w-100 d-block text-center" >
 		<img className="img-fluid" src={require('../images/Organic Food.jpg')} />
 		<h3 className="text-center py-3">
 		Organic Food 	</h3>
 	</Link>	</div>
-	<div id="products" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 product-category product last">
+	<div id="products" className="col-sm-6 col-lg-4 product-category product last">
 		<Link to="/shop/product_list" className="w-100 d-block text-center"  >
 			<img className="img-fluid" src={require('../images/Vitamins & Minerals.jpg')} />
 		<h3 className="text-center py-3">
@@ -61,33 +61,33 @@ class Shop extends React.Component{
 	</div>
 	</div>
 
-<div className="col-md-3">
+<div className="col-sm-4 col-lg-3">
 						<div className="row">
-							<div className="col-md-12 browse aside">
+							<div className="col-sm-12 browse aside">
 								<h4 className="font-weight-bold w-100 pt-5">Browse</h4>
 								<ul className="nav flex-column pt-4">
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Amino Acids <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Amino Acids <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Antioxidants <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Antioxidants <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Multivitamins <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Multivitamins <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Organic Cosmetics <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Organic Cosmetics <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Organic Food <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Organic Food <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Vitamins & Minerals <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Vitamins & Minerals <span>(19)</span></a>
 				                  </li>
 				                </ul>
 							</div>
-							<div className="col-md-12 aside">
-								<h4 className="font-weight-bold w-100 pt-5 mt-md-5">Top Rated Products</h4>
+							<div className="col-sm-12 aside">
+								<h4 className="font-weight-bold w-100 pt-5 mt-sm-5">Top Rated Products</h4>
 								<ul className="product-list pt-4">
 									<li>
 										<a href="#" title="Daily Detangling Shampoo">
@@ -165,8 +165,8 @@ class Shop extends React.Component{
 
 									</ul>
 							</div>
-							<div className="col-md-12 aside">
-								<h4 className="font-weight-bold w-100 pt-5 mt-md-3">Recent Reviews</h4>
+							<div className="col-sm-12 aside">
+								<h4 className="font-weight-bold w-100 pt-5 mt-sm-3">Recent Reviews</h4>
 								<ul className="product-list pt-4">
 									<li className="pb-5">
 

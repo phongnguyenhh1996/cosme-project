@@ -67,18 +67,18 @@ class Login extends React.Component{
 		 return(	
 				<div className="container-fluid blog">
 				<ScrollToTop />
-					<div className="row px-md-5 py-md-3">
+					<div className="row px-sm-3 px-lg-5 py-sm-3">
 						<nav aria-label="breadcrumb ">
 						  <ol className="breadcrumb bg-white">
 						    <li className="breadcrumb-item"> <Link to="/">Home</Link></li>
 						    <li className="breadcrumb-item active" aria-current="page">My Account</li>
 						  </ol>
 						</nav>
-					<div className="w-100 border-bottom-dashed mx-md-3">
+					<div className="w-100 border-bottom-dashed mx-sm-3">
 					</div>
 					</div>
-					<div className="row px-md-5 py-4 form-login-register">
-						<div className=" col-xs-12 col-md-6 col-xl-6">
+					<div className="row px-sm-3 px-lg-5 py-4 form-login-register">
+						<div className="col-sm-4 col-lg-6">
 						
 							<h2 className="pt-5 pb-4"><b> Login</b></h2>
 							<form className="form-login pt-5" onSubmit={this.onSubmit}>
@@ -108,19 +108,19 @@ class Login extends React.Component{
 							</form>
 
 						</div>	
-						<div className=" col-xs-12 col-md-6 col-xl-6">
+						<div className="col-sm-8 col-lg-6">
 						
 						<h2 className="pt-5 pb-4"><b> Register</b></h2>
 						<form className={`checkout-form form-login mb-5 ${(this.state.isValid)?"d-none":"d-block"}`} onSubmit={this.validateForm.bind(this)}>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Email</label>
 						      <input type="text" name="email" value={this.state.fields["email"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["email"]!="" &&this.state.errors["email"]!= undefined)?"is-invalid":""}`} placeholder="Email"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["email"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>Address</label>
 						      <input type="text" name="address" value={this.state.fields["address"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["address"]!="" &&this.state.errors["address"]!= undefined)?"is-invalid":""}`} placeholder="Address"/>
 						      <div class="invalid-feedback">
@@ -129,14 +129,14 @@ class Login extends React.Component{
 						    </div>
 						  </div>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Name</label>
 						      <input type="text" name="name" value={this.state.fields["name"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["name"]!="" &&this.state.errors["name"]!= undefined)?"is-invalid":""}`} placeholder="Name"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["name"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>City</label>
 						      <input type="text" name="city" value={this.state.fields["city"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["city"]!="" &&this.state.errors["city"]!= undefined)?"is-invalid":""}`} placeholder="City"/>
 						      <div class="invalid-feedback">
@@ -145,14 +145,14 @@ class Login extends React.Component{
 						    </div>
 						  </div>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Password</label>
 						      <input type="password" name="pass" value={this.state.fields["pass"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["pass"]!="" &&this.state.errors["pass"]!= undefined)?"is-invalid":""}`} placeholder="Password"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["pass"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>Retype Password</label>
 						      <input type="password" name="city" value={this.state.fields["repass"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["repass"]!="" &&this.state.errors["repass"]!= undefined)?"is-invalid":""}`} placeholder="Retype Password"/>
 						      <div class="invalid-feedback">
@@ -161,14 +161,14 @@ class Login extends React.Component{
 						    </div>
 						  </div>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Phone Number</label>
 						      <input type="number" name="phone" value={this.state.fields["phone"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["phone"]!="" &&this.state.errors["phone"]!= undefined)?"is-invalid":""}`} placeholder="Phone Number"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["phone"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>Tax Code</label>
 						      <input type="text" name="taxcode" value={this.state.fields["taxcode"]} onChange={this.handleChange.bind(this)} className="form-control" placeholder="Tax Code"/>
 						    </div>

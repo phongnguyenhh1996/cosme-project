@@ -79,28 +79,28 @@ class CheckoutPage extends React.Component{
 		 return(
 			<div className="container-fluid blog">
 			<ScrollToTop />
-				<div className="row px-md-5 py-md-3">
+				<div className="row px-sm-3 px-lg-5 py-sm-3">
 					<nav aria-label="breadcrumb ">
 					  <ol className="breadcrumb bg-white">
 					    <li className="breadcrumb-item"> <Link to="/">Home</Link></li>
 					    <li className="breadcrumb-item active" aria-current="page">Checkout</li>
 					  </ol>
 					</nav>
-					<div className="w-100 border-bottom-dashed mx-md-3"></div>
+					<div className="w-100 border-bottom-dashed mx-sm-3"></div>
 				</div>
-				<div className="row px-md-5 py-md-4">
-					<div className="col-xs-12 col-md-9 col-xl-9">
-					<h4 className="w-100 mb-md-3">Shipping Address</h4>
-						<form className={`checkout-form mb-md-5 ${(this.state.isValid)?"d-none":"d-block"}`} onSubmit={this.validateForm.bind(this)}>
+				<div className="row px-sm-3 px-lg-5 py-4">
+					<div className="col-sm-7 col-lg-9">
+					<h4 className="w-100 mb-3">Shipping Address</h4>
+						<form className={`checkout-form mb-5 ${(this.state.isValid)?"d-none":"d-block"}`} onSubmit={this.validateForm.bind(this)}>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Email</label>
 						      <input type="text" name="email" value={this.state.fields["email"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["email"]!="" &&this.state.errors["email"]!= undefined)?"is-invalid":""}`} placeholder="Email"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["email"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>Address</label>
 						      <input type="text" name="address" value={this.state.fields["address"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["address"]!="" &&this.state.errors["address"]!= undefined)?"is-invalid":""}`} placeholder="Address"/>
 						      <div class="invalid-feedback">
@@ -109,14 +109,14 @@ class CheckoutPage extends React.Component{
 						    </div>
 						  </div>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Name</label>
 						      <input type="text" name="name" value={this.state.fields["name"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["name"]!="" &&this.state.errors["name"]!= undefined)?"is-invalid":""}`} placeholder="Name"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["name"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>City</label>
 						      <input type="text" name="city" value={this.state.fields["city"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["city"]!="" &&this.state.errors["city"]!= undefined)?"is-invalid":""}`} placeholder="City"/>
 						      <div class="invalid-feedback">
@@ -125,70 +125,71 @@ class CheckoutPage extends React.Component{
 						    </div>
 						  </div>
 						  <div className="form-row">
-						    <div className="form-group col-md-6 pr-md-3">
+						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Phone Number</label>
 						      <input type="number" name="phone" value={this.state.fields["phone"]} onChange={this.handleChange.bind(this)} className={`form-control ${(this.state.errors["phone"]!="" &&this.state.errors["phone"]!= undefined)?"is-invalid":""}`} placeholder="Phone Number"/>
 						      <div class="invalid-feedback">
 						      	{this.state.errors["phone"]}
 						       </div>
 						    </div>
-						    <div className="form-group col-md-6 pl-md-3">
+						    <div className="form-group col-sm-6 pl-sm-3">
 						      <label>Tax Code</label>
 						      <input type="text" name="taxcode" value={this.state.fields["taxcode"]} onChange={this.handleChange.bind(this)} className="form-control" placeholder="Tax Code"/>
 						    </div>
 						  </div>
-						  <button type="submit" className="btn btn-danger btn-lm mt-md-2">SAVE INFORMATION</button>
+						  <button type="submit" className="btn btn-danger btn-lm mt-2">SAVE INFORMATION</button>
 						</form>
 						<div className={`${(carts.length >0)?"d-block":"d-none"}`}>
-							<div className="row no-gutters mr-md-5 font-weight-bold">
-								<div className="col-md-6">PRODUCT</div>
-								<div className="col-md-2">QUANTITY</div>
-								<div className="col-md-2">PRICE</div>
-								<div className="col-md-2">TOTAL</div>
+
+							<div className="row no-gutters mr-sm-5 font-weight-bold d-none d-lg-flex">
+								<div className="col-sm-6">PRODUCT</div>
+								<div className="col-sm-2">QUANTITY</div>
+								<div className="col-sm-2">PRICE</div>
+								<div className="col-sm-2">TOTAL</div>
 							</div>
 							{carts.map((item)=>{
 								subtotal+= item.price*item.quantity;
-								return <div className="row no-gutters cartpg-item py-md-3 mr-md-5" key={item.id}>
-									<div className="col-md-6">
-									<img className="w-25 float-left" src={require('../images/'+item.img + '.png')} />
-									<ul className="list-unstyled ml-md-2 pr-md-3 w-100">
-							            <li className="pb-md-1 name">{item.name}</li>
-							            <li className="pb-md-1">SKU: N/A</li>
-							            <li className="pb-md-1">Size: 3.5 oz</li>
+								return <div className="row no-gutters cartpg-item py-3 mr-lg-5" key={item.id}>
+									<div className="col-lg-6">
+									<img className="w-25 float-lg-left float-right" src={require('../images/'+item.img + '.png')} />
+									<ul className="list-unstyled ml-lg-2 pr-lg-3 w-100">
+							            <li className="pb-1 name">{item.name}</li>
+							            <li className="pb-1">SKU: N/A</li>
+							            <li className="pb-1">Size: 3.5 oz</li>
 							            <li className="remove" ><span onClick={CartActions.deleteItem.bind(this,item.id)}>Remove Item</span></li>
 							        </ul>   
 									</div>
-									<div className="col-md-2">
-									<div className="row cart-quatity pr-md-5">
-										<QuantityCount qty={item.quantity} idItem={item.id} />
-									</div>			
+									<div className="col-lg-2 col-5 order-3">
+										<div className="row cart-quatity pr-lg-5">
+											<QuantityCount qty={item.quantity} idItem={item.id} />
+										</div>	
 									</div>
-									<div className="col-md-2">{item.price.toFixed(2)}$</div>
-									<div className="col-md-2 font-weight-bold">{(item.price*item.quantity).toFixed(2)}$</div>
+									<div className="col-lg-2 col-3 order-2 pt-2 pt-lg-0">{item.price.toFixed(2)}$</div>
+									<div className="col-lg-2 col-4 pt-2 pt-lg-0 order-4 font-weight-bold text-right text-lg-left">{(item.price*item.quantity).toFixed(2)}$</div>
 								</div>
 							})}
 						</div>
 						<div className={(carts.length >0)?"d-none":"d-block"}><p>Your cart is currently empty.</p><Link className="btn button1 text-white" to="/shop">Return to shop</Link></div>
 					</div>
-					<div className="col-md-3 px-md-0">
+					<div className="col-sm-5 col-lg-3 px-sm-0">
 							<div className="subscribe-follow summary">
 								<div className="subscribe text-left">
 									<div className={`${(this.state.isValid)?"d-block":"d-none"}`}>
-							        	<h4 className="pt-md-3 mb-md-3 font-weight-bold">Shipping To</h4>
-										<ul className="list-unstyled py-md-2">
-								            <li className="pb-md-1">{info.name}</li>
-								            <li className="pb-md-1">{info.address+", "+info.city}</li>
-								            <li className="pb-md-1">{info.phone}</li>
+							        	<h4 className="py-3 font-weight-bold">Shipping To</h4>
+										<ul className="list-unstyled py-2">
+								            <li className="pb-1">{info.name}</li>
+								            <li className="pb-1">{info.address+", "+info.city}</li>
+								            <li className="pb-1">{info.phone}</li>
 								        </ul>
 									</div>
-									<h4 className="pt-md-3 mb-md-3 font-weight-bold">Order Summary</h4>
-									<ul className="list-unstyled py-md-2">
-							            <li className="pb-md-1">Subtotal <span className="float-right">{subtotal.toFixed(2)}$</span></li>
-							            <li className="pb-md-1">Shipping <span className="float-right">0.00$</span></li>
-							            <li className="pb-md-1">Tax <span className="float-right">0.00$</span></li>
+									<h4 className="py-3 font-weight-bold">Order Summary</h4>
+									<ul className="list-unstyled py-2">
+							            <li className="pb-1">Subtotal <span className="float-right">{subtotal.toFixed(2)}$</span></li>
+							            <li className="pb-1">Shipping <span className="float-right">0.00$</span></li>
+							            <li className="pb-1">Tax <span className="float-right">0.00$</span></li>
 							        </ul>
-							        <h6 className="font-weight-bold pb-md-2">ESTIMATED TOTAL <span className="float-right">{subtotal.toFixed(2)}$</span></h6>
-									<button type="submit" disabled={!this.state.isValid} className="btn btn-secondary btn-lm btn-block mb-md-3">CONFIRM PAYMENT</button>
+							        <h6 className="font-weight-bold pb-2">ESTIMATED TOTAL <span className="float-right">{subtotal.toFixed(2)}$</span></h6>
+									<Link to="/checkout" className="btn btn-primary button1 text-white btn-block mb-3">PROCEED TO CHECKOUT</Link>
 								</div>
 							</div>
 					</div>

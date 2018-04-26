@@ -7,17 +7,17 @@ class About extends React.Component{
 		 return(
 			<div className="container-fluid blog">
 			<ScrollToTop />
-				<div className="row px-md-5 py-md-3">
+				<div className="row px-sm-3 px-lg-5 py-sm-3">
 					<nav aria-label="breadcrumb ">
 					  <ol class="breadcrumb bg-white">
 					    <li class="breadcrumb-item"> <Link to="/">Home</Link></li>
 					    <li class="breadcrumb-item active" aria-current="page">About</li>
 					  </ol>
 					</nav>
-					<div className="w-100 border-bottom-dashed mx-md-3"></div>
+					<div className="w-100 border-bottom-dashed mx-sm-3"></div>
 				</div>
-				<div className="row px-md-5 py-4">
-					<div className=" col-xs-12 col-md-9 col-xl-9 pr-md-5">
+				<div className="row px-sm-3 px-lg-5 py-4">
+					<div className="col-sm-8 col-lg-9 pr-sm-5">
 						<div className="content pd-5">
 							<h3>
 								Making your diet healthier since 1992…
@@ -54,16 +54,16 @@ class About extends React.Component{
 						</div>
 						
 					</div>
-					<div className="col-md-3">
+					<div className="col-sm-4 col-lg-3">
 						<div className="row">
-							<div className="making-your col-md-12">
+							<div className="making-your col-sm-12">
 								<h2 className="pt-4">Making your diet healthier since 1992…</h2>
 								<p> Organica is an old player when it comes to everything health-inducing and organic-enhanced!
 								 For years we've been selling quality organic food, vitamins, bio-additives,
 					 			nutritional supplements and other healthy products both in the U.S., as well as internationally.
 					 			</p>
 							</div>
-							<div className="subscribe-follow px-3 px-md-0">
+							<div className="subscribe-follow px-3 px-sm-0">
 								<div className="subscribe">
 									<h2 className="pt-5">Subscribe</h2>
 									<p>Trust us, you'll want to hear what we have to say</p>
@@ -80,7 +80,7 @@ class About extends React.Component{
 										Read our latest news on any of these social networks!
 									</p>
 									<div className="pt-2 pb-5">
-										<ul className="nav social1 mx-auto justify-content-md-center">
+										<ul className="nav social1 mx-auto justify-content-sm-center">
 				                            <li className="nav-item">
 				                                <a className="nav-link" href="#"><i className="fab fa-facebook-f"></i></a>
 				                            </li>

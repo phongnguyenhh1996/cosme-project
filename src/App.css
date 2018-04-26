@@ -997,8 +997,8 @@ text-decoration: none;
 }
 .checkout-form button, .checkout-form input{border-radius:0}
 
-@media (max-width: 575.98px) {
-  header .col-sm-9.order-1.order-md-3 .row{position:fixed; top:0; left: 0; width:100%; background-color:#F5F5F5; margin-right:0;margin-left:0; z-index:100;}
+@media (max-width: 767px) {
+  header .order-1.order-lg-3 .row{position:fixed; top:0; left: 0; width:100%; background-color:#F5F5F5; margin-right:0;margin-left:0; z-index:100;}
   header .order-3{margin-top: 56px;}
   .slide-main .carousel-item .carousel-caption h1{
   font-size: 1rem;
@@ -1007,7 +1007,7 @@ text-decoration: none;
   font-size: 1rem;
   }
   .slide-main .carousel-item .carousel-caption button{font-size:.7rem; padding:.175rem .55rem}
-  .banner .col-md-4,.banner .col-md-12{padding-right:0;padding-left:0}
+  .banner .col-lg-4,.banner .col-lg-12{padding-right:0;padding-left:0}
   .carousel-indicators{bottom: -25px!important;}
   .sub-follow input{text-align: center;}
   .sub-follow ul li .svg-inline--fa.fa-fw{width:1rem}
@@ -1015,8 +1015,23 @@ text-decoration: none;
   .shorting-text{position:relative}
   .blog .title h1{font-size:2rem}
   .blog .publish{font-size:.8rem}
+  .page-shop h3.text-center.py-3{font-size:1.3rem}
 }
 @media (min-width: 768px) {
+  .slide-main .carousel-item .carousel-caption h1{
+  font-size: 2rem;
+  }
+  .font-bigger{
+  font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .slide-main .carousel-item .carousel-caption h1{
+  font-size: 3rem;
+  }
+  .font-bigger{
+  font-size: 6rem;
+  }
   nav.navbar .dropdown .dropdown-menu {
     display: block;
     transition: visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;

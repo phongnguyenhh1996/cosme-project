@@ -19,13 +19,13 @@ class CartContent extends React.Component{
 		var subtotal = 0;
 		return(
 			<div>
-			<div className="cart-content pt-md-3">
+			<div className="cart-content pt-3">
 							{ this.props.itemss.map((item)=>{
 								subtotal+= item.price*item.quantity;
-							return	<div key={item.id} className="cart-item clearfix mb-md-3 d-flex align-items-center">
+							return	<div key={item.id} className="cart-item clearfix mb-3 d-flex align-items-center">
 							          <img src={require('../images/'+item.img + '.png')} />
-							          <ul className="list-unstyled float-left ml-md-2 pr-md-3 w-100">
-							            <li className="pb-md-1"><a href="#">{item.name}</a></li>
+							          <ul className="list-unstyled float-left ml-lg-2 pr-lg-3 w-100">
+							            <li className="pb-1"><a href="#">{item.name}</a></li>
 							            <li>{item.quantity} x <span className="price">{(item.price*item.quantity).toFixed(2)}$</span></li>
 							            <DeleteItem idItem={item.id}/>
 							          </ul>   
@@ -33,8 +33,8 @@ class CartContent extends React.Component{
 							}
 								)}
 				        </div>
-				        <h4 className="my-md-3 pt-md-3 subtotal">SUBTOTAL: <span className="price">{subtotal.toFixed(2)}$</span></h4>
-				        <Link to="/cart" className="btn view-card w-100 mb-md-3">VIEW CART</Link>
+				        <h4 className="my-3 pt-3 subtotal">SUBTOTAL: <span className="price">{subtotal.toFixed(2)}$</span></h4>
+				        <Link to="/cart" className="btn view-card w-100 mb-3">VIEW CART</Link>
 				        <a href="#" className="btn check-out w-100">CHECK OUT</a>
 			</div>
 		);
@@ -59,7 +59,7 @@ class Cart extends React.Component{
 			<li className="nav-item dropdown shopping-cart">
 	            <a className="nav-link " href="#" role="button" id="dropdownCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-shopping-cart fa-lg"></i><span className="badge badge-pill bg-main text-white">{cart.length}</span></a>
 	              <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownCart">
-	                <h4 className="pb-md-3 border-bottom">My Cart</h4>
+	                <h4 className="pb-3 border-bottom">My Cart</h4>
 	                {(cart.length>0) ? <CartContent itemss={cart}/> : "No products in the cart."}
 	              </div>   
 	        </li>

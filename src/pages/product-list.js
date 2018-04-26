@@ -13,7 +13,7 @@ class ProductList extends React.Component{
 		return(
 			<div className="container-fluid">
 			<ScrollToTop />
-				<div className="row px-md-5 py-md-3">
+				<div className="row px-sm-3 px-lg-5 py-sm-3">
 					<nav aria-label="breadcrumb ">
 					  <ol className="breadcrumb bg-white">
 					    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
@@ -21,20 +21,20 @@ class ProductList extends React.Component{
 					    <li className="breadcrumb-item active" aria-current="page">Products List</li>
 					  </ol>
 					</nav>
-					<div className="w-100 border-bottom-dashed mx-md-3"></div>
+					<div className="w-100 border-bottom-dashed mx-sm-3"></div>
 				</div>
-				<div className="row px-md-5 py-md-4">
-					<div className="col-md-9">
+				<div className="row px-sm-3 px-lg-5 py-sm-4">
+					<div className="col-sm-8 col-lg-9">
 						<div className="row">
-							<div className="col-5 col-md-3 pt-5 pt-md-0">
+							<div className="col-5 col-sm-3 pt-5 pt-sm-0">
 								<div className="shorting">Default sorting <i className="fas fa-chevron-down fa-xs"></i></div>
 							</div>
-							<p className="font-weight-bold color-main shorting-text pt-4 pt-md-0">Showing all {prds.length} results</p>
+							<p className="font-weight-bold color-main shorting-text pt-4 pt-sm-0">Showing all {prds.length} results</p>
 						</div>
-						<div className="row py-md-4">
+						<div className="row py-sm-4">
 							{prds.map((prd) =>
 							{
-								return	<div className="products col-md-4 px-3 text-center my-4" key={prd.id}>
+								return	<div className="products col-sm-6 col-lg-4 px-3 text-center my-4" key={prd.id}>
 								      	  	<RateStar star={prd.star}/>
 								      	  	<div className={`product-image product-${prd.status}`}>
 									      	<Link to={"/shop/product_list/"+prd.name}><img className="img-fluid mx-auto" src={require('../images/'+prd.img + '.png')}/></Link>
@@ -47,28 +47,28 @@ class ProductList extends React.Component{
 							)}
 						</div>
 					</div>
-					<div className="col-md-3">
+					<div className="col-sm-4 col-lg-3">
 						<div className="row">
-							<div className="col-md-12 browse aside">
+							<div className="col-sm-12 browse aside">
 								<h4 className="font-weight-bold w-100 pt-5">Browse</h4>
 								<ul className="nav flex-column pt-4">
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Amino Acids <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Amino Acids <span>(19)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Antioxidants <span>(9)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Antioxidants <span>(9)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Multivitamins <span>(12)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Multivitamins <span>(12)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Organic Cosmetics <span>(6)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Organic Cosmetics <span>(6)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Organic Food <span>(15)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Organic Food <span>(15)</span></a>
 				                  </li>
 				                  <li className="nav-item">
-				                    <a className="nav-link px-md-0" href="#">Vitamins & Minerals <span>(19)</span></a>
+				                    <a className="nav-link px-sm-0" href="#">Vitamins & Minerals <span>(19)</span></a>
 				                  </li>
 				                </ul>
 				                <div className="filter-price px-4 mt-5 pb-5">
@@ -77,7 +77,7 @@ class ProductList extends React.Component{
 				                	<button className="btn">FILTER</button><span className="text-secondary float-right pt-2">Price: 15$ — 87$</span>
 				                </div>
 							</div>
-							<div className="col-md-12 aside">
+							<div className="col-sm-12 aside">
 								<h4 className="font-weight-bold w-100 pt-5 mt-5">Top Rated Products</h4>
 								<ul className="product-list pt-4">
 									<li>
@@ -156,7 +156,7 @@ class ProductList extends React.Component{
 
 									</ul>
 							</div>
-							<div className="col-md-12 aside">
+							<div className="col-sm-12 aside">
 								<h4 className="font-weight-bold w-100 pt-5 mt-3">Recent Reviews</h4>
 								<ul className="product-list pt-4">
 									<li className="pb-5">

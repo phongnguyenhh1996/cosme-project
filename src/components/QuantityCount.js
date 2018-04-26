@@ -29,7 +29,7 @@ class QuantityCount extends React.Component{
               <div className="input-group-prepend">
                 <span className="input-group-text" onClick={this.updateQty.bind(this,(this.state.count-1))}>-</span>
               </div>
-              <input type="number" value={this.state.count} className="form-control p-md-0" onChange={this.handleChange.bind(this)}/>
+              <input type="number" value={this.state.count} className="form-control p-lg-0" onChange={this.handleChange.bind(this)}/>
               <div className="input-group-append">
                 <span className="input-group-text" onClick={this.updateQty.bind(this,(this.state.count+1))}>+</span>
               </div>
