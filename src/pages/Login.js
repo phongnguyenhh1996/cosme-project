@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import ScrollToTop from '../components/scrollOnTop';
+import { findDOMNode } from 'react-dom';
+import $ from "jquery";
 
 
 class Login extends React.Component{
@@ -57,12 +59,23 @@ class Login extends React.Component{
     	e.preventDefault();
     	let errors = this.state.errors;
     	let isValid=true;
+    	let modal=findDOMNode(this.refs.modal);
     	Object.keys(this.state.fields).map((k)=>{
     		if (this.state.fields[k]==""){isValid=false;errors[k]="This field cannot be empty!"}
     		if (this.state.errors[k]!=""){isValid=false};
     	});
-    	this.setState({errors});
-    	this.setState({isValid});
+    	if (isValid){
+    	$(modal).modal('show');
+    	this.setState({fields: {email: "",name: "", phone: "", address:"", city:"", pass: "", repass:""}})
+    	} else{
+    		this.setState({errors});
+    		this.setState({isValid});
+    	};
+    	
+    }
+    closeModal(){
+    	let modal=findDOMNode(this.refs.modal);
+    	$(modal).modal('hide');
     }
 	render(){
 		 return(	
@@ -112,7 +125,7 @@ class Login extends React.Component{
 						<div className="col-sm-8 col-lg-6">
 						
 						<h2 className="pt-5 pb-4"><b> Register</b></h2>
-						<form className={`checkout-form form-login mb-5 ${(this.state.isValid)?"d-none":"d-block"}`} onSubmit={this.validateForm.bind(this)}>
+						<form className="checkout-form form-login mb-5" onSubmit={this.validateForm.bind(this)}>
 						  <div className="form-row">
 						    <div className="form-group col-sm-6 pr-sm-3">
 						      <label>Email</label>
@@ -176,6 +189,25 @@ class Login extends React.Component{
 						  </div>
 						  <button type="submit" class="btn btn-primary button1">REGISTER</button>
 						</form>
+						<div ref="modal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        Registration Successfull!
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <Link to="/shop" class="btn btn-primary" onClick={this.closeModal.bind(this)}>Go to Shop</Link>
+						      </div>
+						    </div>
+						  </div>
+						</div>
 						</div>
 					</div>
 

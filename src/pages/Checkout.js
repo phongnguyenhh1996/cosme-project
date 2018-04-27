@@ -189,7 +189,7 @@ class CheckoutPage extends React.Component{
 							            <li className="pb-1">Tax <span className="float-right">0.00$</span></li>
 							        </ul>
 							        <h6 className="font-weight-bold pb-2">ESTIMATED TOTAL <span className="float-right">{subtotal.toFixed(2)}$</span></h6>
-									<Link to="/checkout" className="btn btn-primary button1 text-white btn-block mb-3">PROCEED TO CHECKOUT</Link>
+									<button type="submit" disabled={!this.state.isValid} className="btn btn-secondary btn-lm btn-block mb-3">CONFIRM PAYMENT</button>
 								</div>
 							</div>
 					</div>

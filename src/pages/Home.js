@@ -38,18 +38,38 @@ class Home extends React.Component{
 		return(
 			<div className="container-fluid">
 				<div className="row slide-main">
-					<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+					<div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel">
 					  <div className="carousel-inner">
-					  {Array.apply(null, Array(3)).map((a,index)=> 
-					  	<div className={`carousel-item ${(index==0)?"active":""}`}>
-					      <img className="d-block w-100" src={require('../images/slide-'+(index+1)+'.jpg')} alt="First slide" />
-					      <div className="carousel-caption pt-sm-4 pt-lg-5 mt-lg-5">
-						    <h1 className="hand-writing color-main2 pt-sm-5">Find the</h1>
-						    <h1 className="sans-serif-font text-dark font-weight-bold"><span className="font-bigger sans-serif-font">Healthiest</span><br/>Organic Cosmetic Products</h1>
-						    <button className="btn btn-outline-dark font-weight-bold mt-sm-3 mt-sm-4">SHOP NOW</button>
+					  <div className="carousel-item active">
+					      <img className="d-block w-100" src={require('../images/slide-1.jpg')} alt="First slide" />
+					      <div className="carousel-caption d-flex justify-content-center align-items-center">
+					      <div>
+						   <h1 className="hand-writing color-main2">Find the</h1>
+						   <h1 className="sans-serif-font text-dark font-weight-bold"><span className="font-bigger sans-serif-font">Healthiest</span><br/>Organic Cosmetic Products</h1>
+						   <button className="btn btn-outline-dark font-weight-bold mt-md-4">SHOP NOW</button>
+						   </div>
+						  </div>
+						  </div>
+					    <div className="carousel-item">
+					      <img className="d-block w-100" src={require('../images/slide-2.jpg')} alt="Second slide" />
+					      <div className="carousel-caption d-flex justify-content-end align-items-center">
+					  		<div>
+						    <h1 className="hand-writing text-white pt-md-5">Super Sale</h1>
+						    <h1 className="sans-serif-font text-dark font-weight-bold">SAVE up to <span className="text-white">50%</span> on<br/><span className="color-main2">ORGANIC</span> Aloe Vera Juice</h1>
+						    <button className="btn btn-outline-dark font-weight-bold mt-md-4">SHOP NOW</button>
+						    </div>
 						  </div>
 					    </div>
-					  )}
+					    <div className="carousel-item">
+					      <img className="d-block w-100" src={require('../images/slide-3.jpg')} alt="Third slide" />
+					      <div className="carousel-caption d-flex justify-content-start align-items-center">
+					      	<div>
+						    <h1 className="hand-writing color-main2 pt-md-5">The Best</h1>
+						    <h1 className="sans-serif-font text-white font-weight-bold">Food Supplements<br/>for Health & Beauty</h1>
+						    <button className="btn btn-outline-dark font-weight-bold mt-sm-3 mt-sm-4">SHOP NOW</button>
+						    </div>
+						  </div>
+					    </div>
 					  </div>
 					  <a className="carousel-control-prev d-none d-sm-flex" href="#carouselExampleIndicators" role="button" data-slide="prev">
 					    <span className="carousel-control-prev-icon" aria-hidden="true"></span>

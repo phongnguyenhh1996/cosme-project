@@ -101,7 +101,7 @@ class Header extends React.Component{
                         </nav>
                     </div>
                     <div className="col-6 col-sm-3 d-flex justify-content-end pr-lg-0">
-                        <ul className="nav social py-lg-4 py-2 align-self-center">
+                        <ul className="nav social py-lg-4 py-2 align-self-md-center">
                             <Cart />
                             <li className="nav-item">
                             <Link className="nav-link" to="/login">
