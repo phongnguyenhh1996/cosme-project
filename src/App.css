@@ -241,7 +241,8 @@ h4.subtotal{
   display: block;
 }
 .banner a:hover img{
-  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   box-shadow: 6px 8px 16px rgba(186, 186, 213, 0.57);
 }
 h3.title{
@@ -287,10 +288,12 @@ h3.title{
   transition: all .8s ease;
 }
 .products:hover img{
-  transform:  scale(1.05);
+  -webkit-transform:  scale(1.05);
+          transform:  scale(1.05);
 }
 .products:hover.shop img{
-  transform:  scale(1.0);
+  -webkit-transform:  scale(1.0);
+          transform:  scale(1.0);
 }
 .product-featured::after{
   position: absolute;
@@ -368,6 +371,15 @@ h3.title{
 .sub-follow input{
   background-color: rgba(255, 255, 255, .1);
   color: white!important;
+}
+.sub-follow input::-webkit-input-placeholder{
+  color: white;
+}
+.sub-follow input:-ms-input-placeholder{
+  color: white;
+}
+.sub-follow input::-ms-input-placeholder{
+  color: white;
 }
 .sub-follow input::placeholder{
   color: white;
@@ -462,7 +474,8 @@ ol.breadcrumb li.active{
   position: absolute;
   content: "";
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   height: 180%;
   width: 2px;
   background-color: black;
@@ -505,7 +518,8 @@ ol.breadcrumb li.active{
   text-transform: uppercase;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-align: center;
   bottom: 30px;
   width: 70%;
@@ -728,7 +742,8 @@ margin: 0 auto;
   background-color: #ACD674;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -771,7 +786,8 @@ margin: 0 auto;
   text-transform: uppercase;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-align: center;
   bottom: 30px;
   width: 70%;
@@ -789,7 +805,8 @@ margin: 0 auto;
 color: white;
 top: 54%;
 left: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 }
 .link:hover p{
 color: white;
@@ -803,7 +820,8 @@ color: white;
 color: white;
 top: 50%;
 left: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 
 }
 
@@ -814,7 +832,8 @@ color: white;
  position: absolute;
   top: 50%;
   left: 50%;
-transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
 
 
 }
@@ -1026,14 +1045,14 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 2.5rem;
   }
   .page-shop h3.text-center.py-3{font-size:1.3rem}
+  .fixed-navbar{
+    position:fixed!important;
+    top:0; left:50%; 
+    transform:translateX(-50%); 
+    width:200%;background-color:white; 
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
 }
 @media (min-width: 992px) {
-  .slide-main .carousel-item .carousel-caption h1{
-  font-size: 3rem;
-  }
-  .font-bigger{
-  font-size: 6rem;
-  }
   nav.navbar .dropdown .dropdown-menu {
     display: block;
     transition: visibility 0s linear 0.5s,opacity 0.3s linear, top 0.3s linear;
@@ -1064,6 +1083,16 @@ input[type=number]::-webkit-outer-spin-button {
   nav.navbar .dropdown-item:hover{
     color: #95CA4D!important;
     background-color: transparent!important;
+  }
+  .fixed-navbar{
+    position:fixed!important;
+    top:0; left:50%; 
+    transform:translateX(-50%); 
+    width:200%;background-color:white; 
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
+  .fixed-navbar .py-lg-4{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
   }
 
 }

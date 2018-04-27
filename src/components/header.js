@@ -1,8 +1,26 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Cart from './cartItem'
+import Cart from './cartItem';
+import { findDOMNode } from 'react-dom';
+import $ from "jquery";
 
 class Header extends React.Component{
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll.bind(this));
+    }
+    handleScroll(event) {
+        const el = findDOMNode(this.refs.fixedTop);
+        if (window.scrollY === 0) {
+            if ($(el).hasClass("fixed-navbar")){$(el).removeClass("col-lg-12 fixed-navbar d-flex justify-content-center").addClass("col-lg-9");}
+        }
+        else if (window.scrollY !== 0) {
+            if ($(el).hasClass("col-lg-9")){$(el).removeClass("col-lg-9").addClass("col-lg-12 fixed-navbar d-flex justify-content-center");}
+        }
+    }
     render(){
         return(
             <header className="container-fluid">
@@ -39,10 +57,10 @@ class Header extends React.Component{
                     </div>
                 </div>
                 <div className="row px-lg-5 py-lg-3">
-                    <div className="col-12 col-lg-3 order-3 order-sm-1 d-flex justify-content-center py-3 py-lg-0">
+                    <div className="col-12 col-lg-3 order-3 order-sm-1 d-flex justify-content-center align-items-lg-center py-3 py-lg-0">
                         <Link className="text-center w-100" to="/"><img className="img-fluid mx-auto" src={require('../images/logo.png')} /></Link>
                     </div>
-                    <div className="col-lg-9 order-1 order-lg-3">
+                    <div ref="fixedTop" className="col-lg-9 order-1 order-lg-3">
                     <div className="row">
                          <div className="col-6 col-sm-9">
                         <nav className="navbar navbar-expand-md navbar-light">
@@ -81,8 +99,8 @@ class Header extends React.Component{
                           </div>
                         </nav>
                     </div>
-                    <div className="col-6 col-sm-3">
-                        <ul className="nav social float-right py-lg-4 py-2">
+                    <div className="col-6 col-sm-3 d-flex justify-content-end pr-lg-0">
+                        <ul className="nav social py-lg-4 py-2 align-self-center">
                             <Cart />
                             <li className="nav-item">
                             <Link className="nav-link" to="/login">
