@@ -14,6 +14,7 @@ class Header extends React.Component{
     }
     handleScroll(event) {
         const el = findDOMNode(this.refs.fixedTop);
+        $(el).css("transition","background-color .3s ease, box-shadow .3s ease, transform .3s ease, flex-basis .3s ease, max-width 0s")
         if (window.scrollY === 0) {
             if ($(el).hasClass("fixed-navbar")){$(el).removeClass("col-lg-12 fixed-navbar d-flex justify-content-center").addClass("col-lg-9");}
         }

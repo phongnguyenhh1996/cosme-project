@@ -1048,6 +1048,7 @@ input[type=number]::-webkit-outer-spin-button {
   .fixed-navbar{
     position:fixed!important;
     top:0; left:50%; 
+    z-index: 30;
     transform:translateX(-50%); 
     width:200%;background-color:white; 
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
@@ -1084,12 +1085,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: #95CA4D!important;
     background-color: transparent!important;
   }
-  .fixed-navbar{
-    position:fixed!important;
-    top:0; left:50%; 
-    transform:translateX(-50%); 
-    width:200%;background-color:white; 
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
   .fixed-navbar .py-lg-4{
     padding-top: 0!important;
     padding-bottom: 0!important;
