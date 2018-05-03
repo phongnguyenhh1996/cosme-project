@@ -5,6 +5,7 @@ import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-d
 import Slider from "react-slick";
 import RateStar from '../components/rateStar';
 import AddToCart from '../components/addToCart';
+import ScrollToTop from '../components/scrollOnTop';
 
 class Home extends React.Component{
 	render(){
@@ -37,6 +38,7 @@ class Home extends React.Component{
 	    };
 		return(
 			<div className="container-fluid">
+				<ScrollToTop/>
 				<div className="row slide-main">
 					<div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel">
 					  <div className="carousel-inner">
