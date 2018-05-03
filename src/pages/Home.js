@@ -83,7 +83,7 @@ class Home extends React.Component{
 					  </a>
 					</div>
 				</div>
-				<div className="row px-sm-3 px-lg-5 py-sm-5 banner">
+				<div className="row px-sm-3 px-lg-5 py-sm-5  banner">
 					<div className="col-sm-4"><a href="#"><img className="img-fluid" src={require('../images/banner-1.png')}/></a></div>
 					<div className="col-sm-4">
 						<div className="row justify-content-sm-between">

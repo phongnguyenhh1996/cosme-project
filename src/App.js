@@ -24,7 +24,7 @@ class App extends Component {
           <Header />
           <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
           <Route exact path={process.env.PUBLIC_URL + '/shop'} component={Shop} />
-          <Route exact path=""{process.env.PUBLIC_URL + '/shop/product_list'} component={ProductList} />
+          <Route exact path={process.env.PUBLIC_URL + '/shop/product_list'} component={ProductList} />
           <Route path={process.env.PUBLIC_URL + '/shop/product_list/:prdDetail'} component={ProductDetail} />
           <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
            <Route path={process.env.PUBLIC_URL + '/contacts'} component={Contacts} />
