@@ -22,16 +22,16 @@ class App extends Component {
       <Router>
         <div>
           <Header />
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
-          <Route exact path={process.env.PUBLIC_URL + '/shop'} component={Shop} />
-          <Route exact path={process.env.PUBLIC_URL + '/shop/product_list'} component={ProductList} />
-          <Route path={process.env.PUBLIC_URL + '/shop/product_list/:prdDetail'} component={ProductDetail} />
-          <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
-           <Route path={process.env.PUBLIC_URL + '/contacts'} component={Contacts} />
-          <Route path={process.env.PUBLIC_URL + '/blog'} component={Blog} />
-          <Route path={process.env.PUBLIC_URL + '/login'} component={Login} />
-          <Route path={process.env.PUBLIC_URL + '/cart'} component={CartPage} />
-          <Route path={process.env.PUBLIC_URL + '/checkout'} component={CheckoutPage} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/shop" component={Shop} />
+          <Route exact path="/shop/product_list" component={ProductList} />
+          <Route path="/shop/product_list/:prdDetail" component={ProductDetail} />
+          <Route path="/about" component={About} />
+          <Route path="/contacts" component={Contacts} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/login" component={Login} />
+          <Route path="/cart" component={CartPage} />
+          <Route path="/checkout" component={CheckoutPage} />
           <Footer />
         </div>
       </Router>
