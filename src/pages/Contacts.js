@@ -10,9 +10,9 @@ class Contacts extends React.Component{
 			<ScrollToTop />
 				<div className="row px-sm-3 px-lg-5 py-sm-3">
 					<nav aria-label="breadcrumb ">
-					  <ol class="breadcrumb bg-white">
-					    <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-					    <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+					  <ol className="breadcrumb bg-white">
+					    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+					    <li className="breadcrumb-item active" aria-current="page">Contacts</li>
 					  </ol>
 					</nav>
 					<div className="w-100 border-bottom-dashed mx-sm-3"></div>
@@ -45,20 +45,20 @@ class Contacts extends React.Component{
 						<div className="contact-form pt-5">
 							<h2> Contacts Form</h2>
 
-							<div class="form-group">
+							<div className="form-group">
 							    <label>Your Name: <span>*</span></label>
-							    <input type="text" class="form-control"/>
-							</div>
-							<div class="form-group">
-							    <label for="formGroupExampleInput2">Your Email: <span>*</span></label>
-							    <input type="text" class="form-control"/>
-							</div>
-							<div class="form-group">
-							    <label >Your Message:  <span>*</span></label>
-							     <textarea class="form-control"  rows="8"></textarea>
+							    <input type="text" className="form-control"/>
 							</div>
 							<div className="form-group">
-								<button type="submit" class="btn btn-primary button1">SEND</button>
+							    <label for="formGroupExampleInput2">Your Email: <span>*</span></label>
+							    <input type="text" className="form-control"/>
+							</div>
+							<div className="form-group">
+							    <label >Your Message:  <span>*</span></label>
+							     <textarea className="form-control"  rows="8"></textarea>
+							</div>
+							<div className="form-group">
+								<button type="submit" className="btn btn-primary button1">SEND</button>
 							</div>
 							 
 						</div>
@@ -77,11 +77,11 @@ class Contacts extends React.Component{
 								<div className="subscribe">
 									<h2 className="pt-5">Subscribe</h2>
 									<p>Trust us, you'll want to hear what we have to say</p>
-									<div class="form-group">
-									<input type="text" class="form-control" placeholder=" Enter Your Email"/>
+									<div className="form-group">
+									<input type="text" className="form-control" placeholder=" Enter Your Email"/>
 									</div>
-									<div class="form-group">
-										<button type="submit" class="btn btn-primary btn-lm btn-block">SUBSCRIBE</button>
+									<div className="form-group">
+										<button type="submit" className="btn btn-primary btn-lm btn-block">SUBSCRIBE</button>
 									</div>
 								</div>
 								<div className="follow pt-3">

@@ -9,9 +9,9 @@ class About extends React.Component{
 			<ScrollToTop />
 				<div className="row px-sm-3 px-lg-5 py-sm-3">
 					<nav aria-label="breadcrumb ">
-					  <ol class="breadcrumb bg-white">
-					    <li class="breadcrumb-item"> <Link to="/">Home</Link></li>
-					    <li class="breadcrumb-item active" aria-current="page">About</li>
+					  <ol className="breadcrumb bg-white">
+					    <li className="breadcrumb-item"> <Link to="/">Home</Link></li>
+					    <li className="breadcrumb-item active" aria-current="page">About</li>
 					  </ol>
 					</nav>
 					<div className="w-100 border-bottom-dashed mx-sm-3"></div>
@@ -67,11 +67,11 @@ class About extends React.Component{
 								<div className="subscribe">
 									<h2 className="pt-5">Subscribe</h2>
 									<p>Trust us, you'll want to hear what we have to say</p>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder=" Enter Your Email"/>
+									<div className="form-group">
+										<input type="text" className="form-control" placeholder=" Enter Your Email"/>
 									</div>
-									<div class="form-group">
-										<button type="submit" class="btn btn-primary btn-lm btn-block">SUBSCRIBE</button>
+									<div className="form-group">
+										<button type="submit" className="btn btn-primary btn-lm btn-block">SUBSCRIBE</button>
 									</div>
 								</div>
 								<div className="follow pt-3">

@@ -7,6 +7,10 @@ import $ from "jquery";
 class Header extends React.Component{
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll.bind(this));
+        const el = findDOMNode(this.refs.fixedTop);
+        $(el).find("a.nav-link").click(function(){
+          $(el).find("#navbarSupportedContent").collapse('hide');
+        });
     }
 
     componentWillUnmount() {
