@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CartStore from '../stores/cartStore';
 import * as CartActions from '../actions/CartActions';
-import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
+import { HashRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import { findDOMNode } from 'react-dom';
 import $ from "jquery";
 

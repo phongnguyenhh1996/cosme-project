@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
+import { HashRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import ScrollToTop from '../components/scrollOnTop';
 
 class About extends React.Component{

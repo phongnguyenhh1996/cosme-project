@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProductsList from '../components/productsList';
 import prdStore from '../stores/productsStore';
-import { BrowserRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
+import { HashRouter as Router, IndexRoute, Route, Link } from "react-router-dom";
 import Slider from "react-slick";
 import RateStar from '../components/rateStar';
 import AddToCart from '../components/addToCart';

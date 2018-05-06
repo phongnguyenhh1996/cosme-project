@@ -10,7 +10,7 @@ import Contacts from './pages/Contacts';
 import Login from './pages/Login';
 import ProductList from './pages/product-list';
 import ProductDetail from './pages/productDetail';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import Blog from './pages/Blog';
 import CartPage from './pages/Cart';
 import CheckoutPage from './pages/Checkout';
@@ -19,7 +19,7 @@ import CheckoutPage from './pages/Checkout';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/cosme-project">
         <div>
           <Header />
           <Route exact path="/" component={Home} />

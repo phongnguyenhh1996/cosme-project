@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import * as CartActions from '../actions/CartActions';
 import cartStore from '../stores/cartStore';
 import RateStar from '../components/rateStar';
