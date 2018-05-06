@@ -19,7 +19,7 @@ import CheckoutPage from './pages/Checkout';
 class App extends Component {
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div>
           <Header />
           <Route exact path="/" component={Home} />
