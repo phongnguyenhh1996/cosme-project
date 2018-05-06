@@ -19,7 +19,7 @@ import CheckoutPage from './pages/Checkout';
 class App extends Component {
   render() {
     return (
-      <Router basename="/cosme-project">
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <Header />
           <Route exact path="/" component={Home} />
